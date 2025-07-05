@@ -1,15 +1,18 @@
 import React from "react";
 import OurProduct from "@/app/OurProduct";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <header className="bg-sky-50 shadow p-8 flex justify-between items-center">
-      <h1 className="text-xl font-bold">SV Polymer</h1>
+    <header className="bg-linear-to-t from-sky-100/80 from-10% via-late-100 to-90% to-slate-100 to-90% p-4 flex justify-between items-center">
+      <a href="#">
+        <Image src="/assets/imgs/SVP-Logo.png" alt="Company Logo" width={240} height={160} />
+      </a>
       <nav className="space-x-4">
-        <a href="" className="hover:text-blue-600">
+        <Link href="/" className="hover:text-blue-600">
           Home
-        </a>
+        </Link>
         <Link href="/our-company" className="hover:text-blue-600">
           OurCompany
         </Link>

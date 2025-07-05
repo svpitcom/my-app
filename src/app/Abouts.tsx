@@ -1,12 +1,23 @@
 import React from "react";
+import Image from "next/image";
 
 export default function Abouts() {
   return (
-    <section className="bg-gradient-to-r from-white via-gray-100 to-white py-16">
-      <div className="text-center">
-        <h2 className="text-2xl font-semibold text-gray-700">เกี่ยวกับเรา</h2>
-        <p className="text-gray-500 mt-2">เราคือทีมงานมืออาชีพ...</p>
+    <div className="relative">
+      <Image
+        src="/assets/imgs/En.png"
+        alt="Company Logo"
+        width={800}
+        height={640}
+      />
+      <div className="absolute top-0 left-0">
+        <Image
+          src="/assets/imgs/Card.png"
+          alt="Card Overlay"
+          width={800}
+          height={640}
+        />
       </div>
-    </section>
+    </div>
   );
 }
