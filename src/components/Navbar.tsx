@@ -7,7 +7,12 @@ export default function Navbar() {
   return (
     <header className="bg-linear-to-t from-sky-100/80 from-10% via-late-100 to-90% to-slate-100 to-90% p-4 flex justify-between items-center">
       <a href="#">
-        <Image src="/assets/imgs/SVP-Logo.png" alt="Company Logo" width={240} height={160} />
+        <Image
+          src="/assets/imgs/SVP-Logo.png"
+          alt="Company Logo"
+          width={240}
+          height={160}
+        />
       </a>
       <nav className="space-x-4">
         <Link href="/" className="hover:text-blue-600">
