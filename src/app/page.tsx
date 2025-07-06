@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 // import Abouts from "./Abouts";
-import OurProduct from "./OurProduct";
-import Policy from "./Policy";
-import NewMedia from "./NewMedia";
-import JobOpportunity from "./JobOpportunity";
-import ContactUs from "./ContactUs";
+import OurProduct from "./OurProdutct/page";
+import Policy from "./Policy/page";
+import NewMedia from "./NewMedia/page";
+import JobOpportunity from "./JobOpportunity/page";
+import ContactUs from "./ContactUs/page";
 import Router from "next/router";
 
 export default function Home() {
