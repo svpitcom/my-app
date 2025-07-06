@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import OurProduct from "@/app/OurProduct";
 import Link from "next/link";
@@ -18,7 +19,7 @@ export default function Navbar() {
         <Link href="/" className="hover:text-blue-600">
           Home
         </Link>
-        <Link href="/our-company" className="hover:text-blue-600">
+        <Link href="/OurCompany/" className="hover:text-blue-600">
           OurCompany
         </Link>
         <a href="" className="hover:text-blue-600">
