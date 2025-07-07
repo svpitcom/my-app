@@ -3,22 +3,21 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="row-start-3 flex gap-[80px] flex-wrap items-center justify-center py-80">
-      <a
-        className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-        href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+    <footer className="row-start-3 flex justify-stretch items-center bg-sky-700 py-20 columns-4">
+      <div className="flex flex-col justify-start text-white p-4">
         <Image
-          aria-hidden
-          src="/file.svg"
-          alt="File icon"
-          width={16}
-          height={16}
+          src="/assets/imgs/LOGO_SVP_White.png"
+          alt="Company Logo"
+          width={260}
+          height={240}
         />
-        Learn
-      </a>
+        <p className="text-sm">
+          888 Moo 6, Nampee sub-district, Thongseankhan district, Uttaradit
+          53230
+          <br />
+          Tel: +66(0)55 409 686
+        </p>
+      </div>
       <a
         className="flex items-center gap-2 hover:underline hover:underline-offset-4"
         href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"

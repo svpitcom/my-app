@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <div className="bg-linear-to-t from-sky-100/70 from-10% via-late-100 to-90% to-slate-100 to-90% p-4 flex justify-between items-center">
+    <div className="bg-sky-100 p-4 flex justify-between items-center">
       <a href="#">
         <Image
           src="/assets/imgs/SVP-Logo.png"
