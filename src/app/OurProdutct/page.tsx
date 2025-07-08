@@ -1,7 +1,9 @@
-import React from 'react'
+import React from "react";
 
 export default function OurProduct() {
   return (
-    <div>OurProduct</div>
-  )
+    <div className="flex items-center justify-center  bg-cover bg-center min-h-screen text-center">
+      <h1 className="text-lg">OurProducts</h1>
+    </div>
+  );
 }

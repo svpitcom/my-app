@@ -1,13 +1,4 @@
 import Image from "next/image";
-import Navbar from "@/components/Navbar";
-// import Footer from "@/components/Footer";
-// import Abouts from "./Abouts";
-import OurProduct from "./OurProdutct/page";
-import Policy from "./Policy/page";
-import NewMedia from "./NewMedia/page";
-import JobOpportunity from "./JobOpportunity/page";
-import ContactUs from "./ContactUs/page";
-import Router from "next/router";
 
 export default function Home() {
   return (
