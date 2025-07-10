@@ -28,19 +28,74 @@ export default function OurProduct() {
           of both domestic and international demands.
         </p>
       </section>
-      <div className="bg-blue-700">
+      <div className="bg-blue-700 flex items-center">
         <Image
-          src="/assets/imgs/En.png"
+          src="/assets/imgs/Rectangle54.png"
           alt="Company Logo"
-          width={800}
-          height={640}
+          width={700}
+          height={600}
         />
-        <Image
-          src="/assets/imgs/En.png"
-          alt="Company Logo"
-          width={800}
-          height={640}
-        />
+        <div className="md:w-1/2 bg-blue-700 text-white p-8 flex flex-col justify-center">
+          <h2 className="text-2xl font-semibold mb-4">Product</h2>
+          <ul className="space-y-1 text-sm md:text-base">
+            <li>Standard Thai Rubber 10</li>
+            <li>Standard Thai Rubber 20</li>
+            <li>Standard Thai Rubber 20M</li>
+            <li>Mooney Viscosity Controlled 9710</li>
+            <li>Mooney Viscosity Controlled 9720</li>
+            <li>Constant Viscosity 60</li>
+            <li>Constant Viscosity 65</li>
+            <li>Mixture Rubber (Pending 2017–2018)</li>
+          </ul>
+        </div>
+      </div>
+      <div className="bg-white py-12 px-6 text-center">
+        <h2 className="text-2xl font-bold text-blue-700 mb-2 uppercase">
+          Packaging
+        </h2>
+        <p className="text-sm max-w-2xl mx-auto mb-10">
+          Various packaging are available to meet the requirements of our
+          customers. Our container loading is carried out in our factory under
+          close supervision to ensure that rubber arrives at the destination in
+          its best conditions.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-center">
+        <div className="flex flex-col items-center">
+          <div className="bg-blue-700 text-white w-40 h-40 rounded-full flex items-center justify-center text-3xl font-bold shadow-lg">
+            35
+          </div>
+          <p className="mt-3 text-sm">kilograms loose bales</p>
+        </div>
+        <div className="flex flex-col items-center">
+          <div className="bg-blue-700 text-white w-40 h-40 rounded-full flex items-center justify-center text-3xl font-bold shadow-lg">
+            1.26
+          </div>
+          <p className="mt-3 text-sm text-center">
+            tons shrink wrapped
+            <br />
+            Plastic base
+          </p>
+        </div>
+        <div className="flex flex-col items-center">
+          <div className="bg-blue-700 text-white w-40 h-40 rounded-full flex items-center justify-center text-3xl font-bold shadow-lg">
+            1.33
+          </div>
+          <p className="mt-3 text-sm text-center">
+            tons shrink wrappedmetal base / Friendlypack pallet
+          </p>
+        </div>
+        <div className="flex flex-col items-center">
+          <div className="bg-blue-700 text-white w-40 h-40 rounded-full flex items-center justify-center text-3xl font-bold shadow-lg">
+            1.26
+          </div>
+          <p className="mt-3 text-sm">
+            tons
+            <br />
+            Metal box
+          </p>
+        </div>
       </div>
     </div>
   );
