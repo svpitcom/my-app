@@ -1,9 +1,45 @@
-import React from 'react'
+import React from "react";
 
 export default function NewMedia() {
   return (
     <div className="flex items-center justify-center  bg-cover bg-center min-h-screen text-center">
-      <h1 className="text-lg">OurProducts</h1>
+      <div className="max-w-sm mx-auto border rounded-lg shadow overflow-hidden">
+        <div className="bg-gradient-to-b from-blue-500 to-indigo-700 p-4 text-center relative">
+          <div className="absolute top-2 right-2">
+            <img
+              src="/path/to/logo.png"
+              alt="SV Polymer Logo"
+              className="h-6"
+            />
+          </div>
+
+          <div className="w-12 h-12 mx-auto bg-white rounded-full flex items-center justify-center text-blue-700 text-2xl font-bold">
+            ?
+          </div>
+
+          <div className="mt-4 text-white font-bold text-lg">
+            รวมคำถามที่พบบ่อย
+          </div>
+
+          <div className="mt-2">
+            <span className="bg-gray-200 text-gray-800 text-sm px-4 py-1 rounded-full inline-block">
+              สำหรับพ่อค้ายาง
+            </span>
+          </div>
+        </div>
+
+        <div className="bg-white p-4 text-center">
+          <div className="text-gray-800 font-medium mb-2">
+            Frequently Asked Questions (FAQs)
+          </div>
+          <a
+            href="#"
+            className="inline-block bg-blue-700 text-white text-sm px-4 py-2 rounded hover:bg-blue-800 transition"
+          >
+            READ MORE
+          </a>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
