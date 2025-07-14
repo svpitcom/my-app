@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Policy() {
   return (
-    <div className="bg-white font-sans">
-      <div className="bg-cover bg-center text-white py-12">
+    <div className="bg-cover bg-center h-full w-full font-sans">
+      <div className="bg-[url('/assets/imgs/hardtree.png')] bg-cover bg-center text-white py-2">
         <div className="text-center">
           <h1 className="text-xl md:text-3xl font-bold">Policy</h1>
           <h2 className="text-lg md:text-2xl font-semibold text-blue-300 mt-2">
@@ -40,44 +40,44 @@ export default function Policy() {
           of energy.
         </p>
       </div>
-      <div className="flex justify-center gap-4 mt-8">
-        <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white text-blue-700 flex items-center justify-center text-xl font-bold">
-          1
+      <div className="bg-[url('/assets/imgs/Towertree.png')] bg-cover bg-center p-2">
+        <div className="flex justify-center gap-4">
+          <div className="w-64 h-64 md:w-64 md:h-64 rounded-full bg-white text-blue-700 flex items-center justify-center text-xl font-bold">
+            1
+          </div>
+          <div className="w-64 h-64 md:w-64 md:h-64 rounded-full bg-white text-blue-700 flex items-center justify-center text-xl font-bold">
+            2
+          </div>
+          <div className="w-64 h-64 md:w-64 md:h-64 rounded-full bg-white text-blue-700 flex items-center justify-center text-xl font-bold">
+            3
+          </div>
+          <div className="w-64 h-64 md:w-64 md:h-64 rounded-full bg-white text-blue-700 flex items-center justify-center text-xl font-bold">
+            4
+          </div>
         </div>
-        <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white text-blue-700 flex items-center justify-center text-xl font-bold">
-          2
+        <div className="flex w-[1080px] h-[480px] mx-auto py-4 justify-center items-center bg-white rounded-lg">
+          <div className="max-w-3xl text-center">
+            <p className="text-sm md:text-base mb-4">
+              Energy conservation is the responsibility of executives and
+              employees of the Company to the extent that giving cooperation to
+              comply with measures specified for monitoring and reporting in
+              accordance with laws.
+            </p>
+            <h4 className="text-gray-700 font-semibold mb-2">
+              SV POLYMER COMPANY LIMITED
+            </h4>
+            <p className="text-sm text-gray-600 leading-relaxed mb-2">
+              บริษัท เอสวี โพลิเมอร์ จำกัด ให้ความสำคัญกับการรักษาสิ่งแวดล้อม
+              <br />
+              และมุ่งมั่นที่จะดำเนินธุรกิจควบคู่ไปกับการใช้ทรัพยากรอย่างมีประสิทธิภาพ
+              <br />
+              ลดผลกระทบที่เกิดจากการผลิต และการดำเนินงานอย่างต่อเนื่อง
+            </p>
+            <p className="text-xs text-gray-500 mt-4">
+              นโยบายนี้ เริ่มใช้: วันที่ 5 สิงหาคม พ.ศ. 2564
+            </p>
+          </div>
         </div>
-        <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white text-blue-700 flex items-center justify-center text-xl font-bold">
-          3
-        </div>
-        <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white text-blue-700 flex items-center justify-center text-xl font-bold">
-          4
-        </div>
-      </div>
-      <p className="mt-8 max-w-3xl mx-auto text-sm md:text-base">
-        Energy conservation is the responsibility of executives and employees of
-        the Company to the extent that giving cooperation to comply with
-        measures specified for monitoring and reporting in accordance with laws.
-      </p>
-      <div className="bg-white text-center py-10 px-4">
-        <img
-          src="/path/to/logo.png"
-          alt="SV Polymer Logo"
-          className="mx-auto h-12 mb-4"
-        />
-        <h4 className="text-gray-700 font-semibold mb-2">
-          SV POLYMER COMPANY LIMITED
-        </h4>
-        <p className="text-sm text-gray-600 max-w-md mx-auto leading-relaxed">
-          บริษัท เอสวี โพลิเมอร์ จำกัด ให้ความสำคัญกับการรักษาสิ่งแวดล้อม
-          <br />
-          และมุ่งมั่นที่จะดำเนินธุรกิจควบคู่ไปกับการใช้ทรัพยากรอย่างมีประสิทธิภาพ
-          <br />
-          ลดผลกระทบที่เกิดจากการผลิต และการดำเนินงานอย่างต่อเนื่อง
-        </p>
-        <p className="text-xs text-gray-500 mt-4">
-          นโยบายนี้ เริ่มใช้: วันที่ 5 สิงหาคม พ.ศ. 2564
-        </p>
       </div>
     </div>
   );
