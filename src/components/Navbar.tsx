@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <div className="bg-slate-50 bg-opacity-60 backdrop-blur-md flex justify-between items-center">
+    <div className="bg-slate-50 bg-opacity-60 backdrop-blur-md flex justify-between items-center p-2">
       <Link href="/">
         <Image
           src="/assets/imgs/SVP-Logo.png"
