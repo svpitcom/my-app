@@ -6,30 +6,30 @@ export default function Policy() {
       <div className="bg-[url('/assets/imgs/hardtree.png')] bg-cover bg-center text-white py-2">
         <div className="text-center">
           <h1 className="text-xl md:text-3xl font-bold">Policy</h1>
-          <h2 className="text-lg md:text-2xl font-semibold text-blue-300 mt-2">
+          <h2 className="text-lg md:text-2xl font-semibold text-sky-700 mt-2">
             SV Polymer .Co .Ltd
           </h2>
         </div>
 
         <div className="mt-6 flex flex-col items-center gap-2">
-          <button className="bg-blue-700 hover:bg-blue-800 text-white px-6 py-2 rounded">
+          <button className="bg-sky-700 hover:bg-blue-800 text-white px-6 py-2 rounded">
             นโยบาย EU-Deforestation
           </button>
-          <button className="bg-blue-700 hover:bg-blue-800 text-white px-6 py-2 rounded">
+          <button className="bg-sky-700 hover:bg-blue-800 text-white px-6 py-2 rounded">
             SVP Sustainable Natural Rubber Policy 2022
           </button>
-          <button className="bg-blue-700 hover:bg-blue-800 text-white px-6 py-2 rounded">
+          <button className="bg-sky-700 hover:bg-blue-800 text-white px-6 py-2 rounded">
             นโยบายด้านสิ่งแวดล้อม (Environmental Policy)
           </button>
-          <button className="bg-blue-700 hover:bg-blue-800 text-white px-6 py-2 rounded">
+          <button className="bg-sky-700 hover:bg-blue-800 text-white px-6 py-2 rounded">
             นโยบายคุณภาพ (Quality Policy)
           </button>
-          <button className="bg-blue-700 hover:bg-blue-800 text-white px-6 py-2 rounded">
+          <button className="bg-sky-700 hover:bg-blue-800 text-white px-6 py-2 rounded">
             นโยบายการรักษาพลังงานและอนุรักษ์พลังงาน
           </button>
         </div>
       </div>
-      <div className="bg-blue-700 text-white py-10 text-center px-4">
+      <div className="bg-sky-700 text-white py-10 text-center px-4">
         <h3 className="text-lg md:text-2xl font-bold mb-3">
           Energy Conservation Policy
         </h3>
@@ -42,16 +42,16 @@ export default function Policy() {
       </div>
       <div className="bg-[url('/assets/imgs/Towertree.png')] bg-cover bg-center p-2">
         <div className="flex justify-center gap-4">
-          <div className="w-64 h-64 md:w-64 md:h-64 rounded-full bg-white text-blue-700 flex items-center justify-center text-xl font-bold">
+          <div className="w-48 h-48 md:w-48 md:h-48 rounded-full bg-white text-blue-700 flex items-center justify-center text-xl font-bold">
             1
           </div>
-          <div className="w-64 h-64 md:w-64 md:h-64 rounded-full bg-white text-blue-700 flex items-center justify-center text-xl font-bold">
+          <div className="w-48 h-48 md:w-48 md:h-48 rounded-full bg-white text-blue-700 flex items-center justify-center text-xl font-bold">
             2
           </div>
-          <div className="w-64 h-64 md:w-64 md:h-64 rounded-full bg-white text-blue-700 flex items-center justify-center text-xl font-bold">
+          <div className="w-48 h-48 md:w-48 md:h-48 rounded-full bg-white text-blue-700 flex items-center justify-center text-xl font-bold">
             3
           </div>
-          <div className="w-64 h-64 md:w-64 md:h-64 rounded-full bg-white text-blue-700 flex items-center justify-center text-xl font-bold">
+          <div className="w-48 h-48 md:w-48 md:h-48 rounded-full bg-white text-blue-700 flex items-center justify-center text-xl font-bold">
             4
           </div>
         </div>

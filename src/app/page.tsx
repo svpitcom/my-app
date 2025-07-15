@@ -44,25 +44,25 @@ export default function Home() {
       </section>
       <div className="columns-4">
         <Image
-          src="/assets/imgs/En.png"
+          src="/assets/imgs/209044.png"
           alt="Company Logo"
           width={800}
           height={640}
         />
         <Image
-          src="/assets/imgs/En.png"
+          src="/assets/imgs/209045.png"
           alt="Company Logo"
           width={800}
           height={640}
         />
         <Image
-          src="/assets/imgs/En.png"
+          src="/assets/imgs/209046.png"
           alt="Company Logo"
           width={800}
           height={640}
         />
         <Image
-          src="/assets/imgs/En.png"
+          src="/assets/imgs/209047.png"
           alt="Company Logo"
           width={800}
           height={640}

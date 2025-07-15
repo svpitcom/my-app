@@ -3,7 +3,7 @@ import React from 'react'
 export default function ContactUs() {
   return (
     <div className="flex items-center justify-center  bg-cover bg-center min-h-screen text-center">
-      <h1 className="text-lg">OurProducts</h1>
+      <h1 className="text-lg">ContactUs</h1>
     </div>
   )
 }

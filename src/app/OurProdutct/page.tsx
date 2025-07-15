@@ -28,7 +28,7 @@ export default function OurProduct() {
           of both domestic and international demands.
         </p>
       </section>
-      <div className="bg-blue-700 flex items-center">
+      <div className="bg-sky-700 flex items-center">
         <Image
           src="/assets/imgs/Rectangle54.png"
           alt="Company Logo"
@@ -59,42 +59,42 @@ export default function OurProduct() {
           close supervision to ensure that rubber arrives at the destination in
           its best conditions.
         </p>
-      </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-center">
-        <div className="flex flex-col items-center">
-          <div className="bg-blue-700 text-white w-40 h-40 rounded-full flex items-center justify-center text-3xl font-bold shadow-lg">
-            35
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-center">
+          <div className="flex flex-col items-center">
+            <div className="bg-blue-700 text-white w-40 h-40 rounded-full flex items-center justify-center text-3xl font-bold shadow-lg">
+              35
+            </div>
+            <p className="mt-3 text-sm">kilograms loose bales</p>
           </div>
-          <p className="mt-3 text-sm">kilograms loose bales</p>
-        </div>
-        <div className="flex flex-col items-center">
-          <div className="bg-blue-700 text-white w-40 h-40 rounded-full flex items-center justify-center text-3xl font-bold shadow-lg">
-            1.26
+          <div className="flex flex-col items-center">
+            <div className="bg-blue-700 text-white w-40 h-40 rounded-full flex items-center justify-center text-3xl font-bold shadow-lg">
+              1.26
+            </div>
+            <p className="mt-3 text-sm text-center">
+              tons shrink wrapped
+              <br />
+              Plastic base
+            </p>
           </div>
-          <p className="mt-3 text-sm text-center">
-            tons shrink wrapped
-            <br />
-            Plastic base
-          </p>
-        </div>
-        <div className="flex flex-col items-center">
-          <div className="bg-blue-700 text-white w-40 h-40 rounded-full flex items-center justify-center text-3xl font-bold shadow-lg">
-            1.33
+          <div className="flex flex-col items-center">
+            <div className="bg-blue-700 text-white w-40 h-40 rounded-full flex items-center justify-center text-3xl font-bold shadow-lg">
+              1.33
+            </div>
+            <p className="mt-3 text-sm text-center">
+              tons shrink wrappedmetal base / Friendlypack pallet
+            </p>
           </div>
-          <p className="mt-3 text-sm text-center">
-            tons shrink wrappedmetal base / Friendlypack pallet
-          </p>
-        </div>
-        <div className="flex flex-col items-center">
-          <div className="bg-blue-700 text-white w-40 h-40 rounded-full flex items-center justify-center text-3xl font-bold shadow-lg">
-            1.26
+          <div className="flex flex-col items-center">
+            <div className="bg-blue-700 text-white w-40 h-40 rounded-full flex items-center justify-center text-3xl font-bold shadow-lg">
+              1.26
+            </div>
+            <p className="mt-3 text-sm">
+              tons
+              <br />
+              Metal box
+            </p>
           </div>
-          <p className="mt-3 text-sm">
-            tons
-            <br />
-            Metal box
-          </p>
         </div>
       </div>
     </div>
