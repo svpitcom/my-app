@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export default function OurCompany() {
   return (
@@ -40,7 +41,7 @@ export default function OurCompany() {
         <div className="flex flex-col md:flex-row gap-8 bg-black/40 p-8 rounded-lg backdrop-blur-sm">
           {/* Vision Box */}
           <div className="bg-white/70 p-6 rounded-md shadow-md w-full md:w-1/2 text-center">
-            <h2 className="text-2xl font-bold text-green-700 mb-4">Vision</h2>
+            <h2 className="text-2xl font-bold text-blue-700 mb-4">Vision</h2>
             <p className="text-gray-800">
               "Lead the different and be the benchmark"
               <br />
@@ -50,7 +51,7 @@ export default function OurCompany() {
 
           {/* Missions Box */}
           <div className="bg-white/70 p-6 rounded-md shadow-md w-full md:w-1/2 text-center">
-            <h2 className="text-2xl font-bold text-green-700 mb-4">Missions</h2>
+            <h2 className="text-2xl font-bold text-blue-700 mb-4">Missions</h2>
             <p className="text-gray-800">
               "Advance technology innovative material"
               <br />
@@ -61,6 +62,17 @@ export default function OurCompany() {
               improve standard of living"
             </p>
           </div>
+        </div>
+        <div className="">
+          <Image
+            src="/assets/imgs/Borad.png"
+            alt="Borad"
+            width={1360}
+            height={720}
+          />
+        </div>
+        <div className="animate-pulse bg-blue-500 text-white p-4 rounded-lg w-fit">
+          Hello Slide Down!
         </div>
       </main>
     </div>

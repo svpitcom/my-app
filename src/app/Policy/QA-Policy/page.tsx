@@ -1,0 +1,34 @@
+import React from "react";
+
+export default function QualityPolicy() {
+  return (
+    <div>
+      ประกาศ นโยบายคุณภาพ (Quality policy) บริษัท เอส วี โพลิเมอร์ จำกัด
+      มีความมุ่งมั่นในการดำเนินธุรกิจแปรรูปยางธรรมชาติ โดยใช้เทคโนโลยีที่ทันสมัย
+      เพื่อให้สินค้ามีคุณภาพ บริษัทฯได้นำระบบบริหารจัดการคุณภาพ ISO 9001
+      มาประยุกต์ใช้เพื่อให้เกิดการทำงานที่เป็นมาตรฐานสากล พร้อมยกระดับมาตรฐาน
+      และพัฒนาให้องค์กรเติบโตอย่างต่อเนื่อง SV Polymer Company Limited is
+      committed to conducting natural rubber processing business. Using modern
+      technology to have quality products. The company has applied the ISO 9001
+      quality management system to achieve international standard work. Ready to
+      raise standards and develop the organization to grow continuously
+      จึงขอประกาศ นโยบายคุณภาพ
+      เพื่อเป็นกรอบและแนวทางในการดำเนินงานแก่พนักงานทุกระดับดังนี้ Therefore, we
+      would like to announce our quality policy. To provide a framework and
+      operational guidelines for employees at all levels as follows: 1
+      มุ่งมั่นผลิตสินค้าที่มีคุณภาพ ส่งมอบตรงเวลา (Committed to producing
+      quality products delivered on time) 2
+      สร้างความพึงพอใจสูงสุดแก่ลูกค้าอย่างต่อเนื่อง (Continuously create maximum
+      satisfaction for customers.) 3 ปรับปรุงและพัฒนาระบบบริหารจัดการคุณภาพ
+      รวมถึงระบบการผลิตต่างๆ อย่างต่อเนื่องเพื่อให้สอดคล้องต่อเป้าหมายองค์กร
+      (Improve and develop the quality management system including various
+      production systems continuously to be consistent with the goals) 4
+      ส่งเสริมความตระหนักด้านคุณภาพและพัฒนาศักยภาพบุคลากรให้เติบโตไปพร้อมองค์กรอย่างต่อเนื่อง
+      (Promote quality awareness and develop the potential of personnel to
+      continuously grow with the organization.) โดยได้ทบทวนปรับปรุงนโยบายแล้ว
+      จึงขอประกาศให้ทราบโดยทั่วกัน (The policy has been reviewed and improved.
+      Therefore, we would like to announce this for everyone to know.)
+      จึงประกาศมาเพื่อทราบโดยทั่วกัน ประกาศ ณ วันที่ 15-10-2567
+    </div>
+  );
+}
