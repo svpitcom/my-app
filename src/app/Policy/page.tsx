@@ -6,8 +6,8 @@ export default function Policy() {
     <div className="bg-cover bg-center h-full w-full font-sans">
       <div className="bg-[url('/assets/imgs/hardtree.png')] bg-cover bg-center text-white py-2">
         <div className="text-center">
-          <h1 className="text-xl md:text-3xl font-bold">Policy</h1>
-          <h2 className="text-lg md:text-2xl font-semibold text-sky-700 mt-2">
+          <h1 className="text-6xl font-bold">Policy</h1>
+          <h2 className="text-2xl font-semibold text-sky-700 mt-2">
             SV Polymer .Co .Ltd
           </h2>
         </div>

@@ -69,6 +69,8 @@ export default function Navbar() {
         <button
           className="md:hidden flex flex-col space-y-1"
           onClick={() => setIsOpen(!isOpen)}
+          title="Toggle navigation menu"
+          aria-label="Toggle navigation menu"
         >
           <span className="w-6 h-0.5 bg-gray-800"></span>
           <span className="w-6 h-0.5 bg-gray-800"></span>

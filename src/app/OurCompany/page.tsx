@@ -5,10 +5,10 @@ export default function OurCompany() {
   return (
     <div className="flex items-center justify-center bg-[url('/assets/imgs/Tree-back.png')] bg-cover bg-center min-h-screen text-center">
       <main className="flex flex-col items-center justify-center">
-        <h1 className="text-white text-4xl font-bold mb-4 bg-black/50 p-4 rounded">
+        <h1 className="text-white text-6xl font-bold mb-4 bg-black/50 p-4 rounded">
           About Us
         </h1>
-        <p className="bg-white text-gray-800 p-6 rounded-lg shadow-lg max-w-3xl">
+        <p className="bg-white text-gray-800 items-center justify-center p-6 rounded-lg shadow-lg">
           SV Polymer CO., LTD. (SV Polymer) is a European based joint venture
           BOI approved natural rubber processing and export company established
           in 26th July 2010. With combined experience of over 150 years in
@@ -41,7 +41,7 @@ export default function OurCompany() {
         <div className="flex flex-col md:flex-row gap-8 bg-black/40 p-8 rounded-lg backdrop-blur-sm">
           {/* Vision Box */}
           <div className="bg-white/70 p-6 rounded-md shadow-md w-full md:w-1/2 text-center">
-            <h2 className="text-2xl font-bold text-blue-700 mb-4">Vision</h2>
+            <h2 className="text-3xl font-bold text-blue-700 mb-4">Vision</h2>
             <p className="text-gray-800">
               "Lead the different and be the benchmark"
               <br />
@@ -51,7 +51,7 @@ export default function OurCompany() {
 
           {/* Missions Box */}
           <div className="bg-white/70 p-6 rounded-md shadow-md w-full md:w-1/2 text-center">
-            <h2 className="text-2xl font-bold text-blue-700 mb-4">Missions</h2>
+            <h2 className="text-3xl font-bold text-blue-700 mb-4">Missions</h2>
             <p className="text-gray-800">
               "Advance technology innovative material"
               <br />
