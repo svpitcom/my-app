@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="bg-[url('/assets/imgs/Tree-back.png')] bg-cover bg-center h-full w-full">
+    <div className="bg-[url('/assets/imgs/Tree-back.png')] bg-cover bg-center h-full w-full min-h-screen flex flex-col">
       {/* <Navbar /> */}
       <main className="flex justify-center">
         <div className="relative">

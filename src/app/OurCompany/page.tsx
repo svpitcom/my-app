@@ -71,7 +71,7 @@ export default function OurCompany() {
             height={720}
           />
         </div>
-        <div className="animate-slide-down bg-blue-500 text-white p-4 rounded-lg w-fit">
+        <div className="animate-pulse bg-blue-500 text-white p-4 rounded-lg w-fit">
           Hello Slide Down!
         </div>
       </main>

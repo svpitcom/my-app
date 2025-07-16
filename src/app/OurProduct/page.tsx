@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function OurProduct() {
   return (
-    <div className="bg-[url('/assets/imgs/Rectangle54.png')] bg-cover bg-center h-full w-full">
+    <div className="bg-[url('/assets/imgs/Rectangle54.png')] bg-cover min-h-screen bg-center h-full w-full">
       <main className="flex justify-center">
         <h1 className="text-white text-4xl font-bold mb-4 bg-black/50 p-4 rounded">
           OurProduct
@@ -28,14 +28,14 @@ export default function OurProduct() {
           of both domestic and international demands.
         </p>
       </section>
-      <div className="bg-sky-700 flex items-center">
+      <div className="bg-sky-700 flex items-center min-h-screen">
         <Image
           src="/assets/imgs/Rectangle54.png"
           alt="Company Logo"
           width={700}
           height={600}
         />
-        <div className="md:w-1/2 bg-blue-700 text-white p-8 flex flex-col justify-center">
+        <div className="md:w-1/2 bg-blue-700 text-white p-8 flex flex-col justify-center min-h-screen">
           <h2 className="text-2xl font-semibold mb-4">Product</h2>
           <ul className="space-y-1 text-sm md:text-base">
             <li>Standard Thai Rubber 10</li>

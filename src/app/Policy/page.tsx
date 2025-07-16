@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export default function Policy() {
   return (
@@ -12,21 +13,36 @@ export default function Policy() {
         </div>
 
         <div className="mt-6 flex flex-col items-center gap-2">
-          <button className="bg-sky-700 hover:bg-blue-800 text-white px-6 py-2 rounded">
+          <a
+            className="bg-sky-700 hover:bg-blue-800 text-white px-6 py-2 rounded"
+            href="/Policy/EU-Def"
+          >
             นโยบาย EU-Deforestation
-          </button>
-          <button className="bg-sky-700 hover:bg-blue-800 text-white px-6 py-2 rounded">
+          </a>
+          <a
+            className="bg-sky-700 hover:bg-blue-800 text-white px-6 py-2 rounded"
+            href="/Policy/SVP-Sus"
+          >
             SVP Sustainable Natural Rubber Policy 2022
-          </button>
-          <button className="bg-sky-700 hover:bg-blue-800 text-white px-6 py-2 rounded">
+          </a>
+          <a
+            className="bg-sky-700 hover:bg-blue-800 text-white px-6 py-2 rounded"
+            href="/Policy/Envi-Policy"
+          >
             นโยบายด้านสิ่งแวดล้อม (Environmental Policy)
-          </button>
-          <button className="bg-sky-700 hover:bg-blue-800 text-white px-6 py-2 rounded">
+          </a>
+          <a
+            className="bg-sky-700 hover:bg-blue-800 text-white px-6 py-2 rounded"
+            href="/Policy/QA-Policy"
+          >
             นโยบายคุณภาพ (Quality Policy)
-          </button>
-          <button className="bg-sky-700 hover:bg-blue-800 text-white px-6 py-2 rounded">
+          </a>
+          <a
+            className="bg-sky-700 hover:bg-blue-800 text-white px-6 py-2 rounded"
+            href="/Policy/GGM"
+          >
             นโยบายการรักษาพลังงานและอนุรักษ์พลังงาน
-          </button>
+          </a>
         </div>
       </div>
       <div className="bg-sky-700 text-white py-10 text-center px-4">
@@ -44,20 +60,30 @@ export default function Policy() {
         <div className="flex justify-center gap-4">
           <div className="w-48 h-48 md:w-48 md:h-48 rounded-full bg-white text-blue-700 flex items-center justify-center text-xl font-bold">
             1
+            <div className="text-xs">
+              CONTROL THE TEST OF ELECTRICTY AND FUEL USE TO ACCOMMODATE TO THE
+              NATURE OF ENERGY CONSUMPTION OF THE COMPANY
+            </div>
           </div>
           <div className="w-48 h-48 md:w-48 md:h-48 rounded-full bg-white text-blue-700 flex items-center justify-center text-xl font-bold">
-            2
+            2<div className="text-xs">PROMOTE ENERGY-SAVING ACTIVITES</div>
           </div>
           <div className="w-48 h-48 md:w-48 md:h-48 rounded-full bg-white text-blue-700 flex items-center justify-center text-xl font-bold">
             3
+            <div className="text-xs">
+              ESTABLHISH TARGET OF ENERGY CONSUMPTION REDUCTION
+            </div>
           </div>
           <div className="w-48 h-48 md:w-48 md:h-48 rounded-full bg-white text-blue-700 flex items-center justify-center text-xl font-bold">
             4
+            <div className="text-xs">
+              SUPPOAT OPEAATIONS AND DEVELOPMENT OF ENRGY MANAGEMENT SYSTEM
+            </div>
           </div>
         </div>
         <div className="flex w-[1080px] h-[480px] mx-auto py-4 justify-center items-center bg-white rounded-lg">
           <div className="max-w-3xl text-center">
-            <p className="text-sm md:text-base mb-4">
+            <p className="text-xl md:text-base mb-4">
               Energy conservation is the responsibility of executives and
               employees of the Company to the extent that giving cooperation to
               comply with measures specified for monitoring and reporting in
