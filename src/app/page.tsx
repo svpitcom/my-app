@@ -4,26 +4,29 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="bg-[url('/assets/imgs/Tree-back.png')] bg-cover bg-center h-full w-full min-h-screen flex flex-col">
+    <div className="h-full w-full min-h-screen flex flex-col">
       {/* <Navbar /> */}
-      <main className="flex justify-center">
-        <div className="relative">
-          <Image
-            src="/assets/imgs/En.png"
-            alt="Company Logo"
-            width={800}
-            height={640}
-          />
-          <div className="absolute top-0 left-0">
+      <div className="bg-[url('/assets/imgs/Tree-back.png')] bg-cover bg-center w-full">
+        <div className="flex justify-center">
+          <div className="relative">
             <Image
-              src="/assets/imgs/Card.png"
-              alt="Card Overlay"
+              src="/assets/imgs/En.png"
+              alt="Company Logo"
               width={800}
               height={640}
             />
+            <div className="absolute top-0 left-0">
+              <Image
+                src="/assets/imgs/Card.png"
+                alt="Card Overlay"
+                width={800}
+                height={640}
+              />
+            </div>
           </div>
         </div>
-      </main>
+      </div>
+
       <section className="bg-neutral-50 text-black py-20 px-6 text-center">
         <h1 className="text-6xl md:text-5xl font-bold mb-4">
           SV POLYMER INTRODUTIONS
@@ -82,8 +85,8 @@ export default function Home() {
         <div className="w-full md:w-1/2 flex justify-center">
           <div className="bg-gray-200 rounded-lg border-4 border-white w-full h-full flex items-center justify-center">
             <iframe
-              className="aspect-video w-80 h-80"
-              src="https://www.youtube.com/watch?v=DdO5rYHIsO4"
+              className="aspect-video"
+              src="https://www.youtube.com/embed/d36j9rJgi7E"
               title="SV Polymer Company Presentation Video"
             ></iframe>
           </div>

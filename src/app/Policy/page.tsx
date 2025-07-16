@@ -58,9 +58,9 @@ export default function Policy() {
       </div>
       <div className="bg-[url('/assets/imgs/Towertree.png')] bg-cover bg-center p-2">
         <div className="flex justify-center gap-4">
-          <div className="w-48 h-48 md:w-48 md:h-48 rounded-full bg-white text-blue-700 flex items-center justify-center text-xl font-bold">
-            1
-            <div className="text-xs">
+          <div className="w-48 h-48 md:w-48 md:h-48 rounded-full bg-white text-blue-100 flex items-center justify-center text-xl font-bold">
+            <div className="bg-cover bg-center text-center">1</div>
+            <div className="text-xs text-blue-500">
               CONTROL THE TEST OF ELECTRICTY AND FUEL USE TO ACCOMMODATE TO THE
               NATURE OF ENERGY CONSUMPTION OF THE COMPANY
             </div>
