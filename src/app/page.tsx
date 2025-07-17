@@ -14,8 +14,10 @@ export default function Home() {
               alt="Company Logo"
               width={800}
               height={640}
+              className="object-cover opacity-80"
+              priority
             />
-            <div className="absolute top-0 left-0">
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
               <Image
                 src="/assets/imgs/Card.png"
                 alt="Card Overlay"

@@ -8,14 +8,14 @@ export default function Navbar() {
 
   return (
     <header className="bg-slate-50 shadow">
-      <div className="flex justify-between items-center p-4">
+      <div className="flex justify-between items-center p-10">
         {/* Logo */}
         <Link href="/">
           <Image
             src="/assets/imgs/SVP-Logo.png"
             alt="Company Logo"
-            width={240}
-            height={160}
+            width={260}
+            height={280}
           />
         </Link>
 
