@@ -8,7 +8,7 @@ export default function Navbar() {
 
   return (
     <header className="bg-slate-50 shadow">
-      <div className="flex justify-between items-center p-10">
+      <div className="flex justify-between items-center p-6">
         {/* Logo */}
         <Link href="/">
           <Image

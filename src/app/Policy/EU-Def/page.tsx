@@ -12,7 +12,7 @@ export default function EUDef() {
           height={160}
         />
       </div>
-      <div className="text-center grid grid-cols-6 gap-4">
+      <div className="text-center grid grid-cols-6 gap-4 py-10">
         <h1 className="col-span-4 col-start-2">
           ประกาศกฎระเบียบที่ปราศจากการตัดไม้ทำลายป่าของสหภาพยุโรป (EUDR)
           กลุ่มบริษัทในเครือ เอ็นเทค โพลีเมอร์ กรุ๊ป

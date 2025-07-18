@@ -3,16 +3,16 @@ import Link from "next/link";
 
 export default function Policy() {
   return (
-    <div className="bg-cover bg-center h-full w-full font-sans">
-      <div className="bg-[url('/assets/imgs/hardtree.png')] bg-cover bg-center text-white py-2">
-        <div className="text-center">
+    <div className="bg-cover bg-center h-full w-full">
+      <div className="bg-[url('/assets/imgs/hardtree.png')] bg-cover bg-center text-white h-150 py-2">
+        <div className="text-center py-6">
           <h1 className="text-6xl font-bold">Policy</h1>
           <h2 className="text-2xl font-semibold text-sky-700 mt-2">
             SV Polymer .Co .Ltd
           </h2>
         </div>
 
-        <div className="mt-6 flex flex-col items-center gap-2">
+        <div className="mt-6 flex flex-col items-center gap-2 py-6">
           <a
             className="bg-sky-700 hover:bg-blue-800 text-white px-6 py-2 rounded"
             href="/Policy/EU-Def"
@@ -45,11 +45,11 @@ export default function Policy() {
           </a>
         </div>
       </div>
-      <div className="bg-sky-700 text-white py-10 text-center px-4">
-        <h3 className="text-lg md:text-2xl font-bold mb-3">
+      <div className="bg-sky-700 text-white py-10 text-center">
+        <h3 className="text-4xl md:text-2xl font-bold mb-3 p-4">
           Energy Conservation Policy
         </h3>
-        <p className="max-w-3xl mx-auto text-sm md:text-base">
+        <p className="max-w-3xl mx-auto text-sm md:text-base p-6">
           Energy is a valuable resource. The production of energy and its
           consumption has environmental impacts. The following policy is
           established as guidelines to conservation and promotes efficient use
@@ -58,6 +58,7 @@ export default function Policy() {
       </div>
       <div className="bg-[url('/assets/imgs/Towertree.png')] bg-cover bg-center p-2">
         <div className="flex justify-center gap-4">
+          {/* ทำเป็นรูป */}
           <div className="w-48 h-48 md:w-48 md:h-48 rounded-full bg-white text-blue-100 flex items-center justify-center text-xl font-bold">
             <div className="bg-cover bg-center text-center">1</div>
             <div className="text-xs text-blue-500">
@@ -81,7 +82,7 @@ export default function Policy() {
             </div>
           </div>
         </div>
-        <div className="flex w-[1080px] h-[480px] mx-auto py-4 justify-center items-center bg-white rounded-lg">
+        <div className="flex mx-auto py-4 justify-center items-center bg-white rounded-lg">
           <div className="max-w-3xl text-center">
             <p className="text-xl md:text-base mb-4">
               Energy conservation is the responsibility of executives and
