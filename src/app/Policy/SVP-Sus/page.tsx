@@ -34,12 +34,12 @@ export default function SustainableNatural() {
           we seek to maintain a balance between business performance,
           environmental stewardship and our continual building of sustainable
           relationships with our partners and employees. To successfully meet
-          the ever-changing challenges and "Contributing to the well-being of
-          the humanity", we base our values in
+          the ever-changing challenges and Contributing to the well-being of
+          the humanity, we base our values in
         </p>
         {/* //ทำเป็นข้อ */}
         <p className="col-start-2 col-end-6 p-2">
-          Satisfying our customers' requirements and needs. Contributing to the
+          Satisfying our customers requirements and needs. Contributing to the
           organization economic performance. Establishing relationships of
           honesty and integrity with our partners and suppliers. Respecting the
           people. Respect Facts Promoting environmental friendly activities.
@@ -52,8 +52,8 @@ export default function SustainableNatural() {
           by supporting causes on various concerns including road safety,
           healthcare, environmental sustainability, promoting education,
           promoting sports and other rural development activities. In pursuance
-          of our vision that SV Polymer desires to be a 'Company which society
-          wants to exist', we are dedicated towards fulfilling the social
+          of our vision that SV Polymer desires to be a Company which society
+          wants to exist, we are dedicated towards fulfilling the social
           objectives through various CSR activities. The Company shall make the
           activities endeavor to positively impact and influence the Society for
           its sustainable development. We pledge to continuously improve our
@@ -63,10 +63,10 @@ export default function SustainableNatural() {
           impartiality, fairness and loyalty.
         </p>
         <p className="col-start-2 col-end-6 p-2">
-          "Successful business did not come from only hard work or special
+          Successful business did not come from only hard work or special
           technical ability but derived from synergy and create share value
           among the community, country and company. Only then will it be
-          sustainable."
+          sustainable.
         </p>
         <p className="col-start-2 col-end-6 p-2">
           Sustainable Natural Rubber Policy Components
@@ -160,13 +160,13 @@ export default function SustainableNatural() {
           indigenous people and local communities. 3.6. Upholding applicable
           labour rights and labour laws in the jurisdictions where operating,
           the UN Guiding Principles on Business and Human Rights, and the intent
-          of the International Labor Organization's eight core conventions. This
+          of the International Labor Organizations eight core conventions. This
           includes: 3.6.1. Freedom of association and collective bargaining (ILO
           Convention No. 87 and No. 98) SV Polymer Sustainable Natural Rubber
           Policy 3.6.2. No forced labour (ILO Convention No. 29 and its 2014
           Protocol) 3.6.3. No child labour (ILO Convention No. 138 and No. 182)
-          3.6.4. Decent living wages (ensuring that an employee's salary is at
-          least equal to the country's minimum salary for an equivalent job with
+          3.6.4. Decent living wages (ensuring that an employees salary is at
+          least equal to the countrys minimum salary for an equivalent job with
           the view of fostering an adequate/decent living wage as envisioned by
           the ILO Conventions 100, 105 and 131) 3.6.5. No discrimination (ILO
           Convention No. 111 and No. 100), including eliminating gender related
@@ -197,7 +197,7 @@ export default function SustainableNatural() {
           joint ventures, and company affiliates and subsidiaries. 6.3.
           Maintaining an active, regular stakeholder dialogue to provide
           relevant information, and to afford opportunities for feedback and
-          suggestions related to fulfillment of the company's commitments. 6.4.
+          suggestions related to fulfillment of the company s commitments. 6.4.
           Participating in/supporting multi-stakeholder planning and policy
           efforts that uphold sustainability principles (including those defined
           by industry platforms such as the Global Platform for Sustainable
