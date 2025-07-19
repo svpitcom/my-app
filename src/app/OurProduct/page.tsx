@@ -104,38 +104,48 @@ export default function OurProduct() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-center">
               <div className="flex flex-col items-center">
-                <div className="bg-blue-700 text-white w-40 h-40 rounded-full flex items-center justify-center text-3xl font-bold shadow-lg">
-                  35
+                <div className="w-64 h-64 md:w-64 md:h-64 rounded-full bg-sky-700/50 text-blue-100 flex items-center justify-center text-xl font-bold">
+                  <div className="w-58 h-58 md:w-58 md:h-58 rounded-full bg-sky-700 text-blue-100 flex items-center justify-center text-xl font-bold">
+                    <div className="bg-cover bg-center text-center text-base text-white">
+                      <p className="text-3xl font-bold">35</p>
+                      <p className="mt-3 text-lg">kilograms loose bales</p>
+                    </div>
+                  </div>
                 </div>
-                <p className="mt-3 text-sm">kilograms loose bales</p>
               </div>
               <div className="flex flex-col items-center">
-                <div className="bg-blue-700 text-white w-40 h-40 rounded-full flex items-center justify-center text-3xl font-bold shadow-lg">
-                  1.26
+                <div className="w-64 h-64 md:w-64 md:h-64 rounded-full bg-sky-700/50 text-blue-100 flex items-center justify-center text-xl font-bold">
+                  <div className="w-58 h-58 md:w-58 md:h-58 rounded-full bg-sky-700 text-blue-100 flex items-center justify-center text-xl font-bold">
+                    <div className="bg-cover bg-center text-center text-base text-white">
+                      <p className="text-3xl font-bold">1.26</p>
+                      <p className="mt-3 text-lg">
+                        tons shrink wrapped Plastic base
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <p className="mt-3 text-sm text-center">
-                  tons shrink wrapped
-                  <br />
-                  Plastic base
-                </p>
               </div>
               <div className="flex flex-col items-center">
-                <div className="bg-blue-700 text-white w-40 h-40 rounded-full flex items-center justify-center text-3xl font-bold shadow-lg">
-                  1.33
+                <div className="w-64 h-64 md:w-64 md:h-64 rounded-full bg-sky-700/50 text-blue-100 flex items-center justify-center text-xl font-bold">
+                  <div className="w-58 h-58 md:w-58 md:h-58 rounded-full bg-sky-700 text-blue-100 flex items-center justify-center text-xl font-bold">
+                    <div className="bg-cover bg-center text-center text-base text-white">
+                      <p className="text-3xl font-bold">1.33</p>
+                      <p className="mt-3 text-lg">
+                        tons shrink wrapped metal base/Friendly pack pallet
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <p className="mt-3 text-sm text-center">
-                  tons shrink wrappedmetal base / Friendlypack pallet
-                </p>
               </div>
               <div className="flex flex-col items-center">
-                <div className="bg-blue-700 text-white w-40 h-40 rounded-full flex items-center justify-center text-3xl font-bold shadow-lg">
-                  1.26
+                <div className="w-64 h-64 md:w-64 md:h-64 rounded-full bg-sky-700/50 text-blue-100 flex items-center justify-center text-xl font-bold">
+                  <div className="w-58 h-58 md:w-58 md:h-58 rounded-full bg-sky-700 text-blue-100 flex items-center justify-center text-xl font-bold">
+                    <div className="bg-cover bg-center text-center text-base text-white">
+                      <p className="text-3xl font-bold">1.26</p>
+                      <p className="mt-3 text-lg">tons Metal box</p>
+                    </div>
+                  </div>
                 </div>
-                <p className="mt-3 text-sm">
-                  tons
-                  <br />
-                  Metal box
-                </p>
               </div>
             </div>
           </div>
