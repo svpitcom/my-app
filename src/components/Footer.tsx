@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="row-start-3 flex justify-stretch items-center bg-sky-700 py-10 columns-4">
+    <footer className="row-start-3 flex justify-stretch items-center bg-sky-700 py-8 columns-4">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
         <div className="flex flex-col justify-start text-white p-4">
           <Image
