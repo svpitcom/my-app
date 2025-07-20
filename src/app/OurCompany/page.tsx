@@ -94,7 +94,7 @@ export default function OurCompany() {
               Advance technology innovative material
               <br />
               Create customer satisfaction and produce products at the highest
-              quality"
+              quality
               <br />
               Clean and environmentally friendly factory that help develop and
               improve standard of living
