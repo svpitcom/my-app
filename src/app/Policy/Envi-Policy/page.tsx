@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function page() {
   return (
-    <div className="flex flex-col justify-center bg-white text-xl text-center item-center">
+    <div className="flex flex-col justify-center bg-white text-xl text-center text-black item-center">
       <div className="flex justify-center items-center mb-4">
         <Image
           src="/assets/imgs/LogoSVP.png"

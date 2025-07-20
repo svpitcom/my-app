@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function GreenhouseGasManagement() {
   return (
-    <div className="flex flex-col justify-center text-center bg-white text-xl item-center">
+    <div className="flex flex-col justify-center text-center bg-white text-xl text-black item-center">
       <div className="flex justify-center items-center mb-4">
         <Image
           src="/assets/imgs/LogoSVP.png"
