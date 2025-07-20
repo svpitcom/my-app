@@ -7,13 +7,13 @@ export default function Policy() {
   return (
     <div className="bg-cover bg-center h-full w-full">
       <div className="bg-[url('/assets/imgs/svp-office-tree.jpg')] bg-cover bg-center text-white h-full py-2">
-        <div className="text-center py-6">
-          <div className="flex flex-col bg-white items-center py-4">
+        <div className="flex flex-col text-center items-center">
+          <div className="flex flex-col justify-center rounded-full size-84 bg-radial bg-white/75 items-center py-4">
             <Image
               src="/assets/imgs/LogoSVP.png"
               alt="LogoSVP"
-              width={180}
-              height={180}
+              width={240}
+              height={240}
             />
           </div>
 
