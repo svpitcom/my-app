@@ -100,7 +100,7 @@ export default function OurCompany() {
                 Missions
               </h2>
               <p className="text-gray-800 text-xl">
-                "Advance technology innovative material"
+                Advance technology innovative material
               </p>
               <div className="bg-white/70 p-6 rounded-md shadow-md w-full md:w-1/2 text-center">
                 <h2 className="text-3xl font-bold text-blue-700 mb-4">
