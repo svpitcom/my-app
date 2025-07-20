@@ -5,7 +5,7 @@ export default function ContactUs() {
   return (
     <div className="bg-[url('/assets/imgs/backgruondconstus.jpg')] bg-cover bg-center w-full h-full">
       <h1 className="text-6xl font-bold p-4 text-white text-center">Contact Us</h1>
-      <div className="flex flex-col md:flex-row gap-8 p-6 md:p-12 bg-gray-50">
+      <div className="flex flex-col md:flex-row gap-8 p-6 md:p-12 bg-white/70">
         {/* Left: Contact Info */}
         <div className="w-full md:w-1/2 text-black space-y-4 text-sm md:text-base p-2">
           <h2 className="font-bold text-lg uppercase">Contact Info</h2>

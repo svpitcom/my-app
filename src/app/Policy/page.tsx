@@ -66,7 +66,7 @@ export default function Policy() {
         </div>
       </AnimateOnScroll>
 
-      <div className="bg-[url('/assets/imgs/Towertree.png')] bg-cover bg-center p-4">
+      <div className="bg-[url('/assets/imgs/backgruondconstus.jpg')] bg-cover bg-center p-4">
         <AnimateOnScroll>
           <div className="flex flex-col md:flex-row justify-center items-center gap-4 py-8">
             {[

@@ -79,9 +79,11 @@ export default function OurProduct() {
             <h2 className="text-4xl md:text-7xl font-bold text-center text-blue-700 mb-4 uppercase">
               Packaging
             </h2>
-            <p className="text-sm md:text-lg max-w-4xl mx-auto text-center">
+            <p className="text-sm md:text-lg max-w-4xl mx-auto text-center text-black">
               Various packaging are available to meet the requirements of our
-              customers...
+              customers. Our container loading is carried out in our factory
+              under close supervision to ensure that rubber arrives at the
+              destination in its best conditions.
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
               {[
