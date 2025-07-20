@@ -4,14 +4,14 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 export default function OurCompany() {
   return (
-    <div className="bg-cover bg-center min-h-screen text-center">
-      <div className="flex flex-col bg-[url('/assets/imgs/svp-office.jpg')]">
-        <div className="max-w-4xl mx-auto px-4 py-8">
-          <h1 className="text-white text-6xl font-bold mb-4 bg-black/50 p-4 rounded">
-            About Us
-          </h1>
-          <div className="bg-white w-full bg-cover bg-center">
-            <div className="text-gray-800 p-10 rounded-lg shadow-lg text-balance">
+    <div className="bg-cover bg-center">
+      <div className="bg-[url('/assets/imgs/svp-office.jpg')] bg-cover bg-center text-white h-full py-2">
+        <h1 className="text-white text-6xl font-bold mb-4 bg-black/50 p-4 rounded">
+          About Us
+        </h1>
+        <div className="bg-gradient-to-b bg-white/20 via-white to-white px-4 py-8">
+          <div className=" max-w-4xl mx-auto">
+            <div className="text-gray-800 p-10 rounded-lg text-balance">
               <strong>SV Polymer CO., LTD. (SV Polymer) </strong>
               <p className="mt-2">
                 is a European based joint venture BOI approved natural rubber
