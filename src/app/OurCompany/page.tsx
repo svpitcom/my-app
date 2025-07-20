@@ -78,39 +78,26 @@ export default function OurCompany() {
         {/* Vision Box & Missions Box */}
         <div className="flex flex-col justify-center bg-white/60 max-w-20xl max-h-20xl mx-auto md:flex-row gap-10 p-16 rounded-lg backdrop-blur-sm">
           {/* Vision Box */}
-
           <div className="bg-white/70 py-30 rounded-md shadow-md w-138 h-128 text-center text-balance">
             <h2 className="text-6xl font-bold text-blue-700 mb-4">Vision</h2>
             <p className="text-gray-800 text-xl">
               "Lead the different and be the benchmark"
-
-          <div className="bg-white/70 p-6 rounded-md shadow-md w-full md:w-1/2 text-center">
-            <h2 className="text-3xl font-bold text-blue-700 mb-4">Vision</h2>
-            <p className="text-gray-800">
-              Lead the different and be the benchmark
               <br />
-              through synergy in natural rubber industry
+              "through synergy in natural rubber industry"
             </p>
           </div>
 
           {/* Missions Box */}
-
           <div className="bg-white/70 py-30 rounded-md shadow-md w-138 h-128 text-center text-balance">
             <h2 className="text-5xl font-bold text-blue-700 mb-4">Missions</h2>
             <p className="text-gray-800 text-xl">
               "Advance technology innovative material"
-
-          <div className="bg-white/70 p-6 rounded-md shadow-md w-full md:w-1/2 text-center">
-            <h2 className="text-3xl font-bold text-blue-700 mb-4">Missions</h2>
-            <p className="text-gray-800">
-              Advance technology innovative material
-
               <br />
-              Create customer satisfaction and produce products at the highest
-              quality
+              "Create customer satisfaction and produce products at the highest
+              quality"
               <br />
-              Clean and environmentally friendly factory that help develop and
-              improve standard of living
+              "Clean and environmentally friendly factory that help develop and
+              improve standard of living"
             </p>
           </div>
         </div>
