@@ -82,7 +82,7 @@ export default function OurCompany() {
           <div className="bg-white/70 py-30 rounded-md shadow-md w-138 h-128 text-center text-balance">
             <h2 className="text-6xl font-bold text-blue-700 mb-4">Vision</h2>
             <p className="text-gray-800 text-xl">
-              "Lead the different and be the benchmark"
+              Lead the different and be the benchmark
             </p>
             <div className="bg-white/70 p-6 rounded-md shadow-md w-full md:w-1/2 text-center">
               <h2 className="text-3xl font-bold text-blue-700 mb-4">Vision</h2>
