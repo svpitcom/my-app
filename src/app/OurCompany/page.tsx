@@ -12,7 +12,7 @@ export default function OurCompany() {
           </h1>
           <div className="max-w-4xl mx-auto">
             <div className="text-gray-800 p-10 rounded-lg text-balance">
-              <h1 className="text-3xl font-bold py-4">
+              <h1 className="text-3xl font-bold text-sky-700 py-4">
                 SV Polymer CO., LTD. (SV Polymer){" "}
               </h1>
               <p className="text-lg mt-2">
@@ -76,11 +76,13 @@ export default function OurCompany() {
           </div>
         </div>
         {/* Vision Box & Missions Box */}
-        <div className="flex flex-col justify-center bg-white/60 max-w-20xl max-h-20xl mx-auto md:flex-row gap-10 p-16 rounded-lg backdrop-blur-sm">
+        <div className="flex flex-col md:flex-row justify-center bg-white/60 mx-auto gap-6 md:gap-10 p-4 md:p-16 rounded-lg backdrop-blur-sm">
           {/* Vision Box */}
-          <div className="bg-white/70 py-30 rounded-md shadow-md w-138 h-128 text-center text-balance">
-            <h2 className="text-6xl font-bold text-blue-700 mb-4">Vision</h2>
-            <p className="text-gray-800 text-xl">
+          <div className="bg-white/70 py-16 px-16 rounded-md shadow-md w-full h-96 md:w-1/2 text-center">
+            <h2 className="text-3xl md:text-6xl font-bold text-blue-700 mb-4">
+              Vision
+            </h2>
+            <p className="text-gray-800 text-base md:text-xl">
               Lead the different and be the benchmark
               <br />
               through synergy in natural rubber industry
@@ -88,9 +90,11 @@ export default function OurCompany() {
           </div>
 
           {/* Missions Box */}
-          <div className="bg-white/70 py-30 rounded-md shadow-md w-138 h-128 text-center text-balance">
-            <h2 className="text-5xl font-bold text-blue-700 mb-4">Missions</h2>
-            <p className="text-gray-800 text-xl">
+          <div className="bg-white/70 py-16 px-16 rounded-md shadow-md w-full md:w-1/2 text-center">
+            <h2 className="text-2xl md:text-5xl font-bold text-blue-700 mb-4">
+              Missions
+            </h2>
+            <p className="text-gray-800 text-base md:text-xl">
               Advance technology innovative material
               <br />
               Create customer satisfaction and produce products at the highest
@@ -102,17 +106,18 @@ export default function OurCompany() {
           </div>
         </div>
 
-        <div className="flex items-center justify-center">
+        <div className="flex justify-center items-center mt-6">
           <Image
             src="/assets/imgs/Borad.png"
             alt="Borad"
-            width={1360}
-            height={720}
+            width={1366}
+            height={800}
+            className="w-full max-w-[1366px] object-contain"
           />
         </div>
         <AnimateOnScroll>
-          <div className="flex flex-col md:flex-row w-auto h-auto">
-            <div className="w-full md:w-1/2 relative">
+          <div className="flex flex-col md:flex-row w-full h-auto mt-6">
+            <div className="w-full md:w-1/2 relative h-64 md:h-auto">
               <Image
                 src="/assets/imgs/Rectangle27.png"
                 alt="Boardroom"
@@ -122,28 +127,22 @@ export default function OurCompany() {
             </div>
 
             <div className="w-full md:w-1/2 bg-gray-600 text-white flex items-center">
-              <div className="p-10 space-y-4">
-                <h1 className="text-4xl font-bold">Board of Directors</h1>
+              <div className="p-4 md:p-10 space-y-3">
+                <h1 className="text-2xl md:text-4xl font-bold text-center md:text-left">
+                  Board of Directors
+                </h1>
                 <div className="space-y-3">
-                  <div>
+                  <div className="space-y-2 text-center md:text-left text-sm md:text-base">
                     <p className="font-semibold">Mr. Chaipon Kerdvonbundit</p>
-                    <p className="text-sm">Chief Executive Officer</p>
-                  </div>
-                  <div>
+                    <p>Chief Executive Officer</p>
                     <p className="font-semibold">Mrs. Wei-Mei Wang</p>
-                    <p className="text-sm">Executive Director</p>
-                  </div>
-                  <div>
+                    <p>Executive Director</p>
                     <p className="font-semibold">Mr. Gnoh Tong Tan</p>
-                    <p className="text-sm">Executive Director</p>
-                  </div>
-                  <div>
+                    <p>Executive Director</p>
                     <p className="font-semibold">Mr. Segsarn Trai Ukos</p>
-                    <p className="text-sm">Executive Director</p>
-                  </div>
-                  <div>
+                    <p>Executive Director</p>
                     <p className="font-semibold">Mr. Sethasit Nitayakul</p>
-                    <p className="text-sm">Executive Director</p>
+                    <p>Executive Director</p>
                   </div>
                 </div>
               </div>
