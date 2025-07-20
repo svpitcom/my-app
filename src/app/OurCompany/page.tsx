@@ -81,9 +81,9 @@ export default function OurCompany() {
           <div className="bg-white/70 py-30 rounded-md shadow-md w-138 h-128 text-center text-balance">
             <h2 className="text-6xl font-bold text-blue-700 mb-4">Vision</h2>
             <p className="text-gray-800 text-xl">
-              "Lead the different and be the benchmark"
+              Lead the different and be the benchmark
               <br />
-              "through synergy in natural rubber industry"
+              through synergy in natural rubber industry
             </p>
           </div>
 
@@ -91,13 +91,13 @@ export default function OurCompany() {
           <div className="bg-white/70 py-30 rounded-md shadow-md w-138 h-128 text-center text-balance">
             <h2 className="text-5xl font-bold text-blue-700 mb-4">Missions</h2>
             <p className="text-gray-800 text-xl">
-              "Advance technology innovative material"
+              Advance technology innovative material
               <br />
-              "Create customer satisfaction and produce products at the highest
+              Create customer satisfaction and produce products at the highest
               quality"
               <br />
-              "Clean and environmentally friendly factory that help develop and
-              improve standard of living"
+              Clean and environmentally friendly factory that help develop and
+              improve standard of living
             </p>
           </div>
         </div>
