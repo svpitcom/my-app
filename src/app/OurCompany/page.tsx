@@ -6,14 +6,16 @@ export default function OurCompany() {
   return (
     <div className="bg-cover bg-center">
       <div className="bg-[url('/assets/imgs/svp-office.jpg')] bg-cover bg-center text-white h-full py-2">
-        <h1 className="text-white text-6xl font-bold mb-4 bg-black/50 p-4 rounded">
-          About Us
-        </h1>
         <div className="bg-gradient-to-b bg-white/20 via-white to-white px-4 py-8">
-          <div className=" max-w-4xl mx-auto">
+          <h1 className="text-white text-center text-6xl font-bold mb-4 py-10">
+            About Us
+          </h1>
+          <div className="max-w-4xl mx-auto">
             <div className="text-gray-800 p-10 rounded-lg text-balance">
-              <strong>SV Polymer CO., LTD. (SV Polymer) </strong>
-              <p className="mt-2">
+              <h1 className="text-3xl font-bold py-4">
+                SV Polymer CO., LTD. (SV Polymer){" "}
+              </h1>
+              <p className="text-lg mt-2">
                 is a European based joint venture BOI approved natural rubber
                 processing and export company established in 26th July 2010.
                 With combined experience of over 150 years in natural rubber
@@ -25,7 +27,7 @@ export default function OurCompany() {
               </p>
               <br />
               <br />
-              <p className="mt-2">
+              <p className="text-lg mt-2">
                 We are headquartered with 252 ha (1,600 rais) of land in a
                 strategic location, Mukdahan, Thailand the center of east west
                 economic corridor that connects 4 countries Myanmar, Thailand,
@@ -35,7 +37,7 @@ export default function OurCompany() {
 
               <br />
               <br />
-              <p className="mt-2">
+              <p className="text-lg mt-2">
                 To achieve sustainability in the natural rubber industry it is
                 essential to continually develop process efficiency and quality,
                 maintain high corporate social responsibility through
@@ -45,7 +47,7 @@ export default function OurCompany() {
               <br />
               <br />
               <br />
-              <p className="mt-2">
+              <p className="text-lg mt-2">
                 We understand the importance of quality and its impact on the
                 final products which may have save lives. Therefore, we are
                 committed to manufacturing rubber with stringent quality control
@@ -54,7 +56,7 @@ export default function OurCompany() {
               </p>
               <br />
               <br />
-              <p className="mt-2">
+              <p className="text-lg mt-2">
                 As we aim best in producing highest eco-quality standardized
                 natural rubber. To prove our commitment, we had already been
                 certified with ISO9001:2008, ISO14001:2015, TLS8001:2010, Silver
@@ -63,7 +65,7 @@ export default function OurCompany() {
               </p>
               <br />
               <br />
-              <p className="mt-2">
+              <p className="text-lg mt-2">
                 We believe that skillful labor and employees, state-of-art
                 technology, creative methodology and strong commitment to
                 research and development will enable Nteq Polymer to be center
@@ -73,12 +75,12 @@ export default function OurCompany() {
             </div>
           </div>
         </div>
-
-        <div className="flex flex-col md:flex-row gap-8 bg-black/40 p-8 rounded-lg backdrop-blur-sm">
+        {/* Vision Box & Missions Box */}
+        <div className="flex flex-col justify-center bg-white/60 max-w-20xl max-h-20xl mx-auto md:flex-row gap-10 p-16 rounded-lg backdrop-blur-sm">
           {/* Vision Box */}
-          <div className="bg-white/70 p-6 rounded-md shadow-md w-full md:w-1/2 text-center">
-            <h2 className="text-3xl font-bold text-blue-700 mb-4">Vision</h2>
-            <p className="text-gray-800">
+          <div className="bg-white/70 py-30 rounded-md shadow-md w-138 h-128 text-center text-balance">
+            <h2 className="text-6xl font-bold text-blue-700 mb-4">Vision</h2>
+            <p className="text-gray-800 text-xl">
               "Lead the different and be the benchmark"
               <br />
               "through synergy in natural rubber industry"
@@ -86,9 +88,9 @@ export default function OurCompany() {
           </div>
 
           {/* Missions Box */}
-          <div className="bg-white/70 p-6 rounded-md shadow-md w-full md:w-1/2 text-center">
-            <h2 className="text-3xl font-bold text-blue-700 mb-4">Missions</h2>
-            <p className="text-gray-800">
+          <div className="bg-white/70 py-30 rounded-md shadow-md w-138 h-128 text-center text-balance">
+            <h2 className="text-5xl font-bold text-blue-700 mb-4">Missions</h2>
+            <p className="text-gray-800 text-xl">
               "Advance technology innovative material"
               <br />
               "Create customer satisfaction and produce products at the highest
@@ -99,6 +101,7 @@ export default function OurCompany() {
             </p>
           </div>
         </div>
+
         <div className="flex items-center justify-center">
           <Image
             src="/assets/imgs/Borad.png"
@@ -113,9 +116,8 @@ export default function OurCompany() {
               <Image
                 src="/assets/imgs/Rectangle27.png"
                 alt="Boardroom"
-                width={1360}
-                height={720}
                 className="object-cover"
+                fill
               />
             </div>
 
