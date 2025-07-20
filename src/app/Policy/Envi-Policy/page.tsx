@@ -32,7 +32,7 @@ export default function page() {
           2.ปกป้องสิ่งแวดล้อม ป้องกันมลภาวะ และลดผลกระทบสิ่งแวดล้อมที่เกิดจาก
           กิจกรรมการดำเนินงานขององค์กรทั้งทางตรงและทางอ้อม (Protect the
           environment Prevent pollution and reduce environmental impacts caused
-          by the organization's operating activities, both direct and indirect.)
+          by the organizations operating activities, both direct and indirect.)
           3.ปรับปรุงและพัฒนาระบบบริหารจัดการสิ่งแวดล้อมอย่างต่อเนื่อง
           (Continuously improve and develop the environmental management
           system.) 4.ใช้ทรัพยากรและพลังงานอย่างคุ้มค่าและเกิดประโยชน์สูงสุด (Use
