@@ -81,6 +81,7 @@ export default function OurCompany() {
           <div className="bg-white/70 py-30 rounded-md shadow-md w-138 h-128 text-center text-balance">
             <h2 className="text-6xl font-bold text-blue-700 mb-4">Vision</h2>
             <p className="text-gray-800 text-xl">
+
               "Lead the different and be the benchmark"
               <br />
               "through synergy in natural rubber industry"
@@ -102,54 +103,93 @@ export default function OurCompany() {
           </div>
         </div>
 
-        <div className="flex items-center justify-center">
-          <Image
-            src="/assets/imgs/Borad.png"
-            alt="Borad"
-            width={1360}
-            height={720}
-          />
-        </div>
-        <AnimateOnScroll>
-          <div className="flex flex-col md:flex-row w-auto h-auto">
-            <div className="w-full md:w-1/2 relative">
-              <Image
-                src="/assets/imgs/Rectangle27.png"
-                alt="Boardroom"
-                className="object-cover"
-                fill
-              />
+              Lead the different and be the benchmark
+            </p>
+            <div className="bg-white/70 p-6 rounded-md shadow-md w-full md:w-1/2 text-center">
+              <h2 className="text-3xl font-bold text-blue-700 mb-4">Vision</h2>
+              <p className="text-gray-800">
+                Lead the different and be the benchmark
+                <br />
+                through synergy in natural rubber industry
+              </p>
             </div>
 
-            <div className="w-full md:w-1/2 bg-gray-600 text-white flex items-center">
-              <div className="p-10 space-y-4">
-                <h1 className="text-4xl font-bold">Board of Directors</h1>
-                <div className="space-y-3">
-                  <div>
-                    <p className="font-semibold">Mr. Chaipon Kerdvonbundit</p>
-                    <p className="text-sm">Chief Executive Officer</p>
-                  </div>
-                  <div>
-                    <p className="font-semibold">Mrs. Wei-Mei Wang</p>
-                    <p className="text-sm">Executive Director</p>
-                  </div>
-                  <div>
-                    <p className="font-semibold">Mr. Gnoh Tong Tan</p>
-                    <p className="text-sm">Executive Director</p>
-                  </div>
-                  <div>
-                    <p className="font-semibold">Mr. Segsarn Trai Ukos</p>
-                    <p className="text-sm">Executive Director</p>
-                  </div>
-                  <div>
-                    <p className="font-semibold">Mr. Sethasit Nitayakul</p>
-                    <p className="text-sm">Executive Director</p>
+            {/* Missions Box */}
+
+            <div className="bg-white/70 py-30 rounded-md shadow-md w-138 h-128 text-center text-balance">
+              <h2 className="text-5xl font-bold text-blue-700 mb-4">
+                Missions
+              </h2>
+              <p className="text-gray-800 text-xl">
+                Advance technology innovative material
+              </p>
+              <div className="bg-white/70 p-6 rounded-md shadow-md w-full md:w-1/2 text-center">
+                <h2 className="text-3xl font-bold text-blue-700 mb-4">
+                  Missions
+                </h2>
+                <p className="text-gray-800">
+                  Advance technology innovative material
+                  <br />
+                  Create customer satisfaction and produce products at the
+                  highest quality
+                  <br />
+                  Clean and environmentally friendly factory that help develop
+                  and improve standard of living
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center justify-center">
+              <Image
+                src="/assets/imgs/Borad.png"
+                alt="Borad"
+                width={1360}
+                height={720}
+              />
+            </div>
+            <AnimateOnScroll>
+              <div className="flex flex-col md:flex-row w-auto h-auto">
+                <div className="w-full md:w-1/2 relative">
+                  <Image
+                    src="/assets/imgs/Rectangle27.png"
+                    alt="Boardroom"
+                    className="object-cover"
+                    fill
+                  />
+                </div>
+
+                <div className="w-full md:w-1/2 bg-gray-600 text-white flex items-center">
+                  <div className="p-10 space-y-4">
+                    <h1 className="text-4xl font-bold">Board of Directors</h1>
+                    <div className="space-y-3">
+                      <div>
+                        <p className="font-semibold">
+                          Mr. Chaipon Kerdvonbundit
+                        </p>
+                        <p className="text-sm">Chief Executive Officer</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold">Mrs. Wei-Mei Wang</p>
+                        <p className="text-sm">Executive Director</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold">Mr. Gnoh Tong Tan</p>
+                        <p className="text-sm">Executive Director</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold">Mr. Segsarn Trai Ukos</p>
+                        <p className="text-sm">Executive Director</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold">Mr. Sethasit Nitayakul</p>
+                        <p className="text-sm">Executive Director</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </AnimateOnScroll>
           </div>
-        </AnimateOnScroll>
+        </div>
       </div>
     </div>
   );
