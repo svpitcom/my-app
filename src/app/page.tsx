@@ -29,31 +29,32 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="bg-neutral-50 text-black py-20 px-6 text-center">
+      <div className="bg-neutral-50 text-black py-20 px-6 text-center">
         <h1 className="text-6xl md:text-5xl font-bold mb-4">
           SV POLYMER INTRODUTIONS
         </h1>
-
-        <p className="text-lg text-sky-700 font-bold">
-          “SUSTAINABLE ECO-QUALITY RUBBER”
-        </p>
-        <p className="text-lg md:text-xl mb-6">
-          Nteq Polymer Co., Ltd. is a european base joint venture BOI approved
-          natural rubber processing and export company established since 2010.
-          With strong strategic partnership of a world class tire maker and an
-          experience natural rubber processor that share common vision to lead
-          the different and be the benchmark through synergy in natural rubber
-          industry
-        </p>
-        <br />
-        <p className="text-lg md:text-xl mb-6">
-          Our goal is to create an innovative material via improvement in
-          product quality to satisfy beyond customer’s expectation.
-          Sustainability is key to Nteq, in which we strive to become the
-          cleanest and most eco-friendly factory that help improves the standard
-          living of the people and community.
-        </p>
-      </section>
+        <div className=" max-w-4xl mx-auto">
+          <p className="text-lg text-sky-700 font-bold">
+            “SUSTAINABLE ECO-QUALITY RUBBER”
+          </p>
+          <p className="text-lg md:text-xl mb-6">
+            Nteq Polymer Co., Ltd. is a european base joint venture BOI approved
+            natural rubber processing and export company established since 2010.
+            With strong strategic partnership of a world class tire maker and an
+            experience natural rubber processor that share common vision to lead
+            the different and be the benchmark through synergy in natural rubber
+            industry
+          </p>
+          <br />
+          <p className="text-lg md:text-xl mb-6">
+            Our goal is to create an innovative material via improvement in
+            product quality to satisfy beyond customer’s expectation.
+            Sustainability is key to Nteq, in which we strive to become the
+            cleanest and most eco-friendly factory that help improves the
+            standard living of the people and community.
+          </p>
+        </div>
+      </div>
       <AnimateOnScroll>
         <div className="bg-sky-50 flex flex-col md:flex-row items-center justify-center gap-6 px-4 py-8">
           <Image
