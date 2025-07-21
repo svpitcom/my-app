@@ -15,7 +15,7 @@ export default function OurCompany() {
               <h1 className="text-3xl font-bold text-sky-700 py-4">
                 SV Polymer CO., LTD. (SV Polymer){" "}
               </h1>
-              <p className="text-lg md:text-base mt-2">
+              <p className="text-base md:text-lg mt-2">
                 is a European based joint venture BOI approved natural rubber
                 processing and export company established in 26th July 2010.
                 With combined experience of over 150 years in natural rubber
@@ -27,7 +27,7 @@ export default function OurCompany() {
               </p>
               <br />
               <br />
-              <p className="text-lg mt-2">
+              <p className="text-base md:text-lg mt-2">
                 We are headquartered with 252 ha (1,600 rais) of land in a
                 strategic location, Mukdahan, Thailand the center of east west
                 economic corridor that connects 4 countries Myanmar, Thailand,
@@ -37,7 +37,7 @@ export default function OurCompany() {
 
               <br />
               <br />
-              <p className="text-lg mt-2">
+              <p className="text-base md:text-lg mt-2">
                 To achieve sustainability in the natural rubber industry it is
                 essential to continually develop process efficiency and quality,
                 maintain high corporate social responsibility through
@@ -47,7 +47,7 @@ export default function OurCompany() {
               <br />
               <br />
               <br />
-              <p className="text-lg mt-2">
+              <p className="text-base md:text-lg mt-2">
                 We understand the importance of quality and its impact on the
                 final products which may have save lives. Therefore, we are
                 committed to manufacturing rubber with stringent quality control
@@ -56,7 +56,7 @@ export default function OurCompany() {
               </p>
               <br />
               <br />
-              <p className="text-lg mt-2">
+              <p className="text-base md:text-lg mt-2">
                 As we aim best in producing highest eco-quality standardized
                 natural rubber. To prove our commitment, we had already been
                 certified with ISO9001:2008, ISO14001:2015, TLS8001:2010, Silver
@@ -65,7 +65,7 @@ export default function OurCompany() {
               </p>
               <br />
               <br />
-              <p className="text-lg mt-2">
+              <p className="text-base md:text-lg mt-2">
                 We believe that skillful labor and employees, state-of-art
                 technology, creative methodology and strong commitment to
                 research and development will enable Nteq Polymer to be center
@@ -82,7 +82,7 @@ export default function OurCompany() {
             <h2 className="text-3xl md:text-6xl font-bold text-blue-700 mb-4">
               Vision
             </h2>
-            <p className="text-gray-800 text-base md:text-xl">
+            <p className="text-gray-800 text-base md:text-lg">
               Lead the different and be the benchmark
               <br />
               through synergy in natural rubber industry
@@ -94,7 +94,7 @@ export default function OurCompany() {
             <h2 className="text-2xl md:text-5xl font-bold text-blue-700 mb-4">
               Missions
             </h2>
-            <p className="text-gray-800 text-base md:text-xl">
+            <p className="text-gray-800 text-base md:text-lg">
               Advance technology innovative material
               <br />
               Create customer satisfaction and produce products at the highest
