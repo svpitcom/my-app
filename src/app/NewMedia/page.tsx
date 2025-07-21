@@ -6,7 +6,7 @@ export default function NewMedia() {
   return (
     <div className="bg-[url('/assets/imgs/Tree-back.png')] bg-cover bg-center text-center py-10">
       <div className="container mx-auto">
-        <div className="text center text-6xl font-bold text-white p-2">
+        <div className="text center text-shadow-lg/20 text-6xl font-bold text-white p-2">
           <h1>NEW&MEDIA</h1>
         </div>
         <div className="columns-3 bg-sky-50 flex flex-col md:flex-row items-center justify-center gap-6 px-8 py-8">

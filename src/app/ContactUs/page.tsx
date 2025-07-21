@@ -3,36 +3,31 @@ import React from "react";
 
 export default function ContactUs() {
   return (
-    <div className="bg-[url('/assets/imgs/backgruondconstus.jpg')] bg-cover bg-center w-full h-full">
-      <h1 className="text-6xl font-bold p-4 text-white text-center">Contact Us</h1>
+    <div className="bg-white bg-cover bg-center w-full h-full">
+      <h1 className="text-6xl text-shadow-lg/20 font-bold p-4 text-white text-center">
+        Contact Us
+      </h1>
       <div className="flex flex-col md:flex-row gap-8 p-6 md:p-12 bg-white/70">
         {/* Left: Contact Info */}
         <div className="w-full md:w-1/2 text-black space-y-4 text-sm md:text-base p-2">
           <h2 className="font-bold text-lg uppercase">Contact Info</h2>
-          <h3 className="font-bold text-xl">NTEQ Polymer Co., Ltd.</h3>
+          <h3 className="font-bold text-xl">SV Polymer Co., Ltd.</h3>
           <p>
-            319 Moo 16, Chayangkul Road, Tambon Khampalai, Amphur Muang,
+            888 Moo 6,Tambon Nam Phi, Amphur Thong Saen Khan,
             <br />
-            Mukdahan 49000 Thailand.
-          </p>
-          <h1>HelloWorld</h1>
-          <p>
-            <span className="font-bold">Tel.</span> +66(0)42 699 439
+            Uttaradit 53230 Thailand.
           </p>
           <p>
-            <span className="font-bold">Fax.</span> +66(0)42 699 377
+            <span className="font-bold">Tel.</span> +66(0)55 409 686
           </p>
           <p>
-            <span className="font-bold">Website:</span> www.nteq-polymer.com
+            <span className="font-bold">Fax.</span>
           </p>
           <p>
-            <span className="font-bold">E-mail:</span> info@nteq-polymer.com
+            <span className="font-bold">Website:</span> www.sv-polymer.com
           </p>
-
-          <h4 className="font-semibold pt-4">How to travel</h4>
-          <p className="whitespace-pre-line">
-            - Travel by bus (Transport Company Limited).{"\n"}- Travel by plane
-            Get off at Sakon Nakhon or Nakhon Phanom airport.
+          <p>
+            <span className="font-bold">E-mail:</span> info@sv-polymer.com
           </p>
         </div>
 

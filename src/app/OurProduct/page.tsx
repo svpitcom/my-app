@@ -5,9 +5,9 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 export default function OurProduct() {
   return (
     <div className="bg-white bg-cover bg-center w-full">
-      <div className="bg-[url('/assets/imgs/backgruondconstus.jpg')] bg-cover bg-center">
+      <div className="bg-cover bg-center">
         <div className="flex justify-center py-12 md:py-20">
-          <h1 className="text-white text-4xl md:text-6xl font-bold p-4 md:p-8 rounded text-center">
+          <h1 className="text-white text-shadow-lg/20 text-4xl md:text-6xl font-bold p-4 md:p-8 rounded text-center">
             OurProduct
           </h1>
         </div>
