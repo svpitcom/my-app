@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function NewMedia() {
   return (
-    <div className="bg-[url('/assets/imgs/Tree-back.png')] bg-cover bg-center text-center py-10">
+    <div className="bg-linear-to-bl from-sky-700 to-green-200 bg-cover bg-center text-center py-30">
       <div className="container mx-auto">
         <div className="text center text-shadow-lg/20 text-6xl font-bold text-white p-2">
           <h1>NEW&MEDIA</h1>
@@ -31,7 +31,7 @@ export default function NewMedia() {
               Frequently Asked Questions (FAQs)
             </Link>
             <a
-              className="bg-sky-700 text-xl w-full h-full hover:bg-blue-800 text-white rounded p-2"
+              className="text-xl w-full h-full bg-gradient-to-r from-sky-700 to-green-200 hover:from-green-300 hover:to-sky-500 text-white rounded p-2"
               href="#"
             >
               Read Me

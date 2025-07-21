@@ -6,7 +6,7 @@ export default function Policy() {
   return (
     <div className="bg-cover bg-center h-full w-full">
       <div className="bg-[url('/assets/imgs/svp-office-tree.jpg')] bg-cover bg-center bg-radial text-white h-full">
-        <div className="flex flex-col text-center items-center bg-white/75 px-4 py-8">
+        <div className="flex flex-col text-center items-center bg-white/60 px-4 py-20">
           <Image
             src="/assets/imgs/LogoSVP.png"
             alt="LogoSVP"
@@ -43,7 +43,7 @@ export default function Policy() {
               <a
                 key={index}
                 href={item.link}
-                className="bg-sky-700 hover:bg-blue-800 text-white px-4 py-2 rounded w-full max-w-sm text-sm md:text-base text-center"
+                className="bg-gradient-to-r from-sky-700 to-green-200 hover:from-green-300 hover:to-sky-500 text-white px-4 py-2 rounded w-full max-w-sm text-sm md:text-base text-center"
               >
                 {item.text}
               </a>
@@ -53,7 +53,7 @@ export default function Policy() {
       </div>
 
       <AnimateOnScroll>
-        <div className="bg-sky-700 text-white py-10 text-center px-4">
+        <div className="bg-linear-to-bl from-sky-700 to-green-200 text-white py-10 text-center px-4">
           <h1 className="text-3xl md:text-6xl font-bold mb-3">
             Energy Conservation Policy
           </h1>
@@ -66,24 +66,26 @@ export default function Policy() {
         </div>
       </AnimateOnScroll>
 
-      <div className="bg-[url('/assets/imgs/backgruondconstus.jpg')] bg-cover bg-center p-4">
+      <div className="bg-[url('/assets/imgs/backgruondconstus.jpg')] bg-white/75 bg-cover bg-center ">
         <AnimateOnScroll>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-4 py-8">
-            {[
-              "CONTROL THE TEST OF ELECTRICTY AND FUEL USE TO ACCOMMODATE TO THE NATURE OF ENERGY CONSUMPTION OF THE COMPANY",
-              "PROMOTE ENERGY-SAVING ACTIVITIES",
-              "ESTABLISH TARGET OF ENERGY CONSUMPTION REDUCTION",
-              "SUPPORT OPERATIONS AND DEVELOPMENT OF ENERGY MANAGEMENT SYSTEM",
-            ].map((text, index) => (
-              <div
-                key={index}
-                className="w-52 h-52 md:w-72 md:h-72 rounded-full bg-white/50 flex items-center justify-center text-center px-4"
-              >
-                <div className="w-44 h-44 md:w-64 md:h-64 rounded-full bg-white text-blue-500 flex items-center justify-center text-xs md:text-base font-bold p-4">
-                  {text}
+          <div className="bg-white/60 bg-cover bg-center p-4">
+            <div className="flex flex-col md:flex-row justify-center items-center gap-4 py-8">
+              {[
+                "CONTROL THE TEST OF ELECTRICTY AND FUEL USE TO ACCOMMODATE TO THE NATURE OF ENERGY CONSUMPTION OF THE COMPANY",
+                "PROMOTE ENERGY-SAVING ACTIVITIES",
+                "ESTABLISH TARGET OF ENERGY CONSUMPTION REDUCTION",
+                "SUPPORT OPERATIONS AND DEVELOPMENT OF ENERGY MANAGEMENT SYSTEM",
+              ].map((text, index) => (
+                <div
+                  key={index}
+                  className="w-52 h-52 md:w-72 md:h-72 rounded-full bg-white/50 flex items-center justify-center text-center px-4"
+                >
+                  <div className="w-44 h-44 md:w-64 md:h-64 rounded-full bg-white text-blue-500 flex items-center justify-center text-xs md:text-base font-bold p-4">
+                    {text}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </AnimateOnScroll>
 

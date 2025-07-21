@@ -4,7 +4,7 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 export default function OurProduct() {
   return (
-    <div className="bg-white bg-cover bg-center w-full">
+    <div className="bg-linear-to-bl from-sky-700 to-green-200 bg-cover bg-center w-full">
       <div className="bg-cover bg-center">
         <div className="flex justify-center py-12 md:py-20">
           <h1 className="text-white text-shadow-lg/20 text-4xl md:text-6xl font-bold p-4 md:p-8 rounded text-center">
@@ -40,16 +40,16 @@ export default function OurProduct() {
           </div>
         </div>
         <AnimateOnScroll>
-          <div className="flex flex-col md:flex-row w-full">
+          <div className="flex flex-col md:flex-row w-full rounded-lg p-10">
             <div className="w-full md:w-1/2 relative h-60 md:h-auto">
               <Image
                 src="/assets/imgs/Rectangle54.png"
                 alt="Company Logo"
-                className="object-cover"
+                className="object-cover rounded-lg"
                 fill
               />
             </div>
-            <div className="w-full md:w-1/2 bg-sky-600 text-white flex items-center">
+            <div className="w-full md:w-1/2 bg-linear-to-bl from-sky-700 to-green-200 text-white rounded-lg flex items-center">
               <div className="p-6 md:p-10 space-y-3 text-left md:text-left">
                 <h2 className="text-xl md:text-2xl font-semibold mb-2">
                   Product

@@ -1,71 +1,60 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="bg-slate-50 shadow">
-      <div className="flex justify-between items-center p-6">
-        {/* Logo */}
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isScrolled ? "bg-white shadow-md" : "bg-white/80 backdrop-blur-md"
+      }`}
+    >
+      <div className="flex justify-between items-center px-4 py-3">
         <Link href="/">
           <Image
             src="/assets/imgs/SVP-Logo.png"
             alt="Company Logo"
-            width={260}
-            height={280}
+            width={180}
+            height={180}
+            className="object-contain"
           />
         </Link>
 
-        {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-4">
-          <Link
-            href="/"
-            className="font-bold text-xl text-sky-600 hover:text-sky-400"
-          >
-            Home
-          </Link>
-          <Link
-            href="/OurCompany"
-            className="font-bold text-xl text-sky-600 hover:text-sky-400"
-          >
-            OurCompany
-          </Link>
-          <Link
-            href="/OurProduct"
-            className="font-bold text-xl text-sky-600 hover:text-sky-400"
-          >
-            OurProduct
-          </Link>
-          <Link
-            href="/Policy"
-            className="font-bold text-xl text-sky-600 hover:text-sky-400"
-          >
-            Policy
-          </Link>
-          <Link
-            href="/NewMedia"
-            className="font-bold text-xl text-sky-600 hover:text-sky-400"
-          >
-            New&Media
-          </Link>
-          <Link
-            href="/JobOpportunity"
-            className="font-bold text-xl text-sky-600 hover:text-sky-400"
-          >
-            Job Opportunity
-          </Link>
-          <Link
-            href="/ContactUs"
-            className="font-bold text-xl text-sky-600 hover:text-sky-400"
-          >
-            Contact Us
-          </Link>
+          {[
+            "Home",
+            "OurCompany",
+            "OurProduct",
+            "Policy",
+            "NewMedia",
+            "JobOpportunity",
+            "ContactUs",
+          ].map((item) => (
+            <Link
+              key={item}
+              href={`/${item === "Home" ? "" : item}`}
+              className="font-bold text-base text-sky-600 hover:text-sky-400"
+            >
+              {item === "NewMedia"
+                ? "New&Media"
+                : item.replace(/([A-Z])/g, " $1").trim()}
+            </Link>
+          ))}
         </nav>
 
-        {/* Hamburger Button (Mobile) */}
         <button
           className="md:hidden flex flex-col space-y-1"
           onClick={() => setIsOpen(!isOpen)}
@@ -78,51 +67,28 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
-        <nav className="md:hidden flex flex-col space-y-2 p-4 bg-slate-100">
-          <Link
-            href="/"
-            className="font-bold text-lg text-sky-600 hover:text-sky-400"
-          >
-            Home
-          </Link>
-          <Link
-            href="/OurCompany"
-            className="font-bold text-lg text-sky-600 hover:text-sky-400"
-          >
-            OurCompany
-          </Link>
-          <Link
-            href="/OurProduct"
-            className="font-bold text-lg text-sky-600 hover:text-sky-400"
-          >
-            OurProduct
-          </Link>
-          <Link
-            href="/Policy"
-            className="font-bold text-lg text-sky-600 hover:text-sky-400"
-          >
-            Policy
-          </Link>
-          <Link
-            href="/NewMedia"
-            className="font-bold text-lg text-sky-600 hover:text-sky-400"
-          >
-            New&Media
-          </Link>
-          <Link
-            href="/JobOpportunity"
-            className="font-bold text-lg text-sky-600 hover:text-sky-400"
-          >
-            Job Opportunity
-          </Link>
-          <Link
-            href="/ContactUs"
-            className="font-bold text-lg text-sky-600 hover:text-sky-400"
-          >
-            Contact Us
-          </Link>
+        <nav className="md:hidden flex flex-col space-y-2 p-4 bg-white/30 backdrop-blur-md shadow">
+          {[
+            "Home",
+            "OurCompany",
+            "OurProduct",
+            "Policy",
+            "NewMedia",
+            "JobOpportunity",
+            "ContactUs",
+          ].map((item) => (
+            <Link
+              key={item}
+              href={`/${item === "Home" ? "" : item}`}
+              className="font-bold text-lg text-sky-600 hover:text-sky-400"
+              onClick={() => setIsOpen(false)}
+            >
+              {item === "NewMedia"
+                ? "New&Media"
+                : item.replace(/([A-Z])/g, " $1").trim()}
+            </Link>
+          ))}
         </nav>
       )}
     </header>

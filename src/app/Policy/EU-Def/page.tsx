@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function EUDef() {
   return (
-    <div className="flex flex-col justify-center text-center text-xl bg-white text-black item-center">
+    <div className="flex flex-col justify-center text-center text-xl bg-sky-100 text-black item-center">
       <div className="flex justify-center items-center mb-4">
         <Image
           src="/assets/imgs/LogoSVP.png"

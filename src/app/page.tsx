@@ -8,7 +8,7 @@ export default function Home() {
       {/* <Navbar /> */}
       <div className="bg-[url('/assets/imgs/Tree-back.png')] bg-cover bg-center w-full">
         <div className="flex justify-center">
-          <div className="relative">
+          <div className="relative py-20">
             <Image
               src="/assets/imgs/En.png"
               alt="Company Logo"
@@ -56,7 +56,7 @@ export default function Home() {
         </div>
       </div>
       <AnimateOnScroll>
-        <div className="bg-sky-50 flex flex-col md:flex-row items-center justify-center gap-6 px-4 py-8">
+        <div className="bg-gradient-to-r from-sky-700 to-green-200 flex flex-col md:flex-row items-center justify-center gap-6 px-4 py-8">
           <Image
             src="/assets/imgs/209044.png"
             alt="Company Logo"
