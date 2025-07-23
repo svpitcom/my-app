@@ -17,7 +17,7 @@ export default function SustainableNatural() {
         </div>
         <div className="text-left grid grid-cols-6 gap-4 py-10">
           <h1 className="col-span-4 col-start-2">
-            SV Polymer Sustainable Natural Rubber Policy
+            SV Polymer Sustainable Natural Rubber Policys
           </h1>
           <p className="col-start-2 col-end-6 p-2">
             SV Polymer Values and Principles
