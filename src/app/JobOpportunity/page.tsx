@@ -6,7 +6,7 @@ import Image from "next/image";
 const DataJob = [
   {
     id: 1,
-    label: "ผู้ช่วยผู้จัดการฝ่ายจัดซื้อ",
+    label: "ผช.ผจก.ฝ่ายบุคคลและธุรการ ประจำที่อุตรดิตถ์",
     description:
       "รายละเอียดงาน: รับผิดชอบการจัดซื้อ จัดหาและประสานงานกับผู้ขาย",
     detail:
@@ -107,31 +107,6 @@ export default function JobOpportunity() {
             </h2>
             <p className="text-lg">
               {DataJob.find((dtj) => dtj.id === selected)?.description}
-            </p>
-            <p className="text-lg">
-              {DataJob.find((dtj) => dtj.id === selected)?.description}
-            </p>
-            <p className="text-lg">
-              {DataJob.find((dtj) => dtj.id === selected)?.detail}
-            </p>
-            <p className="text-lg">
-              {DataJob.find((dtj) => dtj.id === selected)?.detail}
-            </p>
-          
-            <p className="text-lg">
-              {DataJob.find((dtj) => dtj.id === selected)?.detail}
-            </p>
-            <p className="text-lg">
-              {DataJob.find((dtj) => dtj.id === selected)?.detail}
-            </p>
-            <p className="text-lg">
-              {DataJob.find((dtj) => dtj.id === selected)?.detail}
-            </p>
-            <p className="text-lg">
-              {DataJob.find((dtj) => dtj.id === selected)?.detail}
-            </p>
-            <p className="text-lg">
-              {DataJob.find((dtj) => dtj.id === selected)?.detail}
             </p>
             <p className="text-lg">
               {DataJob.find((dtj) => dtj.id === selected)?.detail}

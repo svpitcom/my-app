@@ -132,7 +132,7 @@ export default function OurCompany() {
                   Board of Directors
                 </h1>
                 <div className="space-y-3">
-                  <div className="space-y-2 text-center md:text-left text-sm md:text-base">
+                  <div className="space-y-2 text-left md:text-left text-sm md:text-base">
                     <p className="font-semibold">Mr. Chaipon Kerdvonbundit</p>
                     <p>Chief Executive Officer</p>
                     <p className="font-semibold">Mrs. Wei-Mei Wang</p>
