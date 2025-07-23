@@ -4,7 +4,7 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 export default function OurProduct() {
   return (
-    <div className="bg-linear-to-bl from-sky-700 to-green-200 bg-cover bg-center w-full">
+    <div className="bg-gradient-to-r from-sky-500 to-green-300 bg-cover bg-center w-full">
       <div className="bg-cover bg-center">
         <div className="flex justify-center py-12 md:py-20">
           <h1 className="text-white text-shadow-lg/20 text-4xl md:text-6xl font-bold p-4 md:p-8 rounded text-center">

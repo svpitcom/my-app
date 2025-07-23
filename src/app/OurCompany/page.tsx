@@ -4,7 +4,7 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 export default function OurCompany() {
   return (
-    <div className="bg-linear-to-bl from-sky-700 to-green-200 bg-cover bg-center">
+    <div className="bg-gradient-to-r from-sky-500 to-green-300 bg-cover bg-center">
       <div className="bg-gradient-to-b bg-white/20 via-white to-white bg-cover bg-center text-white h-full py-2">
         <div className="py-20">
           <h1 className="text-white text-shadow-lg/20 text-center text-6xl font-bold mb-4 py-10">

@@ -43,7 +43,7 @@ export default function Policy() {
               <a
                 key={index}
                 href={item.link}
-                className="bg-gradient-to-r from-sky-700 to-green-200 hover:from-green-300 hover:to-sky-500 text-white px-4 py-2 rounded w-full max-w-sm text-sm md:text-base text-center"
+                className="bg-gradient-to-r from-sky-500 to-green-300 hover:from-green-300 hover:to-sky-500 text-white px-4 py-2 rounded w-full max-w-sm text-sm md:text-base text-center"
               >
                 {item.text}
               </a>

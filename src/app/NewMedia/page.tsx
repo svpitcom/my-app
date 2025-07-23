@@ -31,7 +31,7 @@ export default function NewMedia() {
               Frequently Asked Questions (FAQs)
             </Link>
             <a
-              className="text-xl w-full h-full bg-gradient-to-r from-sky-700 to-green-200 hover:from-green-300 hover:to-sky-500 text-white rounded p-2"
+              className="text-xl w-full h-full bg-gradient-to-r from-sky-500 to-green-300 hover:from-green-300 hover:to-sky-500 text-white rounded p-2"
               href="#"
             >
               Read Me
@@ -58,7 +58,7 @@ export default function NewMedia() {
               Frequently Asked Questions (FAQs)
             </Link>
             <a
-              className="bg-sky-700 text-xl w-full h-full hover:bg-blue-800 text-white rounded p-2"
+              className="bg-gradient-to-r from-sky-500 to-green-300 hover:from-green-300 hover:to-sky-500 text-white rounded p-2 w-full"
               href="#"
             >
               Read Me
@@ -85,7 +85,7 @@ export default function NewMedia() {
               Frequently Asked Questions (FAQs)
             </Link>
             <a
-              className="bg-sky-700 text-xl w-full h-full hover:bg-blue-800 text-white rounded p-2"
+              className="bg-gradient-to-r from-sky-500 to-green-300 hover:from-green-300 hover:to-sky-500 w-full text-white rounded p-2"
               href="#"
             >
               Read Me
