@@ -13,11 +13,11 @@ export default function OurProduct() {
         </div>
         <div className="bg-neutral-50 text-black py-10 md:py-16 px-4 md:px-10 text-center">
           <div className="max-w-5xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            <h1 className="text-4xl md:text-4xl font-bold mb-4">
               Technically Specified Rubber
             </h1>
             <br />
-            <p className="text-base md:text-xl text-left leading-relaxed">
+            <p className="text-base md:text-lg text-left leading-relaxed">
               Demand for TSR has been increasing over the years due to its
               measurable quality and production technology which allows better
               consistency in the rubber quality. Raw materials and finished
@@ -29,7 +29,7 @@ export default function OurProduct() {
             <br />
             <br />
             <br />
-            <p className="text-base md:text-xl text-left leading-relaxed">
+            <p className="text-base md:text-lg text-left leading-relaxed">
               Customization of products or special request specifications of
               quality are always welcome. Our further research and development
               will lead to future production of new value added products.
@@ -85,7 +85,7 @@ export default function OurProduct() {
               under close supervision to ensure that rubber arrives at the
               destination in its best conditions.
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
               {[
                 { weight: "35", description: "kilograms loose bales" },
                 {

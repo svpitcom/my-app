@@ -29,7 +29,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-neutral-50 text-black py-20 px-6 text-center">
+      <div className="bg-white text-black py-20 px-6 text-center">
         <h1 className="text-6xl md:text-5xl font-bold mb-4">
           SV POLYMER INTRODUTIONS
         </h1>
@@ -152,13 +152,13 @@ export default function Home() {
               href="/"
               className="font-bold text-3xl text-sky-600 hover:text-sky-400"
             >
-              News
+              CSR
             </Link>
             <Link
               href="/"
               className="font-bold text-xl text-sky-600 hover:text-sky-400"
             >
-              Frequently Asked Questions (FAQs)
+              กิจกรรม
             </Link>
             <a
               className="bg-sky-700 text-xl w-full h-full hover:bg-blue-800 text-white rounded p-2"
@@ -177,15 +177,15 @@ export default function Home() {
             />
             <Link
               href="/"
-              className="font-bold text-3xl text-sky-600 hover:text-sky-400"
+              className="font-bold text-2xl text-sky-600 hover:text-sky-400"
             >
-              News
+              KNOWLEDGE CENTER
             </Link>
             <Link
               href="/"
-              className="font-bold text-xl text-sky-600 hover:text-sky-400"
+              className="font-bold text-lg text-sky-600 hover:text-sky-400"
             >
-              Frequently Asked Questions (FAQs)
+              Diseases and enemies of rubbe
             </Link>
             <a
               className="bg-sky-700 text-xl w-full h-full hover:bg-blue-800 text-white rounded p-2"
