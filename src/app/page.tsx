@@ -30,7 +30,7 @@ export default function Home() {
       </div>
 
       <div className="bg-white text-black py-20 px-6 text-center">
-        <h1 className="text-6xl md:text-5xl font-bold mb-4">
+        <h1 className="text-3xl md:text-5xl font-bold mb-4">
           SV POLYMER INTRODUTIONS
         </h1>
         <div className=" max-w-4xl mx-auto">
@@ -38,7 +38,7 @@ export default function Home() {
             “SUSTAINABLE ECO-QUALITY RUBBER”
           </p>
           <p className="text-lg md:text-xl mb-6">
-            Nteq Polymer Co., Ltd. is a european base joint venture BOI approved
+            SV Polymer Co., Ltd. is a european base joint venture BOI approved
             natural rubber processing and export company established since 2010.
             With strong strategic partnership of a world class tire maker and an
             experience natural rubber processor that share common vision to lead

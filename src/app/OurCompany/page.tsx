@@ -29,7 +29,7 @@ export default function OurCompany() {
               <br />
               <p className="text-base mt-2">
                 We are headquartered with 252 ha (1,600 rais) of land in a
-                strategic location, Mukdahan, Thailand the center of east west
+                strategic location, Uttaradit, Thailand the center of east west
                 economic corridor that connects 4 countries Myanmar, Thailand,
                 Laos and Vietnam which produces total estimation of 47% of world
                 rubber production and raw material sources.
