@@ -37,8 +37,8 @@ export default function ContactUs() {
         <div className="flex flex-col md:flex-row gap-8 p-6 md:p-12">
           {/* Left: Contact Info */}
           <div className="w-full md:w-1/2 text-white space-y-4 text-sm md:text-base p-2">
-            <h2 className="font-bold text-black text-lg uppercase">Contact Info</h2>
-            <h3 className="font-bold text-black text-xl">SV Polymer Co., Ltd.</h3>
+            <h2 className="font-bold text-white text-lg uppercase">Contact Info</h2>
+            <h3 className="font-bold text-white text-xl">SV Polymer Co., Ltd.</h3>
             <p>
               888 Moo 6,Tambon Nam Phi, Amphur Thong Saen Khan,
               <br />
