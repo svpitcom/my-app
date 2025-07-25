@@ -56,7 +56,7 @@ export default function Home() {
         </div>
       </div>
       <AnimateOnScroll>
-        <div className="bg-gradient-to-r from-sky-700 to-green-200 flex flex-col md:flex-row items-center justify-center gap-6 px-4 py-8">
+        <div className="bg-gradient-to-r from-sky-500 to-green-300 flex flex-col md:flex-row items-center justify-center gap-6 px-4 py-8">
           <Image
             src="/assets/imgs/209044.png"
             alt="Company Logo"
@@ -84,7 +84,7 @@ export default function Home() {
         </div>
       </AnimateOnScroll>
 
-      <div className="bg-sky-400 bg-gradient-to-br from-sky-500 to-sky-600 rounded-lg p-6 flex flex-col md:flex-row items-center gap-6 shadow-lg">
+      <div className="bg-gradient-to-r from-sky-500 to-green-300 rounded-lg p-6 flex flex-col md:flex-row items-center gap-6 shadow-lg">
         <div className="w-full md:w-1/2 flex justify-center">
           <div className="bg-gray-200 rounded-lg border-4 border-white w-full h-full flex items-center justify-center">
             <iframe
