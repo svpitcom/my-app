@@ -31,7 +31,7 @@ export default function ContactUs() {
   return (
     <div className="bg-white bg-cover bg-center w-full h-full py-30">
       <div className="bg-gradient-to-r from-sky-500 to-green-300 rounded-sm">
-        <h1 className="text-6xl text-shadow-lg/20 font-bold p-8 text-white text-center">
+        <h1 className="text-6xl font-bold p-8 text-white text-center">
           Contact Us
         </h1>
         <div className="flex flex-col md:flex-row gap-8 p-6 md:p-12">
