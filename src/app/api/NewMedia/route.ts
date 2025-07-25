@@ -7,8 +7,4 @@ export async function GET(res:Response) {
 }
 // import { NextResponse } from "next/server";
 
-export async function POST(params:type) {
-    
-}
-// import { NextResponse } from "next/server";
 
