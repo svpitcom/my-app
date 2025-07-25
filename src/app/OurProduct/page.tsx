@@ -22,7 +22,7 @@ export default function OurProduct() {
               measurable quality and production technology which allows better
               consistency in the rubber quality. Raw materials and finished
               goods are tested according to quality plan to ensure the rubber
-              produced meets the required standard of our customers. Nteq core
+              produced meets the required standard of our customers. SV Polymer core
               operations are processing of Standard Thai Rubber grade STR10, and
               STR20 as well as Mooney viscosity controlled 9710 and 9720.
             </p>

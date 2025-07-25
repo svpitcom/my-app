@@ -17,6 +17,8 @@ export default function Footer() {
             53230
             <br />
             Tel: +66(0)55 409 686
+            <br />
+            Email: info@sv-polymer.com
           </p>
         </div>
         <div className="text-center text-white font-semibold text-3xl border-y md:border-y-0 md:border-x border-white py-2">
