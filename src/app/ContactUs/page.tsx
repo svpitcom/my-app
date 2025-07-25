@@ -31,14 +31,14 @@ export default function ContactUs() {
   return (
     <div className="bg-white bg-cover bg-center w-full h-full py-30">
       <div className="bg-gradient-to-r from-sky-500 to-green-300 rounded-sm">
-        <h1 className="text-6xl text-shadow-lg/20 font-bold p-8 text-black text-center">
+        <h1 className="text-6xl text-shadow-lg/20 font-bold p-8 text-white text-center">
           Contact Us
         </h1>
         <div className="flex flex-col md:flex-row gap-8 p-6 md:p-12">
           {/* Left: Contact Info */}
           <div className="w-full md:w-1/2 text-white space-y-4 text-sm md:text-base p-2">
-            <h2 className="font-bold text-lg uppercase">Contact Info</h2>
-            <h3 className="font-bold text-xl">SV Polymer Co., Ltd.</h3>
+            <h2 className="font-bold text-black text-lg uppercase">Contact Info</h2>
+            <h3 className="font-bold text-black text-xl">SV Polymer Co., Ltd.</h3>
             <p>
               888 Moo 6,Tambon Nam Phi, Amphur Thong Saen Khan,
               <br />
