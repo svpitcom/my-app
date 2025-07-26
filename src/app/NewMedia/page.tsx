@@ -12,48 +12,10 @@ type NewMedia = {
   borad_img: string;
 };
 
-// const NewMediaData = [
-//   {
-//     id: 1,
-//     borard_header: "Frequently Asked Questions (FAQs)",
-//     borad_title: "Frequently Asked Questions (FAQs)",
-//     borad_button: "Read Me",
-//     borad_img: "/assets/imgs/Card-box-1.png",
-//   },
-//   {
-//     id: 2,
-//     borard_header: "EUDR Rubber Trading Process",
-//     borad_title: "Frequently Asked Questions (FAQs)",
-//     borad_button: "Read Me",
-//     borad_img: "/assets/imgs/Card-box-1.png",
-//   },
-//   {
-//     id: 3,
-//     borard_header: "News",
-//     borad_title: "Frequently Asked Questions (FAQs)",
-//     borad_button: "Read Me",
-//     borad_img: "/assets/imgs/Card-box-1.png",
-//   },
-//   {
-//     id: 4,
-//     borard_header: "News",
-//     borad_title: "Frequently Asked Questions (FAQs)",
-//     borad_button: "Read Me",
-//     borad_img: "/assets/imgs/Card-box-1.png",
-//   },
-//   {
-//     id: 5,
-//     borard_header: "News",
-//     borad_title: "Frequently Asked Questions (FAQs)",
-//     borad_button: "Read Me",
-//     borad_img: "/assets/imgs/Card-box-1.png",
-//   },
-// ];
-
 export default function NewMedia() {
   const [news, setNews] = useState<NewMedia[]>([]);
   useEffect(() => {
-    fetch("/api/newmedia")
+    fetch("/api/NewMedia")
       .then((res) => res.json())
       .then(setNews);
   }, []);
@@ -82,7 +44,7 @@ export default function NewMedia() {
 
                 {/* Header */}
                 <Link
-                  href={`/newmedia/${item.id}`}
+                  href={`/NewMedia/${item.id}`}
                   className="font-bold text-2xl text-sky-700 hover:text-sky-500 mb-2"
                 >
                   {item.borard_header}

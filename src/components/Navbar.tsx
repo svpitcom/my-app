@@ -39,7 +39,7 @@ export default function Navbar() {
             "OurCompany",
             "OurProduct",
             "Policy",
-            "newmedia",
+            "NewMedia",
             "JobOpportunity",
             "ContactUs",
           ].map((item) => (
@@ -48,8 +48,8 @@ export default function Navbar() {
               href={`/${item === "Home" ? "" : item}`}
               className="font-bold text-base text-sky-600 hover:text-sky-400"
             >
-              {item === "newmedia"
-                ? "News&Media"
+              {item === "NewMedia"
+                ? "NewMedia"
                 : item.replace(/([A-Z])/g, " $1").trim()}
             </Link>
           ))}
@@ -74,7 +74,7 @@ export default function Navbar() {
             "OurCompany",
             "OurProduct",
             "Policy",
-            "newmedia",
+            "NewMedia",
             "JobOpportunity",
             "ContactUs",
           ].map((item) => (
@@ -84,8 +84,8 @@ export default function Navbar() {
               className="font-bold text-lg text-sky-600 hover:text-sky-400"
               onClick={() => setIsOpen(false)}
             >
-              {item === "newmedia"
-                ? "newmedia"
+              {item === "NewMedia"
+                ? "NewMedia"
                 : item.replace(/([A-Z])/g, " $1").trim()}
             </Link>
           ))}

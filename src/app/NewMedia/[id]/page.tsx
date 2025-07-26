@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-import Image from "next/image";
 
 type NewmediaItem = {
   id: number;
@@ -20,7 +19,7 @@ export default function NewmediaDetailClient() {
     const id = params.id;
     if (!id) return;
 
-    fetch(`/api/newmedia/${id}`)
+    fetch(`/api/NewMedia/${id}`)
       .then((res) => {
         if (!res.ok) throw new Error("Not Found");
         return res.json();
@@ -35,7 +34,7 @@ export default function NewmediaDetailClient() {
     <div className="p-30">
       <h1 className="text-3xl font-bold text-sky-700">{data.borard_header}</h1>
       <p className="text-lg text-gray-600 mb-4">{data.borad_title}</p>
-      <Image
+      <img
         src={data.borad_img}
         alt={data.borad_title}
         className="rounded mb-6 w-96"
