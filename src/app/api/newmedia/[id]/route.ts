@@ -1,14 +1,14 @@
 import { NextResponse } from "next/server";
 import Newmedia from "@/data/newmedia.json";
 
-export async function GET(request: Request, context: any) {
+export async function GET(request: Request, context: unknown) {
   // context.params เป็น object ที่ Next.js ให้มา
-  const id = parseInt(context.params.id, 10);
-  const item = Newmedia.find((p) => p.id === id);
+  const ctx = context as { params: { id: string } };
+  const id = parseInt(ctx.params.id, 10);
 
-  if (!item) {
+  if (!id) {
     return NextResponse.json({ error: "Not Found" }, { status: 404 });
   }
 
-  return NextResponse.json(item);
+  return NextResponse.json(id);
 }
