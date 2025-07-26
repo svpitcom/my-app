@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import Newmedia from "@/data/newmedia.json";
+// import Newmedia from "@/data/newmedia.json";
 
 export async function GET(request: Request, context: unknown) {
   // context.params เป็น object ที่ Next.js ให้มา
