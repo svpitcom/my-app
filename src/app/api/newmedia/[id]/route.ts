@@ -1,19 +1,16 @@
 import { NextResponse } from "next/server";
 import Newmedia from "@/data/newmedia.json";
 
-type Params = {
-  params: {
-    id: string;
-  };
-};
+export async function GET(req: Request, context: { params: { id: string } }) {
+  // ✅ ดึง params โดยรอ await ถ้าจำเป็น
+  const { id } = await context.params;
 
-export async function GET(req: Request, context: Params) {
-  const id = parseInt(context.params.id, 10);
-  const newmedia = Newmedia.find((p) => p.id === id);
+  const parsedId = parseInt(id, 10);
+  const item = Newmedia.find((p) => p.id === parsedId);
 
-  if (!newmedia) {
+  if (!item) {
     return NextResponse.json({ error: "Not Found" }, { status: 404 });
   }
 
-  return NextResponse.json(newmedia);
+  return NextResponse.json(item);
 }
