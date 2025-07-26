@@ -4,7 +4,7 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 export default function OurCompany() {
   return (
-    <div className="bg-gradient-to-r from-sky-500 to-green-300 bg-cover bg-center">
+    <div className="bg-gradient-to-br from-sky-600 to-green-500 bg-cover bg-center">
       <div className="bg-gradient-to-b bg-white/20 via-white to-white bg-cover bg-center text-white h-full py-2">
         <div className="py-20">
           <h1 className="text-white text-shadow-lg/20 text-center text-6xl font-bold mb-4 py-10">
@@ -78,7 +78,7 @@ export default function OurCompany() {
         {/* Vision Box & Missions Box */}
         <div className="flex flex-col md:flex-row justify-center mx-auto gap-6 md:gap-10 p-4 md:p-16 rounded-lg backdrop-blur-sm">
           {/* Vision Box */}
-          <div className="bg-linear-to-bl from-sky-700 to-green-200 py-16 px-16 rounded-md shadow-md w-full h-96 md:w-1/2 text-center">
+          <div className="bg-gradient-to-br from-sky-600 to-green-500 py-16 px-16 rounded-md shadow-md w-full h-96 md:w-1/2 text-center">
             <h2 className="text-2xl md:text-5xl font-bold text-blue-700 mb-4">
               Vision
             </h2>
@@ -90,7 +90,7 @@ export default function OurCompany() {
           </div>
 
           {/* Missions Box */}
-          <div className="bg-linear-to-bl from-sky-700 to-green-200 py-16 px-16 rounded-md shadow-md w-full md:w-1/2 text-center">
+          <div className="bg-gradient-to-br from-sky-600 to-green-500 py-16 px-16 rounded-md shadow-md w-full md:w-1/2 text-center">
             <h2 className="text-2xl md:text-5xl font-bold text-blue-700 mb-4">
               Missions
             </h2>
@@ -126,7 +126,7 @@ export default function OurCompany() {
               />
             </div>
 
-            <div className="w-full md:w-1/2 bg-linear-to-bl from-sky-700 to-green-200 text-white flex items-center">
+            <div className="w-full md:w-1/2 bg-gradient-to-br from-sky-600 to-green-500 text-white flex items-center">
               <div className="p-4 md:p-10 space-y-3">
                 <h1 className="text-2xl md:text-4xl font-bold text-center md:text-left">
                   Board of Directors
