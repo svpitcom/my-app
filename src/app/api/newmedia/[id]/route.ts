@@ -1,10 +1,8 @@
 import { NextResponse } from "next/server";
 import Newmedia from "@/data/newmedia.json";
 
-export async function GET(
-  request: Request,
-  context: { params: { id: string } }
-) {
+export async function GET(request: Request, context: any) {
+  // context.params เป็น object ที่ Next.js ให้มา
   const id = parseInt(context.params.id, 10);
   const item = Newmedia.find((p) => p.id === id);
 
