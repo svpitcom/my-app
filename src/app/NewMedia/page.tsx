@@ -2,24 +2,61 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
-type NewMedia = {
-  id: number;
-  borard_header: string;
-  borad_title: string;
-  borad_button: string;
-  borad_img: string;
-};
+// type NewMedia = {
+//   id: number;
+//   borard_header: string;
+//   borad_title: string;
+//   borad_button: string;
+//   borad_img: string;
+// };
+
+const news = [
+  {
+    id: 1,
+    borard_header: "Frequently Asked Questions (FAQs)",
+    borad_title: "Frequently Asked Questions (FAQs)",
+    borad_button: "Read Me",
+    borad_img: "/assets/imgs/Card-box-1.png",
+  },
+  {
+    id: 2,
+    borard_header: "EUDR Rubber Trading Process",
+    borad_title: "Frequently Asked Questions (FAQs)",
+    borad_button: "Read Me",
+    borad_img: "/assets/imgs/Card-box-1.png",
+  },
+  {
+    id: 3,
+    borard_header: "News",
+    borad_title: "Frequently Asked Questions (FAQs)",
+    borad_button: "Read Me",
+    borad_img: "/assets/imgs/Card-box-1.png",
+  },
+  {
+    id: 4,
+    borard_header: "News",
+    borad_title: "Frequently Asked Questions (FAQs)",
+    borad_button: "Read Me",
+    borad_img: "/assets/imgs/Card-box-1.png",
+  },
+  {
+    id: 5,
+    borard_header: "NewsHellWordl",
+    borad_title: "Frequently Asked Questions (FAQs)",
+    borad_button: "Read Me",
+    borad_img: "/assets/imgs/Card-box-1.png",
+  },
+  {
+    id: 6,
+    borard_header: "MyNameIs",
+    borad_title: "Frequently Asked Questions (FAQs)",
+    borad_button: "Read Me",
+    borad_img: "/assets/imgs/Card-box-1.png",
+  },
+];
 
 export default function NewMedia() {
-  const [news, setNews] = useState<NewMedia[]>([]);
-  useEffect(() => {
-    fetch("/api/NewMedia")
-      .then((res) => res.json())
-      .then(setNews);
-  }, []);
-
   return (
     <div className="bg-gradient-to-bl from-sky-700 to-green-200 bg-cover bg-center py-26">
       <div className="container mx-auto px-4">
@@ -44,7 +81,7 @@ export default function NewMedia() {
 
                 {/* Header */}
                 <Link
-                  href={`/NewMedia/${item.id}`}
+                  href={`/`}
                   className="font-bold text-2xl text-sky-700 hover:text-sky-500 mb-2"
                 >
                   {item.borard_header}
