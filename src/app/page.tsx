@@ -113,13 +113,13 @@ export default function Home() {
       </div>
       <AnimateOnScroll>
         <div className="bg-sky-50 flex flex-col md:flex-row items-center justify-center gap-6 px-8 py-8">
-          <div className="rounded-md bg-blue-100 w-full max-w-xs flex flex-col items-center text-center p-4 shadow">
+          <div className="w-95 h-full rounded-md bg-white flex flex-col justify-between items-center text-center p-2 shadow-md hover:shadow-lg transition-transform hover:scale-105 cursor-pointer">
             <Image
               src="/assets/imgs/Card-box-1.png"
               alt="Company Logo"
               width={350}
               height={350}
-              className="p-2"
+              className="p-2 "
             />
             <Link
               href="/"
@@ -140,7 +140,7 @@ export default function Home() {
               Read Me
             </a>
           </div>
-          <div className="rounded-md bg-blue-100 w-full max-w-xs flex flex-col items-center text-center p-4 shadow">
+          <div className="w-95 h-full rounded-md bg-white flex flex-col justify-between items-center text-center p-2 shadow-md hover:shadow-lg transition-transform hover:scale-105 cursor-pointer">
             <Image
               src="/assets/imgs/Card-box-1.png"
               alt="Company Logo"
@@ -167,7 +167,7 @@ export default function Home() {
               Read Me
             </a>
           </div>
-          <div className="rounded-md bg-blue-100 w-full max-w-xs flex flex-col items-center text-center p-4 shadow">
+          <div className="w-95 h-full rounded-md bg-white flex flex-col justify-between items-center text-center p-2 shadow-md hover:shadow-lg transition-transform hover:scale-105 cursor-pointer">
             <Image
               src="/assets/imgs/Card-box-1.png"
               alt="Company Logo"

@@ -110,12 +110,12 @@ export default function JobOpportunity() {
       {/* Content */}
       <div className="flex flex-col md:flex-row gap-6 p-6 md:p-10 bg-white">
         {/* Left: Buttons */}
-        <div className="flex-1 space-y-4">
+        <div className="flex-1 space-y-4 ">
           {DataJob.map((dtj) => (
             <button
               key={dtj.id}
               onClick={() => setSelected(dtj.id)}
-              className={`flex items-center justify-between w-full px-4 py-3 rounded-full shadow transition duration-200
+              className={`flex items-center justify-between w-full px-4 py-3 rounded-full shadow transition duration-200 cursor-pointer
               ${
                 selected === dtj.id
                   ? "bg-gradient-to-br from-sky-600 to-green-500 text-white"
