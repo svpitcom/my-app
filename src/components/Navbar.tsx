@@ -69,38 +69,56 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-md" : "bg-white/80 backdrop-blur-md"
+        isScrolled ? "bg-white shadow-md" : "bg-white/0 backdrop-blur-md"
       }`}
     >
       <div className="flex justify-between items-center px-4 py-3">
         <Link href={`/${currentLocale}`}>
           <Image
-            src="/assets/imgs/SVP-Logo.png"
+            src={
+              isScrolled
+                ? "/assets/imgs/SVP-Logo.png"
+                : "/assets/imgs/LOGO_SVP_White.png"
+            }
             alt="Company Logo"
-            width={180}
-            height={180}
+            width={240}
+            height={240}
             className="object-contain"
           />
         </Link>
 
-        <nav className="hidden md:flex space-x-4">
+        <nav
+          className={`hidden md:flex space-x-4 ${
+            isScrolled ? "text-sky-600" : "text-white"
+          }`}
+        >
           {menuItems.map((item) => (
             <Link
               key={item.key}
               href={`/${currentLocale}/${item.path}`}
-              className="font-bold text-base text-sky-600 hover:text-sky-400"
+              className="font-bold text-base hover:text-sky-400"
             >
               {menuLabels[currentLocale]?.[item.key] ?? item.key}
             </Link>
           ))}
-          <div className="">
+          <div
+            className={`${
+              isScrolled ? "bg-white shadow-md" : "bg-white/0 backdrop-blur-md"
+            }`}
+          >
             <select
               value={selected}
               onChange={handleChange}
-              className="font-bold text-base text-sky-600 hover:text-sky-400"
+              className={`font-bold text-base ${
+                isScrolled ? "bg-white text-sky-600" : "bg-white/20 text-white"
+              } hover:text-sky-400 backdrop-blur-md px-2 py-1 rounded`}
             >
-              <option value="en">ENG</option>
-              <option value="th">TH</option>
+              <option className=" text-sky-700" value="en">
+                ENG
+              </option>
+              <option className="text-sky-700" value="th">
+                TH
+              </option>
             </select>
           </div>
         </nav>
@@ -118,12 +136,12 @@ export default function Navbar() {
       </div>
 
       {isOpen && (
-        <nav className="md:hidden flex flex-col space-y-2 p-4 bg-white/30 backdrop-blur-md shadow">
+        <nav className="md:hidden flex flex-col space-y-2 p-4 bg-white/0 backdrop-blur-md shadow">
           {menuItems.map((item) => (
             <Link
               key={item.key}
               href={`/${currentLocale}/${item.path}`}
-              className="font-bold text-base text-sky-600 hover:text-sky-400"
+              className={`${isScrolled ? "text-sky-600" : "text-white"}`}
             >
               {menuLabels[currentLocale]?.[item.key] ?? item.key}
             </Link>
@@ -132,10 +150,14 @@ export default function Navbar() {
             <select
               value={selected}
               onChange={handleChange}
-              className="font-bold text-base text-sky-600 hover:text-sky-400"
+              className={`${isScrolled ? "text-sky-600" : "text-white"}`}
             >
-              <option value="en">ENG</option>
-              <option value="th">TH</option>
+              <option className="text-sky-600" value="en">
+                ENG
+              </option>
+              <option className="text-sky-600" value="th">
+                TH
+              </option>
             </select>
           </div>
         </nav>

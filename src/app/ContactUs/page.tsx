@@ -29,8 +29,8 @@ export default function ContactUs() {
     alert(data.message);
   };
   return (
-    <div className="bg-white bg-cover bg-center w-full h-full py-30">
-      <div className="bg-gradient-to-r from-sky-500 to-green-300 rounded-sm">
+    <div className="bg-cover bg-center w-full h-full">
+      <div className="bg-gradient-to-r from-sky-500 to-green-300 rounded-sm py-30">
         <h1 className="text-6xl font-bold p-8 text-white text-center">
           Contact Us
         </h1>
