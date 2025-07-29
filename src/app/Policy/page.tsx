@@ -53,7 +53,7 @@ export default function Policy() {
       </div>
 
       <AnimateOnScroll>
-        <div className="bg-gradient-to-br from-sky-600 to-green-500 text-white text-white py-10 text-center px-4">
+        <div className="bg-gradient-to-br from-sky-600 to-green-500 text-white py-10 text-center px-4">
           <h1 className="text-3xl md:text-6xl font-bold mb-3">
             Energy Conservation Policy
           </h1>
@@ -80,7 +80,7 @@ export default function Policy() {
                   key={index}
                   className="w-52 h-52 md:w-72 md:h-72 rounded-full bg-gradient-to-br from-sky-600/60 to-green-500/60 text-white flex items-center justify-center text-center px-4"
                 >
-                  <div className="w-44 h-44 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-sky-600 to-green-500 text-white text-blue-500 flex items-center justify-center text-xs md:text-base font-bold p-4">
+                  <div className="w-44 h-44 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-sky-600 to-green-500 text-white flex items-center justify-center text-xs md:text-base font-bold p-4">
                     {text}
                   </div>
                 </div>
