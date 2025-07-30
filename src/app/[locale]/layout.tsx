@@ -1,9 +1,8 @@
-// /app/[locale]/layout.tsx
+// app/[locale]/layout.tsx
 import type { Metadata } from "next";
+import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import "./globals.css";
-// import { Locale } from "@/types";
 
 export const metadata: Metadata = {
   title: "SV Polymer Co., Ltd.",
@@ -15,16 +14,13 @@ type Props = {
   params: { locale: string };
 };
 
-export default async function RootLayout({ children, params }: Props) {
-  const awaitedParams = await Promise.resolve(params); // await params เพื่อบังคับแก้ error
-  const { locale } = awaitedParams;
-
+export default function RootLayout({ children, params }: Props) {
   return (
-    <html lang={locale}>
+    <html lang={params.locale}>
       <body>
-        <Navbar locale={locale} />
+        <Navbar locale={params.locale} />
         <main>{children}</main>
-        <Footer locale={locale} />
+        <Footer locale={params.locale} />
       </body>
     </html>
   );
