@@ -1,11 +1,7 @@
-import type { NextConfig } from "next";
+// next.config.ts
+/** @type {import('next').NextConfig} */
+const nextConfig = {
 
-const nextConfig: NextConfig = {
-  i18n: {
-    locales: ["th", "en"],
-    defaultLocale: "en",
-    localeDetection: false,
-  },
 };
 
 export default nextConfig;
