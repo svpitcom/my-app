@@ -1,10 +1,8 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  i18n: {
-    locales: ["th", "en"],
-    defaultLocale: "en",
-    localeDetection: false,
+// next.config.ts
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  experimental: {
+    // เอา serverActions ออกถ้าไม่ได้ใช้
   },
 };
 

@@ -1,11 +1,18 @@
 import Image from "next/image";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import Link from "next/link";
+// /app/[locale]/page.tsx
 
-export default function Home() {
+type Props = {
+  params: {
+    locale: string;
+  };
+};
+
+export default function Home({ params }: Props) {
+  // const dict = await getDictionary(params.locale);
   return (
     <div className="h-full w-full min-h-screen flex flex-col">
-      {/* <Navbar /> */}
       <div className="bg-[url('/assets/imgs/Tree-back.png')] bg-cover bg-center w-full">
         <div className="flex justify-center">
           <div className="relative py-20">
