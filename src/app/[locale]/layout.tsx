@@ -22,7 +22,7 @@ export default async function RootLayout({ children, params }: Props) {
       <body>
         <Navbar locale={params.locale} />
         <main>{children}</main>
-        <Footer locale={locale} />
+        <Footer />
       </body>
     </html>
   );

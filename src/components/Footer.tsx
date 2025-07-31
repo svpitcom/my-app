@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
 
-type FooterProps = {
-  locale: string;
-};
+// type FooterProps = {
+//   locale: string;
+// };
 
-export default function Footer({ locale: _locale }: { locale: string }) {
+export default function Footer() {
   return (
     <footer className="row-start-3 flex justify-stretch items-center bg-gradient-to-br from-sky-600 to-green-500 py-8 columns-4">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
