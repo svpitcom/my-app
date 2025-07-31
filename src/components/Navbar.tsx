@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import { useRouter, usePathname, useParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import { getDictionary } from "@/lib/getDictionary"; // <- import function
+import type { Locale } from "@/types/index";
 
 const menuItems = [
   { key: "Home", path: "" },
@@ -14,53 +16,40 @@ const menuItems = [
   { key: "ContactUs", path: "ContactUs" },
 ];
 
-const menuLabels: Record<string, Record<string, string>> = {
-  en: {
-    Home: "Home",
-    OurCompany: "Our Company",
-    OurProduct: "Our Product",
-    Policy: "Policy",
-    NewMedia: "New Media",
-    JobOpportunity: "Careers",
-    ContactUs: "Contact Us",
-  },
-  th: {
-    Home: "หน้าหลัก",
-    OurCompany: "เกี่ยวกับเรา",
-    OurProduct: "ผลิตภัณฑ์",
-    Policy: "นโยบาย",
-    NewMedia: "สื่อใหม่",
-    JobOpportunity: "ร่วมงานกับเรา",
-    ContactUs: "ติดต่อเรา",
-  },
-};
-
 type NavbarProps = {
-  locale: string; // หรือ Locale ถ้า import ได้
+  locale: Locale;
 };
 
 export default function Navbar({ locale }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [dictionary, setDictionary] = useState<any>(null);
+
   const router = useRouter();
   const pathname = usePathname();
   const params = useParams();
-  const currentLocale = (params.locale as string) || "en";
+  const currentLocale = (params.locale as string) || locale;
   const [selected, setSelected] = useState(currentLocale);
 
-  // ✅ Scroll effect
+  // ✅ โหลด dictionary ตาม locale
+  useEffect(() => {
+    const load = async () => {
+      const dict = await getDictionary(selected as Locale);
+      setDictionary(dict);
+    };
+    load();
+  }, [selected]);
+
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // ✅ Handle locale change
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newLocale = e.target.value;
     setSelected(newLocale);
 
-    // ปรับ path โดยเปลี่ยนแค่ locale ส่วนแรก
     const segments = pathname.split("/");
     if (segments[1] === "en" || segments[1] === "th") {
       segments[1] = newLocale;
@@ -76,6 +65,8 @@ export default function Navbar({ locale }: NavbarProps) {
   const selectBg = isScrolled
     ? "bg-white text-sky-600"
     : "bg-white/20 text-white";
+
+  if (!dictionary) return null; // ✅ wait for dictionary to load
 
   return (
     <header
@@ -98,7 +89,7 @@ export default function Navbar({ locale }: NavbarProps) {
           />
         </Link>
 
-        {/* Desktop Nav */}
+        {/* Desktop nav */}
         <nav className={`hidden md:flex space-x-4 ${linkColor}`}>
           {menuItems.map((item) => (
             <Link
@@ -106,7 +97,7 @@ export default function Navbar({ locale }: NavbarProps) {
               href={`/${currentLocale}/${item.path}`}
               className="font-bold text-lg hover:text-sky-400"
             >
-              {menuLabels[currentLocale]?.[item.key] ?? item.key}
+              {dictionary.nav[item.key] ?? item.key}
             </Link>
           ))}
 
@@ -115,21 +106,15 @@ export default function Navbar({ locale }: NavbarProps) {
             onChange={handleChange}
             className={`font-bold text-lg ${selectBg} hover:text-sky-400 backdrop-blur-md px-2 py-1 rounded`}
           >
-            <option className="text-sky-700" value="en">
-              ENG
-            </option>
-            <option className="text-sky-700" value="th">
-              TH
-            </option>
+            <option value="en">ENG</option>
+            <option value="th">TH</option>
           </select>
         </nav>
 
-        {/* Hamburger for mobile */}
+        {/* Hamburger */}
         <button
           className="md:hidden flex flex-col space-y-1"
           onClick={() => setIsOpen(!isOpen)}
-          title="Toggle navigation menu"
-          aria-label="Toggle navigation menu"
         >
           <span className="w-6 h-0.5 bg-gray-800"></span>
           <span className="w-6 h-0.5 bg-gray-800"></span>
@@ -147,7 +132,7 @@ export default function Navbar({ locale }: NavbarProps) {
               className={`${linkColor} font-medium`}
               onClick={() => setIsOpen(false)}
             >
-              {menuLabels[currentLocale]?.[item.key] ?? item.key}
+              {dictionary.nav[item.key] ?? item.key}
             </Link>
           ))}
           <select

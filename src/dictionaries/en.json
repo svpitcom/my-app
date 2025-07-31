@@ -1,9 +1,11 @@
 {
-  "Home": "Home",
-  "OurCompany": "Our Company",
-  "OurProduct": "Our Product",
-  "Policy": "Policy",
-  "NewMedia": "New Media",
-  "JobOpportunity": "Careers",
-  "ContactUs": "Contact Us"
+  "nav": {
+    "Home": "Home",
+    "OurCompany": "Our Company",
+    "OurProduct": "Our Product",
+    "Policy": "Policy",
+    "NewMedia": "New Media",
+    "JobOpportunity": "Careers",
+    "ContactUs": "Contact Us"
+  }
 }
