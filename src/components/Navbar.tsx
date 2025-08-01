@@ -1,10 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { useRouter, usePathname, useParams } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { getDictionary } from "@/lib/getDictionary"; // <- import function
-import type { Locale } from "@/types/index";
+// import { getDictionary } from "@/lib/getDictionary"; // <- import function
+// import type { Locale } from "@/types/index";
 
 const menuItems = [
   { key: "Home", path: "" },
@@ -16,30 +16,33 @@ const menuItems = [
   { key: "ContactUs", path: "ContactUs" },
 ];
 
-type NavbarProps = {
-  locale: Locale;
-};
+// type NavbarProps = {
+//   locale: Locale;
+// };
 // { locale }: NavbarProps
 
-export default function Navbar({ locale }: any) {
+// { locale }: any
+
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [dictionary, setDictionary] = useState<any>(null);
+
+  // const [dictionary, setDictionary] = useState<any>(null);
 
   const router = useRouter();
   const pathname = usePathname();
-  const params = useParams();
-  const currentLocale = (params.locale as string) || locale;
-  const [selected, setSelected] = useState(currentLocale);
+  // const params = useParams();
+  // const currentLocale = (params.locale as string) || locale;
+  // const [selected, setSelected] = useState(currentLocale);
 
   // ✅ โหลด dictionary ตาม locale
-  useEffect(() => {
-    const load = async () => {
-      const dict = await getDictionary(selected as Locale);
-      setDictionary(dict);
-    };
-    load();
-  }, [selected]);
+  // useEffect(() => {
+  //   const load = async () => {
+  //     const dict = await getDictionary(selected as Locale);
+  //     setDictionary(dict);
+  //   };
+  //   load();
+  // }, [selected]);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -49,7 +52,7 @@ export default function Navbar({ locale }: any) {
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newLocale = e.target.value;
-    setSelected(newLocale);
+    // setSelected(newLocale);
 
     const segments = pathname.split("/");
     if (segments[1] === "en" || segments[1] === "th") {
@@ -67,7 +70,7 @@ export default function Navbar({ locale }: any) {
     ? "bg-white text-sky-600"
     : "bg-white/20 text-white";
 
-  if (!dictionary) return null; // ✅ wait for dictionary to load
+  // if (!dictionary) return null; // ✅ wait for dictionary to load
 
   return (
     <header
@@ -76,7 +79,8 @@ export default function Navbar({ locale }: any) {
       }`}
     >
       <div className="flex justify-between items-center px-4 py-3">
-        <Link href={`/${currentLocale}`}>
+        <Link href={`/`}>
+          {/* ${currentLocale} */}
           <Image
             src={
               isScrolled
@@ -93,17 +97,20 @@ export default function Navbar({ locale }: any) {
         {/* Desktop nav */}
         <nav className={`hidden md:flex space-x-4 ${linkColor}`}>
           {menuItems.map((item) => (
+            // ${currentLocale}/
             <Link
               key={item.key}
-              href={`/${currentLocale}/${item.path}`}
+              href={`/${item.path}`}
               className="font-bold text-lg hover:text-sky-400"
             >
-              {dictionary.nav[item.key] ?? item.key}
+              {/* dictionary.nav */}
+              {item.key}
+              {/* [item.key] ??  */}
             </Link>
           ))}
 
           <select
-            value={selected}
+            // value={selected}
             onChange={handleChange}
             className={`font-bold text-lg ${selectBg} hover:text-sky-400 backdrop-blur-md px-2 py-1 rounded`}
           >
@@ -127,17 +134,20 @@ export default function Navbar({ locale }: any) {
       {isOpen && (
         <nav className="md:hidden flex flex-col space-y-2 p-4 bg-white/0 backdrop-blur-md shadow">
           {menuItems.map((item) => (
+            // ${currentLocale}
             <Link
               key={item.key}
-              href={`/${currentLocale}/${item.path}`}
+              href={`//${item.path}`}
               className={`${linkColor} font-medium`}
               onClick={() => setIsOpen(false)}
             >
-              {dictionary.nav[item.key] ?? item.key}
+              {/* dictionary.nav */}
+              {item.key}
+              {/* [item.key] ?? */}
             </Link>
           ))}
           <select
-            value={selected}
+            // value={selected}
             onChange={handleChange}
             className={`mt-2 ${selectBg} font-medium px-2 py-1 rounded`}
           >

@@ -1,6 +1,6 @@
 // app/[locale]/layout.tsx
 
-import type { ReactNode } from "react";
+// import type { ReactNode } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "../[locale]/globals.css";
@@ -12,10 +12,10 @@ export const metadata = {
 
 export type Locale = "th" | "en";
 
-type Props = {
-  children: ReactNode;
-  params: { locale: Locale };
-};
+// type Props = {
+//   children: ReactNode;
+//   params: { locale: Locale };
+// };
 
 export default function RootLayout({
   children,
