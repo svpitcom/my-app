@@ -17,11 +17,15 @@ type Props = {
   params: { locale: Locale };
 };
 
-export default function RootLayout({ children, params }: Props) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html lang={params.locale}>
+    <html lang="en">
       <body>
-        <Navbar locale={params.locale} />
+        <Navbar />
         <main>{children}</main>
         <Footer />
       </body>

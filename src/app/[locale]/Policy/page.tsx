@@ -5,8 +5,8 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 export default function Policy() {
   return (
     <div className="bg-cover bg-center h-full w-full">
-      <div className="bg-[url('/assets/imgs/svp-office-tree.jpg')] bg-cover bg-center bg-radial text-white h-full">
-        <div className="flex flex-col text-center items-center px-4 py-20">
+      <div className="bg-[url('/assets/imgs/DJI_0674.jpg')] bg-cover bg-center bg-radial text-white h-full">
+        <div className="flex flex-col text-center items-center px-4 py-30">
           <Image
             src="/assets/imgs/LogoSVP.png"
             alt="LogoSVP"

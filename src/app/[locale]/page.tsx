@@ -3,17 +3,18 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 import Link from "next/link";
 // /app/[locale]/page.tsx
 
-type Props = {
-  params: {
-    locale: string;
-  };
-};
+// type Props = {
+//   params: {
+//     locale: string;
+//   };
+// };
+// { params }: Props
 
-export default function Home({ params }: Props) {
+export default function Home() {
   // const dict = await getDictionary(params.locale);
   return (
     <div className="h-full w-full min-h-screen flex flex-col">
-      <div className="bg-[url('/assets/imgs/Tree-back.png')] bg-cover bg-center w-full">
+      <div className="bg-[url('/assets/imgs/paratree.jpg')] bg-cover bg-center w-full">
         <div className="flex justify-center">
           <div className="relative py-20">
             <Image

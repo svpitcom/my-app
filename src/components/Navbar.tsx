@@ -19,8 +19,9 @@ const menuItems = [
 type NavbarProps = {
   locale: Locale;
 };
+// { locale }: NavbarProps
 
-export default function Navbar({ locale }: NavbarProps) {
+export default function Navbar({ locale }: any) {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [dictionary, setDictionary] = useState<any>(null);
