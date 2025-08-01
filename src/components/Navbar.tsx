@@ -137,7 +137,7 @@ export default function Navbar() {
             // ${currentLocale}
             <Link
               key={item.key}
-              href={`//${item.path}`}
+              href={`/${item.path}`}
               className={`${linkColor} font-medium`}
               onClick={() => setIsOpen(false)}
             >

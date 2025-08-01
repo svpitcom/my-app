@@ -31,6 +31,7 @@ export default function ContactUs() {
   return (
     <div className="bg-cover bg-center w-full h-full">
       <div className="bg-gradient-to-r from-sky-500 to-green-300 rounded-sm py-30">
+      <div className="bg-[url('/assets/imgs/DJI_0674.JPG')] bg-cover bg-center bg-radial text-white h-full"></div>
         <h1 className="text-6xl font-bold p-8 text-white text-center">
           Contact Us
         </h1>
@@ -59,7 +60,7 @@ export default function ContactUs() {
           </div>
 
           {/* Right: Contact Form */}
-          <div className="w-full md:w-1/2 bg-white rounded-md shadow space-y-4 p-2">
+          <div className="w-full md:w-1/2 bg-white rounded-md shadow space-y-4 p-6">
             <h2 className="font-bold text-lg uppercase">Contact Form</h2>
             <p className="text-gray-600 text-sm">
               We appreciate your comments for our product and services, we will
