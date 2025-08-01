@@ -113,6 +113,7 @@ export default function Navbar() {
             // value={selected}
             onChange={handleChange}
             className={`font-bold text-lg ${selectBg} hover:text-sky-400 backdrop-blur-md px-2 py-1 rounded`}
+            aria-label="Select language"
           >
             <option value="en">ENG</option>
             <option value="th">TH</option>
@@ -121,12 +122,24 @@ export default function Navbar() {
 
         {/* Hamburger */}
         <button
-          className="md:hidden flex flex-col space-y-1"
+          className="md:hidden flex flex-col space-y-1 transition-all duration-300"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <span className="w-6 h-0.5 bg-gray-800"></span>
-          <span className="w-6 h-0.5 bg-gray-800"></span>
-          <span className="w-6 h-0.5 bg-gray-800"></span>
+          <span
+            className={`w-6 h-1 transition-all duration-300 ${
+              isScrolled ? "bg-sky-600" : "bg-white"
+            }`}
+          ></span>
+          <span
+            className={`w-6 h-1 transition-all duration-300 ${
+              isScrolled ? "bg-sky-600" : "bg-white"
+            }`}
+          ></span>
+          <span
+            className={`w-6 h-1 transition-all duration-300 ${
+              isScrolled ? "bg-sky-600" : "bg-white"
+            }`}
+          ></span>
         </button>
       </div>
 

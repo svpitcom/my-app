@@ -16,9 +16,14 @@ export default function Policy() {
           />
 
           <h1 className="text-4xl md:text-6xl font-bold py-2">Policy</h1>
-          <h2 className="text-lg md:text-2xl font-semibold text-sky-700 mt-2">
+          <h1 className="text-lg md:text-4xl font-black uppercase text-sky-700 mt-2"
+          style={{
+              WebkitTextStroke: "2px white",
+              WebkitFontSmoothing: "antialiased",
+            }}>
             SV Polymer Co., Ltd.
-          </h2>
+          </h1>
+         
 
           <div className="mt-6 flex flex-col items-center gap-3 py-4 w-full px-2">
             {[
