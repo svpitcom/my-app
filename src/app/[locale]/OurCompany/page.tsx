@@ -6,7 +6,7 @@ export default function OurCompany() {
   return (
     <div className="bg-gradient-to-br from-sky-600 to-green-500 bg-cover bg-center">
       <div className="bg-gradient-to-b bg-white/20 via-white to-white bg-cover bg-center text-white h-full py-2">
-        <div className="bg-[url('/assets/imgs/DJI_0668.jpg')] bg-cover bg-center text-white w-full relative py-60"></div>
+        <div className="bg-[url('/assets/imgs/DJI_0668.JPG')] bg-cover bg-center text-white w-full relative py-60"></div>
 
         <h1 className="text-white text-shadow-lg/20 text-center text-6xl font-bold mb-4 py-10">
           About Us
