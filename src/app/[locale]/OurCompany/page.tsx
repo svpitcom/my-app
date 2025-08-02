@@ -77,7 +77,7 @@ export default function OurCompany() {
       {/* Vision Box & Missions Box */}
       <div className="flex flex-col md:flex-row justify-center mx-auto gap-6 md:gap-10 p-4 md:p-16 rounded-lg backdrop-blur-sm">
         {/* Vision Box */}
-        <div className="bg-gradient-to-br from-sky-600 to-green-500 py-16 px-16 rounded-md shadow-md w-full h-96 md:w-1/2 text-center">
+        <div className="bg-gradient-to-r from-sky-500 to-green-300 py-16 px-16 rounded-md shadow-md w-full h-96 md:w-1/2 text-center">
           <h2 className="text-2xl md:text-5xl font-bold text-blue-700 mb-4">
             Vision
           </h2>
@@ -89,7 +89,7 @@ export default function OurCompany() {
         </div>
 
         {/* Missions Box */}
-        <div className="bg-gradient-to-br from-sky-600 to-green-500 py-16 px-16 rounded-md shadow-md w-full md:w-1/2 text-center">
+        <div className="bg-gradient-to-r from-sky-500 to-green-300 py-16 px-16 rounded-md shadow-md w-full md:w-1/2 text-center">
           <h2 className="text-2xl md:text-5xl font-bold text-blue-700 mb-4">
             Missions
           </h2>

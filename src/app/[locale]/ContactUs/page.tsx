@@ -1,7 +1,5 @@
 "use client";
 import { useState } from "react";
-// import React {useState} from "react";
-// import Image from "next/image";
 
 export default function ContactUs() {
   const [form, setForm] = useState({
@@ -30,16 +28,20 @@ export default function ContactUs() {
   };
   return (
     <div className="bg-cover bg-center w-full h-full">
-      <div className="bg-gradient-to-r from-sky-500 to-green-300 rounded-sm py-30">
-      <div className="bg-[url('/assets/imgs/DJI_0674.JPG')] bg-cover bg-center bg-radial text-white h-full"></div>
+      <div className="bg-[url('/assets/imgs/DJI_0674.JPG')] bg-cover bg-center bg-radial text-white py-60"></div>
+      <div className="bg-gradient-to-r from-sky-500 to-green-300 rounded-sm">
         <h1 className="text-6xl font-bold p-8 text-white text-center">
           Contact Us
         </h1>
-        <div className="flex flex-col md:flex-row gap-8 p-6 md:p-12">
+        <div className="flex flex-col md:flex-row gap-8 p-6 md:p-20 bg-white">
           {/* Left: Contact Info */}
-          <div className="w-full md:w-1/2 text-white space-y-4 text-sm md:text-base p-2">
-            <h2 className="font-bold text-white text-lg uppercase">Contact Info</h2>
-            <h3 className="font-bold text-white text-xl">SV Polymer Co., Ltd.</h3>
+          <div className="w-full md:w-1/2 text-black space-y-4 text-sm md:text-base p-2">
+            <h2 className="font-bold text-black text-lg uppercase">
+              Contact Info
+            </h2>
+            <h3 className="font-bold text-black text-xl">
+              SV Polymer Co., Ltd.
+            </h3>
             <p>
               888 Moo 6,Tambon Nam Phi, Amphur Thong Saen Khan,
               <br />

@@ -11,7 +11,7 @@ const menuItems = [
   { key: "OurCompany", path: "OurCompany" },
   { key: "OurProduct", path: "OurProduct" },
   { key: "Policy", path: "Policy" },
-  { key: "NewMedia", path: "NewMedia" },
+  // { key: "NewMedia", path: "NewMedia" },
   { key: "JobOpportunity", path: "JobOpportunity" },
   { key: "ContactUs", path: "ContactUs" },
 ];
