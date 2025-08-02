@@ -16,16 +16,8 @@ export default function Home() {
     <div className="h-full w-full min-h-screen flex flex-col">
       <div className="bg-[url('/assets/imgs/paratree.jpg')] bg-cover bg-center w-full">
         <div className="flex justify-center">
-          <div className="relative py-20">
-            <Image
-              src="/assets/imgs/En.png"
-              alt="Company Logo"
-              width={800}
-              height={640}
-              className="object-cover opacity-80"
-              priority
-            />
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+          <div className="relative py-30">
+            <div className="flex flex-col items-center justify-center text-center px-4">
               <Image
                 src="/assets/imgs/Card.png"
                 alt="Card Overlay"
