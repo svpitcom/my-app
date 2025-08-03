@@ -4,7 +4,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export default function EUDef() {
   return (
-    <div className="flex flex-col justify-center text-center item-center bg-gradient-to-r from-sky-500 to-green-300 text-black items-center py-24 px-4 sm:px-10">
+    <div className="flex flex-col justify-center text-center item-center bg-gradient-to-r from-sky-500 to-green-300 text-black items-center py-30 px-4 sm:px-10">
       <div className="bg-white rounded-xl w-full max-w-5xl px-4 sm:px-10 py-8">
         <Breadcrumb />
         <div className="flex justify-center items-center mb-6">
