@@ -8,13 +8,12 @@ export default function Policy() {
       <div className="bg-[url('/assets/imgs/DJI_0674.JPG')] bg-cover bg-center bg-radial text-white h-full">
         <div className="flex flex-col text-center items-center px-4 py-30">
           <Image
-            src="/assets/imgs/LogoSVP.png"
+            src="/assets/imgs/AW_LOGO_SVP [Final] + Stroke-01.png"
             alt="LogoSVP"
-            width={180}
-            height={180}
+            width={260}
+            height={260}
             className="mb-4"
           />
-
           <h1 className="text-4xl md:text-6xl font-bold py-2">Policy</h1>
           <h1 className="text-lg md:text-4xl font-black uppercase text-sky-700 mt-2"
           style={{
@@ -23,7 +22,6 @@ export default function Policy() {
             }}>
             SV Polymer Co., Ltd.
           </h1>
-         
 
           <div className="mt-6 flex flex-col items-center gap-3 py-4 w-full px-2">
             {[

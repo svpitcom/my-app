@@ -5,9 +5,20 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 export default function OurProduct() {
   return (
     <div className="bg-gradient-to-r from-sky-500 to-green-300 bg-cover bg-center w-full">
-      <div className="bg-[url('/assets/imgs/Productio-back.jpg')] bg-cover bg-center text-white w-full relative py-60"></div>
+      <div className="bg-[url('/assets/imgs/Productio-back.jpg')] bg-cover bg-center text-white w-full relative py-30">
+        <div className="flex justify-center items-center">
+          <Image
+            src="/assets/imgs/AW_LOGO_SVP [Final] + Stroke-01.png"
+            alt="LogoSVP"
+            width={240}
+            height={240}
+            className="mb-4"
+          />
+        </div>
+      </div>
+
       <div className="bg-cover bg-center">
-        <div className="flex justify-center py-12 md:py-20">
+        <div className="flex justify-center py-12 md:py-16">
           <h1 className="text-white text-shadow-lg/20 text-4xl md:text-6xl font-bold p-4 md:p-8 rounded text-center">
             OurProducts
           </h1>
@@ -23,9 +34,10 @@ export default function OurProduct() {
               measurable quality and production technology which allows better
               consistency in the rubber quality. Raw materials and finished
               goods are tested according to quality plan to ensure the rubber
-              produced meets the required standard of our customers. SV Polymer core
-              operations are processing of Standard Thai Rubber grade STR10, and
-              STR20 as well as Mooney viscosity controlled 9710 and 9720.
+              produced meets the required standard of our customers. SV Polymer
+              core operations are processing of Standard Thai Rubber grade
+              STR10, and STR20 as well as Mooney viscosity controlled 9710 and
+              9720.
             </p>
             <br />
             <br />

@@ -5,9 +5,18 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 export default function OurCompany() {
   return (
     <div className="bg-gradient-to-br from-sky-600 to-green-500 bg-cover bg-center">
+      <div className="bg-[url('/assets/imgs/Office_SVP_Factory.png')] bg-cover bg-center text-white w-full relative py-30">
+        <div className="flex flex-col text-center items-center px-4">
+          <Image
+            src="/assets/imgs/AW_LOGO_SVP [Final] + Stroke-01.png"
+            alt="LogoSVP"
+            width={260}
+            height={260}
+            className="mb-4"
+          />
+        </div>
+      </div>
       <div className="bg-gradient-to-b bg-white/20 via-white to-white bg-cover bg-center text-white h-full py-2">
-        <div className="bg-[url('/assets/imgs/DJI_0668.JPG')] bg-cover bg-center text-white w-full relative py-60"></div>
-
         <h1 className="text-white text-shadow-lg/20 text-center text-6xl font-bold mb-4 py-10">
           About Us
         </h1>

@@ -39,7 +39,7 @@ export default function Home() {
           </p>
           <p className="text-lg md:text-xl mb-6">
             SV Polymer Co., Ltd. is a european base joint venture BOI approved
-            natural rubber processing and export company established since 2010.
+            natural rubber processing and export company established since 2024.
             With strong strategic partnership of a world class tire maker and an
             experience natural rubber processor that share common vision to lead
             the different and be the benchmark through synergy in natural rubber
@@ -99,10 +99,7 @@ export default function Home() {
             VDO PRESENTATION
           </h2>
           <p className="text-white mb-4">
-            บริษัท เอส วี โพลิเมอร์ จำกัด ขอเชิญชวน ร่วมสนับสนุน
-            โครงการต่อเนื่อง มุทิตาคารโรงเรียนมัธยมยืน2 เพื่อส่งเสริมการเรียนรู้
-            ปรับปรุงสภาพแวดล้อม ให้น่าเรียน น่าอยู่
-            และพัฒนาการเรียนรู้ให้อยู่คู่เยาวชนไทยสืบต่อไป
+            บริษัท เอส วี โพลิเมอร์ จำกัด
           </p>
           <p className="text-white text-sm mb-4">Credit: SV POLYMER</p>
 
@@ -111,7 +108,7 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <AnimateOnScroll>
+      {/* <AnimateOnScroll>
         <div className="bg-sky-50 flex flex-col md:flex-row items-center justify-center gap-6 px-8 py-8">
           <div className="w-95 h-full rounded-md bg-white flex flex-col justify-between items-center text-center p-2 shadow-md hover:shadow-lg transition-transform hover:scale-105 cursor-pointer">
             <Image
@@ -195,7 +192,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-      </AnimateOnScroll>
+      </AnimateOnScroll> */}
     </div>
   );
 }
