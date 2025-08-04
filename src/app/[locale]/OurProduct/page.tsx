@@ -96,7 +96,7 @@ export default function OurProduct() {
                 {
                   weight: "1.33",
                   description:
-                    "tons shrink wrapped metal base/Friendly pack pallet",
+                    "tons shrink wrapped metal base/Friendly pack pallets",
                 },
                 { weight: "1.26", description: "tons Metal box" },
               ].map((item, index) => (
