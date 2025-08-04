@@ -5,7 +5,7 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 export default function OurProduct() {
   return (
     <div className="bg-gradient-to-r from-sky-500 to-green-300 bg-cover bg-center w-full">
-      <div className="bg-[url('/assets/imgs/Productio-back.jpg')] bg-cover bg-center text-white w-full relative py-30">
+      <div className="bg-[url('/assets/imgs/OurProduction.png')] bg-cover bg-center text-white w-full relative py-30">
         <div className="flex justify-center items-center">
           <Image
             src="/assets/imgs/AW_LOGO_SVP [Final] + Stroke-01.png"
@@ -56,7 +56,7 @@ export default function OurProduct() {
           <div className="flex flex-col md:flex-row w-full rounded-lg p-10">
             <div className="w-full md:w-1/2 relative h-60 md:h-auto">
               <Image
-                src="/assets/imgs/S__21954588_0.jpg"
+                src="/assets/imgs/inProduction.png"
                 alt="Company Logo"
                 className="object-cover rounded-lg"
                 fill
@@ -89,7 +89,7 @@ export default function OurProduct() {
         </AnimateOnScroll>
         <AnimateOnScroll>
           <div className="bg-white py-8 px-4 md:px-10">
-            <h2 className="text-4xl md:text-7xl font-bold text-center text-gradient-to-r from-sky-500 to-green-300 mb-4 uppercase">
+            <h2 className="text-4xl md:text-7xl font-bold text-center text-sky-700 mb-4 uppercase">
               Packaging
             </h2>
             <p className="text-sm md:text-lg max-w-4xl mx-auto text-center text-black">

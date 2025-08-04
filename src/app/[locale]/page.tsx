@@ -1,23 +1,16 @@
 import Image from "next/image";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
-// import Link from "next/link";
-// /app/[locale]/page.tsx
-
-// type Props = {
-//   params: {
-//     locale: string;
-//   };
-// };
-// { params }: Props
 
 export default function Home() {
-  // const dict = await getDictionary(params.locale);
   return (
     <div className="h-full w-full min-h-screen flex flex-col">
       <div className="bg-[url('/assets/imgs/tree.png')] bg-cover bg-center">
         <div className="flex justify-center">
           <div className="relative py-20">
             <div className="flex flex-col items-center justify-center text-center px-4">
+              <h1>SV Polymer .Co,Ltd</h1>
+              <h1 className="text-green-700">Green rubber</h1>
+              <h1 className="text-blue-700">Leader of innovation</h1>
               <Image
                 src="/assets/imgs/Card.png"
                 alt="Card Overlay"
@@ -98,9 +91,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-white mb-2">
             VDO PRESENTATION
           </h2>
-          <p className="text-white mb-4">
-            บริษัท เอส วี โพลิเมอร์ จำกัด
-          </p>
+          <p className="text-white mb-4">บริษัท เอส วี โพลิเมอร์ จำกัด</p>
           <p className="text-white text-sm mb-4">Credit: SV POLYMER</p>
 
           <button className="bg-blue-700 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-300">
