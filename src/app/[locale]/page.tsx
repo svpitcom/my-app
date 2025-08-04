@@ -14,9 +14,9 @@ export default function Home() {
   // const dict = await getDictionary(params.locale);
   return (
     <div className="h-full w-full min-h-screen flex flex-col">
-      <div className="bg-[url('/assets/imgs/paratree.jpg')] bg-cover bg-center w-full">
+      <div className="bg-[url('/assets/imgs/tree.png')] bg-cover bg-center">
         <div className="flex justify-center">
-          <div className="relative py-30">
+          <div className="relative py-20">
             <div className="flex flex-col items-center justify-center text-center px-4">
               <Image
                 src="/assets/imgs/Card.png"
