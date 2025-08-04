@@ -87,11 +87,11 @@ export default function Home() {
       <div className="bg-gradient-to-br from-sky-600 to-green-500 rounded-lg py-4 flex flex-col md:flex-row items-center gap-6 shadow-lg">
         <div className="w-full md:w-1/2 flex justify-center">
           <div className="bg-gray-200 rounded-lg border-4 border-white w-full h-full flex items-center justify-center">
-            {/* <iframe
+            <iframe
               className="aspect-video"
-              src="https://www.youtube.com/embed/d36j9rJgi7E"
+              src="/assets/video/SV-P01.mp4"
               title="SV Polymer Company Presentation Video"
-            ></iframe> */}
+            ></iframe>
           </div>
         </div>
         <div className="w-full md:w-1/2 text-center md:text-left">

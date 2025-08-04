@@ -5,7 +5,7 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 export default function OurProduct() {
   return (
     <div className="bg-gradient-to-r from-sky-500 to-green-300 bg-cover bg-center w-full">
-      <div className="bg-[url('/assets/imgs/Productions.png')] bg-cover bg-center text-white w-full relative py-60"></div>
+      <div className="bg-[url('/assets/imgs/Productio-back.jpg')] bg-cover bg-center text-white w-full relative py-60"></div>
       <div className="bg-cover bg-center">
         <div className="flex justify-center py-12 md:py-20">
           <h1 className="text-white text-shadow-lg/20 text-4xl md:text-6xl font-bold p-4 md:p-8 rounded text-center">
@@ -77,7 +77,7 @@ export default function OurProduct() {
         </AnimateOnScroll>
         <AnimateOnScroll>
           <div className="bg-white py-8 px-4 md:px-10">
-            <h2 className="text-4xl md:text-7xl font-bold text-center text-blue-700 mb-4 uppercase">
+            <h2 className="text-4xl md:text-7xl font-bold text-center text-gradient-to-r from-sky-500 to-green-300 mb-4 uppercase">
               Packaging
             </h2>
             <p className="text-sm md:text-lg max-w-4xl mx-auto text-center text-black">
@@ -101,8 +101,8 @@ export default function OurProduct() {
                 { weight: "1.26", description: "tons Metal box" },
               ].map((item, index) => (
                 <div key={index} className="flex flex-col items-center">
-                  <div className="w-36 h-36 md:w-64 md:h-64 rounded-full bg-sky-700/50 flex items-center justify-center">
-                    <div className="w-32 h-32 md:w-56 md:h-56 rounded-full bg-sky-700 text-white flex flex-col items-center justify-center text-center p-2">
+                  <div className="w-36 h-36 md:w-64 md:h-64 rounded-full bg-gradient-to-r from-sky-500/60 to-green-300/60 flex items-center justify-center">
+                    <div className="w-32 h-32 md:w-56 md:h-56 rounded-full bg-gradient-to-r from-sky-500 to-green-300 text-white flex flex-col items-center justify-center text-center p-2">
                       <p className="text-xl md:text-3xl font-bold">
                         {item.weight}
                       </p>
