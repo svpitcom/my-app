@@ -7,16 +7,43 @@ export default function Home() {
       <div className="bg-[url('/assets/imgs/tree.png')] bg-cover bg-center">
         <div className="flex justify-center">
           <div className="relative py-20">
-            <div className="flex flex-col items-center justify-center text-center px-4">
-              <h1>SV Polymer .Co,Ltd</h1>
-              <h1 className="text-green-700">Green rubber</h1>
-              <h1 className="text-blue-700">Leader of innovation</h1>
-              <Image
-                src="/assets/imgs/Card.png"
-                alt="Card Overlay"
-                width={800}
-                height={640}
-              />
+            <div className="flex flex-col items-center justify-center text-center py-30 px-4">
+              <div className="relative w-[880px] h-[680px]">
+                {/* พื้นหลังหมุน */}
+                <div className="absolute inset-0 animate-spin-slow">
+                  <Image
+                    src="/assets/imgs/Card_No.png"
+                    alt="Company Logo"
+                    fill
+                    className="object-cover" // ให้จาง
+                  />
+                </div>
+
+                {/* ข้อความไม่หมุน */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center z-10 text-center">
+                  <h1 className="text-white font-black text-4xl md:text-6xl">
+                    SV Polymer Co., Ltd
+                  </h1>
+                  <h1
+                    className="text-green-700 font-black uppercase text-3xl md:text-5xl"
+                    style={{
+                      WebkitTextStroke: "2px white",
+                      WebkitFontSmoothing: "antialiased",
+                    }}
+                  >
+                    Green rubber
+                  </h1>
+                  <h1
+                    className="text-blue-700 font-black uppercase text-3xl md:text-5xl"
+                    style={{
+                      WebkitTextStroke: "2px white",
+                      WebkitFontSmoothing: "antialiased",
+                    }}
+                  >
+                    Leader of innovation
+                  </h1>
+                </div>
+              </div>
             </div>
           </div>
         </div>
