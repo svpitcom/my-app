@@ -1,216 +1,134 @@
 import Image from "next/image";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
+import Link from "next/link";
+
+const imageList = [
+  "/assets/imgs/209044.png",
+  "/assets/imgs/209045.png",
+  "/assets/imgs/209046.png",
+  "/assets/imgs/209047.png",
+];
+
+const cardData = [
+  {
+    title: "News",
+    subtitle: "Frequently Asked Questions (FAQs)",
+    link: "/",
+  },
+  {
+    title: "CSR",
+    subtitle: "กิจกรรม",
+    link: "/",
+  },
+  {
+    title: "Knowledge Center",
+    subtitle: "Diseases and enemies of rubber",
+    link: "/",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="h-full w-full min-h-screen flex flex-col">
-      <div className="bg-[url('/assets/imgs/tree.png')] bg-cover bg-center">
-        <div className="flex justify-center">
-          <div className="relative py-20">
-            <div className="flex flex-col items-center justify-center text-center py-30 px-4">
-              <div className="relative w-[880px] h-[680px]">
-                {/* พื้นหลังหมุน */}
-                <div className="absolute inset-0 animate-spin-slow">
-                  <Image
-                    src="/assets/imgs/Card_No.png"
-                    alt="Company Logo"
-                    fill
-                    className="object-cover" // ให้จาง
-                  />
-                </div>
-
-                {/* ข้อความไม่หมุน */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center z-10 text-center">
-                  <h1 className="text-white font-black text-4xl md:text-6xl">
-                    SV Polymer Co., Ltd
-                  </h1>
-                  <h1
-                    className="text-green-700 font-black uppercase text-3xl md:text-5xl"
-                    style={{
-                      WebkitTextStroke: "2px white",
-                      WebkitFontSmoothing: "antialiased",
-                    }}
-                  >
-                    Green rubber
-                  </h1>
-                  <h1
-                    className="text-blue-700 font-black uppercase text-3xl md:text-5xl"
-                    style={{
-                      WebkitTextStroke: "2px white",
-                      WebkitFontSmoothing: "antialiased",
-                    }}
-                  >
-                    Leader of innovation
-                  </h1>
-                </div>
-              </div>
+    <div className="min-h-screen w-full flex flex-col">
+      {/* Banner Section */}
+      <div className="bg-[url('/assets/imgs/tree.png')] bg-cover bg-center text-center">
+        <div className="flex justify-center py-12 sm:py-16 md:py-20 lg:py-24">
+          <div className="relative px-4 py-10 sm:py-16">
+            <div className="flex flex-col items-center text-center">
+              <Image
+                src="/assets/imgs/Card_6v1.png"
+                alt="Card"
+                width={800}
+                height={640}
+                className="mb-4"
+              />
+              {/* w-full max-w-md sm:max-w-lg md:max-w-2xl */}
             </div>
           </div>
         </div>
       </div>
 
-      <div className="bg-white text-black py-20 px-6 text-center">
-        <h1 className="text-3xl md:text-5xl font-bold mb-4">
-          SV POLYMER INTRODUTIONS
+      {/* Introduction */}
+      <div className="bg-white text-black py-12 px-4 sm:px-6 text-center">
+        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4">
+          SV POLYMER INTRODUCTIONS
         </h1>
-        <div className=" max-w-4xl mx-auto">
-          <p className="text-lg text-sky-700 font-bold">
+        <div className="max-w-4xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-sky-700 font-bold mb-4">
             “SUSTAINABLE ECO-QUALITY RUBBER”
           </p>
-          <p className="text-lg md:text-xl mb-6">
-            SV Polymer Co., Ltd. is a european base joint venture BOI approved
+          <p className="text-sm sm:text-base md:text-lg mb-4">
+            SV Polymer Co., Ltd. is a European base joint venture BOI approved
             natural rubber processing and export company established since 2024.
             With strong strategic partnership of a world class tire maker and an
-            experience natural rubber processor that share common vision to lead
-            the different and be the benchmark through synergy in natural rubber
-            industry
+            experienced natural rubber processor that share common vision to
+            lead the different and be the benchmark through synergy in natural
+            rubber industry.
           </p>
-          <br />
-          <p className="text-lg md:text-xl mb-6">
+          <p className="text-sm sm:text-base md:text-lg">
             Our goal is to create an innovative material via improvement in
             product quality to satisfy beyond customer’s expectation.
             Sustainability is key to Nteq, in which we strive to become the
-            cleanest and most eco-friendly factory that help improves the
+            cleanest and most eco-friendly factory that helps improve the
             standard living of the people and community.
           </p>
         </div>
       </div>
+
+      {/* Images Section */}
       <AnimateOnScroll>
-        <div className="bg-gradient-to-br from-sky-600 to-green-500 flex flex-col md:flex-row items-center justify-center gap-6 px-4 py-8">
-          <Image
-            src="/assets/imgs/209044.png"
-            alt="Company Logo"
-            width={800}
-            height={640}
-          />
-          <Image
-            src="/assets/imgs/209045.png"
-            alt="Company Logo"
-            width={800}
-            height={640}
-          />
-          <Image
-            src="/assets/imgs/209046.png"
-            alt="Company Logo"
-            width={800}
-            height={640}
-          />
-          <Image
-            src="/assets/imgs/209047.png"
-            alt="Company Logo"
-            width={800}
-            height={640}
-          />
+        <div className="bg-gradient-to-br from-sky-600 to-green-500 flex flex-wrap justify-center gap-4 px-4 py-8">
+          {imageList.map((src, index) => (
+            <div key={index} className="w-full sm:w-1/2 md:w-1/4 px-2">
+              <Image
+                src={src}
+                alt={`Company image ${index + 1}`}
+                width={500}
+                height={500}
+                className="w-full h-auto object-cover rounded-lg shadow-md"
+              />
+            </div>
+          ))}
         </div>
       </AnimateOnScroll>
-      <br />
-      <div className="bg-gradient-to-br from-sky-600 to-green-500 rounded-lg py-4 flex flex-col md:flex-row items-center gap-6 shadow-lg">
-        <div className="w-full md:w-1/2 flex justify-center">
-          <div className="bg-gray-200 rounded-lg border-4 border-white w-full h-full flex items-center justify-center">
-            <iframe
-              className="aspect-video"
-              src="/assets/video/SV-P01.mp4"
-              title="SV Polymer Company Presentation Video"
-            ></iframe>
-          </div>
-        </div>
-        <div className="w-full md:w-1/2 text-center md:text-left">
-          <h2 className="text-3xl font-bold text-white mb-2">
-            VDO PRESENTATION
-          </h2>
-          <p className="text-white mb-4">บริษัท เอส วี โพลิเมอร์ จำกัด</p>
-          <p className="text-white text-sm mb-4">Credit: SV POLYMER</p>
 
-          <button className="bg-blue-700 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-300">
-            MORE VDO
-          </button>
+      {/* Cards Section */}
+      <AnimateOnScroll>
+        <div className="bg-sky-50 flex flex-wrap justify-center gap-6 px-4 py-12">
+          {cardData.map((card, index) => (
+            <div
+              key={index}
+              className="w-full sm:w-[90%] md:w-[45%] lg:w-[30%] bg-white rounded-md flex flex-col items-center text-center p-4 shadow-md hover:shadow-lg transition-transform hover:scale-105 cursor-pointer"
+            >
+              <Image
+                src="/assets/imgs/Card-box-1.png"
+                alt={`${card.title} image`}
+                width={350}
+                height={350}
+                className="w-full h-auto p-2"
+              />
+              <Link
+                href={card.link}
+                className="font-bold text-xl md:text-2xl text-sky-600 hover:text-sky-400"
+              >
+                {card.title}
+              </Link>
+              <Link
+                href={card.link}
+                className="font-semibold text-base md:text-lg text-sky-600 hover:text-sky-400"
+              >
+                {card.subtitle}
+              </Link>
+              <a
+                className="bg-sky-700 text-base md:text-lg w-full hover:bg-blue-800 text-white rounded p-2 mt-2"
+                href="#"
+              >
+                Read Me
+              </a>
+            </div>
+          ))}
         </div>
-      </div>
-      {/* <AnimateOnScroll>
-        <div className="bg-sky-50 flex flex-col md:flex-row items-center justify-center gap-6 px-8 py-8">
-          <div className="w-95 h-full rounded-md bg-white flex flex-col justify-between items-center text-center p-2 shadow-md hover:shadow-lg transition-transform hover:scale-105 cursor-pointer">
-            <Image
-              src="/assets/imgs/Card-box-1.png"
-              alt="Company Logo"
-              width={350}
-              height={350}
-              className="p-2 "
-            />
-            <Link
-              href="/"
-              className="font-bold text-3xl text-sky-600 hover:text-sky-400"
-            >
-              News
-            </Link>
-            <Link
-              href="/"
-              className="font-bold text-xl text-sky-600 hover:text-sky-400"
-            >
-              Frequently Asked Questions (FAQs)
-            </Link>
-            <a
-              className="bg-sky-700 text-xl w-full h-full hover:bg-blue-800 text-white rounded p-2"
-              href="#"
-            >
-              Read Me
-            </a>
-          </div>
-          <div className="w-95 h-full rounded-md bg-white flex flex-col justify-between items-center text-center p-2 shadow-md hover:shadow-lg transition-transform hover:scale-105 cursor-pointer">
-            <Image
-              src="/assets/imgs/Card-box-1.png"
-              alt="Company Logo"
-              width={350}
-              height={350}
-              className="p-2"
-            />
-            <Link
-              href="/"
-              className="font-bold text-3xl text-sky-600 hover:text-sky-400"
-            >
-              CSR
-            </Link>
-            <Link
-              href="/"
-              className="font-bold text-xl text-sky-600 hover:text-sky-400"
-            >
-              กิจกรรม
-            </Link>
-            <a
-              className="bg-sky-700 text-xl w-full h-full hover:bg-blue-800 text-white rounded p-2"
-              href="#"
-            >
-              Read Me
-            </a>
-          </div>
-          <div className="w-95 h-full rounded-md bg-white flex flex-col justify-between items-center text-center p-2 shadow-md hover:shadow-lg transition-transform hover:scale-105 cursor-pointer">
-            <Image
-              src="/assets/imgs/Card-box-1.png"
-              alt="Company Logo"
-              width={350}
-              height={350}
-              className="p-2"
-            />
-            <Link
-              href="/"
-              className="font-bold text-2xl text-sky-600 hover:text-sky-400"
-            >
-              KNOWLEDGE CENTER
-            </Link>
-            <Link
-              href="/"
-              className="font-bold text-lg text-sky-600 hover:text-sky-400"
-            >
-              Diseases and enemies of rubbe
-            </Link>
-            <a
-              className="bg-sky-700 text-xl w-full h-full hover:bg-blue-800 text-white rounded p-2"
-              href="#"
-            >
-              Read Me
-            </a>
-          </div>
-        </div>
-      </AnimateOnScroll> */}
+      </AnimateOnScroll>
     </div>
   );
 }

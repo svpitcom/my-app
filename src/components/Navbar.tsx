@@ -11,38 +11,19 @@ const menuItems = [
   { key: "OurCompany", path: "OurCompany" },
   { key: "OurProduct", path: "OurProduct" },
   { key: "Policy", path: "Policy" },
-  // { key: "NewMedia", path: "NewMedia" },
+  { key: "NewMedia", path: "NewMedia" },
   { key: "JobOpportunity", path: "JobOpportunity" },
   { key: "ContactUs", path: "ContactUs" },
 ];
 
-// type NavbarProps = {
-//   locale: Locale;
-// };
-// { locale }: NavbarProps
-
-// { locale }: any
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // const [dictionary, setDictionary] = useState<any>(null);
 
   const router = useRouter();
   const pathname = usePathname();
-  // const params = useParams();
-  // const currentLocale = (params.locale as string) || locale;
-  // const [selected, setSelected] = useState(currentLocale);
-
-  // ✅ โหลด dictionary ตาม locale
-  // useEffect(() => {
-  //   const load = async () => {
-  //     const dict = await getDictionary(selected as Locale);
-  //     setDictionary(dict);
-  //   };
-  //   load();
-  // }, [selected]);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);

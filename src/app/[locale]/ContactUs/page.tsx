@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function ContactUs() {
   const [form, setForm] = useState({
@@ -28,7 +29,17 @@ export default function ContactUs() {
   };
   return (
     <div className="bg-cover bg-center w-full h-full">
-      <div className="bg-[url('/assets/imgs/DJI_0674.JPG')] bg-cover bg-center bg-radial text-white py-60"></div>
+      <div className="bg-[url('/assets/imgs/Contnot.jpg')] bg-cover bg-center bg-radial text-white py-30">
+        <div className="flex flex-col text-center items-center px-4">
+          <Image
+            src="/assets/imgs/AW_LOGO_SVP [Final] + Stroke-01.png"
+            alt="LogoSVP"
+            width={260}
+            height={260}
+            className="mb-4"
+          />
+        </div>
+      </div>
       <div className="bg-gradient-to-r from-sky-500 to-green-300 rounded-sm">
         <h1 className="text-6xl font-bold p-8 text-white text-center">
           Contact Us

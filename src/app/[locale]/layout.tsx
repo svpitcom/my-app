@@ -21,7 +21,7 @@ export const metadata = {
     description: "ผู้ผลิตและจำหน่ายผลิตภัณฑ์โพลิเมอร์ในประเทศไทย",
     url: "https://sv-polymer.com",
     siteName: "SV Polymer Co., Ltd.",
-    locale: "th_TH",
+    locale: "en_EN",
     type: "website",
   },
   robots: {
