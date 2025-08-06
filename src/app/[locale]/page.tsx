@@ -153,20 +153,20 @@ export default function HomeClient() {
                 className="w-full h-auto p-2"
               />
               <Link
-                href="/"
+                href="/OurCompany"
                 className="font-bold text-xl md:text-2xl text-sky-600 hover:text-sky-400"
               >
                 {/* {card.title} */}
               </Link>
               <Link
-                href="/"
+                href="/OurCompany"
                 className="font-semibold text-base md:text-lg text-sky-600 hover:text-sky-400"
               >
                 {/* {card.subtitle} */}
               </Link>
               <a
                 className="bg-sky-700 text-base md:text-lg w-full hover:bg-blue-800 text-white rounded p-2 mt-2"
-                href="/"
+                href="/OurCompany"
               >
                 HelloWorld
               </a>
