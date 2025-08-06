@@ -133,6 +133,17 @@ export default function ContactUs() {
             </button>
           </div>
         </div>
+        <div className="w-full mt-10">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3803.7766792461057!2d100.24383437463086!3d17.565815997641547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30df47221e2000eb%3A0xd59727c4b2705837!2zU1YgUG9seW1lciDguK3guLjguJXguKPguJTguLTguJXguJbguYw!5e0!3m2!1sen!2sus!4v1754406724806!5m2!1sen!2sus"
+            width="100%"
+            height="450"
+            loading="lazy"
+            allowFullScreen
+            className="rounded-md border-none w-full"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </div>
     </div>
   );
