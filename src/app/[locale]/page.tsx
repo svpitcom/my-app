@@ -141,36 +141,36 @@ export default function HomeClient() {
       <AnimateOnScroll>
         <div className="bg-sky-50 flex flex-wrap justify-center gap-6 px-4 py-12">
           {/* {t.cards.map((card: any, index: number) => ( */}
-            <div
-              // key={index}
-              className="w-full sm:w-[90%] md:w-[45%] lg:w-[30%] bg-white rounded-md flex flex-col items-center text-center p-4 shadow-md hover:shadow-lg transition-transform hover:scale-105 cursor-pointer"
+          <div
+            // key={index}
+            className="w-full sm:w-[90%] md:w-[45%] lg:w-[30%] bg-white rounded-md flex flex-col items-center text-center p-4 shadow-md hover:shadow-lg transition-transform hover:scale-105 cursor-pointer"
+          >
+            <Image
+              src="/assets/imgs/Card-box-1.png"
+              alt="image"
+              width={350}
+              height={350}
+              className="w-full h-auto p-2"
+            />
+            <Link
+              href="#"
+              className="font-bold text-xl md:text-2xl text-sky-600 hover:text-sky-400"
             >
-              <Image
-                src="/assets/imgs/Card-box-1.png"
-                alt="image"
-                width={350}
-                height={350}
-                className="w-full h-auto p-2"
-              />
-              <Link
-                href="/OurCompany"
-                className="font-bold text-xl md:text-2xl text-sky-600 hover:text-sky-400"
-              >
-                {/* {card.title} */}
-              </Link>
-              <Link
-                href="/OurCompany"
-                className="font-semibold text-base md:text-lg text-sky-600 hover:text-sky-400"
-              >
-                {/* {card.subtitle} */}
-              </Link>
-              <a
-                className="bg-sky-700 text-base md:text-lg w-full hover:bg-blue-800 text-white rounded p-2 mt-2"
-                href="/OurCompany"
-              >
-                HelloWorld
-              </a>
-            </div>
+              Hello
+            </Link>
+            <Link
+              href="#"
+              className="font-semibold text-base md:text-lg text-sky-600 hover:text-sky-400"
+            >
+              Hello
+            </Link>
+            <a
+              className="bg-sky-700 text-base md:text-lg w-full hover:bg-blue-800 text-white rounded p-2 mt-2"
+              href="#"
+            >
+              HelloWorld
+            </a>
+          </div>
           {/* ))} */}
         </div>
       </AnimateOnScroll>
