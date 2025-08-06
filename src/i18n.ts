@@ -1,9 +1,11 @@
 import createMiddleware from 'next-intl/middleware';
-import { locales } from './i18n';
+
+export const locales = ['en', 'th']; // ✅ ต้อง export ตัวแปรนี้
+export const defaultLocale = 'en';
 
 export default createMiddleware({
   locales,
-  defaultLocale: 'en',
+  defaultLocale,
   localePrefix: 'as-needed'
 });
 
