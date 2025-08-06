@@ -42,7 +42,7 @@ export default function Footer() {
         </div>
       </div>
       {/* Copyright section */}
-      <div className="bg-gradient-to-r from-sky-500 to-green-300 w-full text-left text-white text-base px-48 py-2">
+      <div className="bg-gradient-to-r from-sky-500 to-green-300 w-full text-center sm:text-left text-white text-sm sm:text-base px-4 sm:px-12 md:px-24 lg:px-48 py-2">
         © {new Date().getFullYear()} SV Polymer. All rights reserved.
       </div>
     </footer>

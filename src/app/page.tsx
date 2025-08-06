@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import Link from "next/link";

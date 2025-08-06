@@ -1,9 +1,25 @@
-//Get Dictionary.ts
+// lib/getDictionary.ts
+import { supabase } from "./supabase";
 
-import type { Locale } from "@/types/index";
-import en from "@/dictionaries/en.json";
-import th from "@/dictionaries/th.json";
+export type Locale = "en" | "th";
 
-export function getDictionary(locale: Locale) {
-  return locale === "en" ? en : th;
+export type Dictionary = Record<string, string>;
+
+export async function getDictionary(locale: Locale): Promise<Dictionary> {
+  const { data, error } = await supabase
+    .from("translations")
+    .select("key_name, value")
+    .eq("locale", locale);
+
+  if (error) {
+    throw new Error(`Supabase error: ${error.message}`);
+  }
+
+  const dictionary: Dictionary = {};
+
+  for (const item of data ?? []) {
+    dictionary[item.key_name] = item.value;
+  }
+
+  return dictionary;
 }

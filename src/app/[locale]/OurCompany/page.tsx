@@ -22,8 +22,8 @@ export default function OurCompany() {
       {/* <div className="bg-gradient-to-b bg-white/20 via-white to-white bg-cover bg-center text-white h-full py-2"> */}
 
       <div className="max-w-4xl mx-auto">
-        <div className="text-gray-800 p-10 rounded-lg text-balance">
-          <h1 className="text-3xl font-bold text-sky-700 py-4">
+        <div className="text-white p-10 rounded-lg text-balance">
+          <h1 className="text-3xl font-bold text-white py-4">
             SV Polymer CO., LTD. (SV Polymer){" "}
           </h1>
           <p className="text-base mt-2">

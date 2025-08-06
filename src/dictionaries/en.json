@@ -7,5 +7,29 @@
     "NewMedia": "New Media",
     "JobOpportunity": "Careers",
     "ContactUs": "Contact Us"
-  }
+  },
+  "introTitle": "SV POLYMER INTRODUCTIONS",
+  "slogan": "“SUSTAINABLE ECO-QUALITY RUBBER”",
+  "paragraphs": [
+    "SV Polymer Co., Ltd. is a European base joint venture BOI approved natural rubber processing and export company established since 2024. With strong strategic partnership of a world class tire maker and an experienced natural rubber processor that share common vision to lead the different and be the benchmark through synergy in natural rubber industry.",
+    "Our goal is to create an innovative material via improvement in product quality to satisfy beyond customer’s expectation. Sustainability is key to SV Polymer, in which we strive to become the cleanest and most eco-friendly factory that helps improve the standard living of the people and community."
+  ],
+  "cards": [
+    {
+      "title": "Our Company",
+      "subtitle": "Learn about our vision",
+      "link": "/OurCompany"
+    },
+    {
+      "title": "Our Products",
+      "subtitle": "Explore product range",
+      "link": "/our-product"
+    },
+    {
+      "title": "Sustainability Policy",
+      "subtitle": "Our commitment to sustainability",
+      "link": "/policy"
+    }
+  ],
+  "readMore": "Read More"
 }
