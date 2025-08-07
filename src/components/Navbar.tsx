@@ -187,7 +187,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {isOpen && (
-        <nav className="md:hidden flex flex-col space-y-2 p-4 bg-white/90 backdrop-blur-md shadow">
+        <nav className="md:hidden flex flex-col space-y-2 p-4 bg-white/10 backdrop-blur-md shadow">
           {menuItems.map((item) => (
             <Link
               key={item.key}
