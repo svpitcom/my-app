@@ -5,28 +5,21 @@ export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const lang = searchParams.get("lang") === "th" ? "th" : "en";
 
-  const { data, error } = await supabase
-    .from("home")
-    .select(`
-      home_id,
-      home_title_${lang},
-      home_detail_01_${lang},
-      home_detail_02_${lang},
-      home_detail_03_${lang}
-    `);
+  const fields = [
+    "home_id",
+    `home_title_${lang}`,
+    `home_detail_01_${lang}`,
+    `home_detail_02_${lang}`,
+    `home_detail_03_${lang}`,
+  ];
+  const selectFields = fields.join(", ");
+
+  const { data, error } = await supabase.from("home").select(selectFields);
 
   if (error) {
+    console.error("Supabase select error:", error);
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
-
-  // แปลงข้อมูลให้ frontend ใช้งานง่าย
-//   const formatted = data.map((item) => ({
-//     id: item.home_id,
-//     title: item[`home_title_${lang}`],
-//     detail_01: item[`home_detail_01_${lang}`],
-//     detail_02: item[`home_detail_02_${lang}`],
-//     detail_03: item[`home_detail_03_${lang}`],
-//   }));
 
   return NextResponse.json({ data });
 }

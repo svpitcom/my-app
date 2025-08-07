@@ -1,10 +1,22 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
-const dictionary = {
+import { useLanguage } from "@/context/LanguageContext";
+
+type Locale = "en" | "th";
+type MenuKey =
+  | "Home"
+  | "OurCompany"
+  | "OurProduct"
+  | "Policy"
+  | "NewMedia"
+  | "JobOpportunity"
+  | "ContactUs";
+
+const dict: Record<Locale, Record<MenuKey, string>> = {
   en: {
     Home: "Home",
     OurCompany: "Our Company",
@@ -25,7 +37,7 @@ const dictionary = {
   },
 };
 
-const menuItems = [
+const menuItems: { key: MenuKey; path: string }[] = [
   { key: "Home", path: "" },
   { key: "OurCompany", path: "OurCompany" },
   { key: "OurProduct", path: "OurProduct" },
@@ -41,15 +53,36 @@ export default function Navbar() {
 
   const router = useRouter();
   const pathname = usePathname();
+  const { lang, setLang } = useLanguage();
 
-  // Detect current locale from path, default to 'en' if none
-  const currentLocale = React.useMemo(() => {
+  // ตรวจหา locale ปัจจุบันจาก pathname
+  const currentLocale = useMemo<Locale>(() => {
     const segments = pathname.split("/");
-    if (segments[1] === "en" || segments[1] === "th") {
+    if (segments[1] === "th" || segments[1] === "en") {
       return segments[1];
     }
     return "en";
   }, [pathname]);
+
+  // sync lang context กับ currentLocale
+  useEffect(() => {
+    if (lang !== currentLocale) {
+      setLang(currentLocale as "th" | "en");
+    }
+  }, [currentLocale, lang, setLang]);
+
+  // เปลี่ยน URL ตาม locale และ update context
+  const changeLocale = (newLocale: string) => {
+    const segments = pathname.split("/");
+    if (["en", "th"].includes(segments[1])) {
+      segments[1] = newLocale;
+    } else {
+      segments.splice(1, 0, newLocale);
+    }
+    const newPath = segments.join("/") || "/";
+    setLang(newLocale as "th" | "en");
+    router.push(newPath);
+  };
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -57,24 +90,41 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const newLocale = e.target.value;
+  // const dict = {
+  //   en: {
+  //     Home: "Home",
+  //     OurCompany: "Our Company",
+  //     OurProduct: "Our Product",
+  //     Policy: "Policy",
+  //     NewMedia: "New Media",
+  //     JobOpportunity: "Job Opportunity",
+  //     ContactUs: "Contact Us",
+  //   },
+  //   th: {
+  //     Home: "หน้าแรก",
+  //     OurCompany: "เกี่ยวกับบริษัท",
+  //     OurProduct: "ผลิตภัณฑ์ของเรา",
+  //     Policy: "นโยบาย",
+  //     NewMedia: "สื่อใหม่",
+  //     JobOpportunity: "ร่วมงานกับเรา",
+  //     ContactUs: "ติดต่อเรา",
+  //   },
+  // };
 
-    const segments = pathname.split("/");
-    if (segments[1] === "en" || segments[1] === "th") {
-      segments[1] = newLocale;
-    } else {
-      segments.splice(1, 0, newLocale);
-    }
-
-    const newPath = segments.join("/") || "/";
-    router.push(newPath);
-  };
+  // const menuItems = [
+  //   { key: "Home", path: "" },
+  //   { key: "OurCompany", path: "OurCompany" },
+  //   { key: "OurProduct", path: "OurProduct" },
+  //   { key: "Policy", path: "Policy" },
+  //   { key: "NewMedia", path: "NewMedia" },
+  //   { key: "JobOpportunity", path: "JobOpportunity" },
+  //   { key: "ContactUs", path: "ContactUs" },
+  // ];
 
   const linkColor = isScrolled ? "text-sky-600" : "text-white";
-  const selectBg = isScrolled
-    ? "bg-white text-sky-600"
-    : "bg-white/20 text-white";
+  const selectClass = `font-bold text-lg ${
+    isScrolled ? "bg-white text-sky-600" : "bg-white/20 text-white"
+  } hover:text-sky-400 backdrop-blur-md px-2 py-1 rounded`;
 
   return (
     <header
@@ -105,14 +155,13 @@ export default function Navbar() {
               href={`/${currentLocale}/${item.path}`}
               className="font-bold text-lg hover:text-sky-400"
             >
-              {dictionary[currentLocale][item.key]}
+              {dict[currentLocale][item.key]}
             </Link>
           ))}
-
           <select
             value={currentLocale}
-            onChange={handleChange}
-            className={`font-bold text-lg ${selectBg} hover:text-sky-400 backdrop-blur-md px-2 py-1 rounded`}
+            onChange={(e) => changeLocale(e.target.value)}
+            className={selectClass}
             aria-label="Select language"
           >
             <option value="en">ENG</option>
@@ -122,30 +171,23 @@ export default function Navbar() {
 
         {/* Hamburger */}
         <button
-          className="md:hidden flex flex-col space-y-1 transition-all duration-300"
+          className="md:hidden flex flex-col space-y-1"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <span
-            className={`w-6 h-1 transition-all duration-300 ${
-              isScrolled ? "bg-sky-600" : "bg-white"
-            }`}
-          ></span>
-          <span
-            className={`w-6 h-1 transition-all duration-300 ${
-              isScrolled ? "bg-sky-600" : "bg-white"
-            }`}
-          ></span>
-          <span
-            className={`w-6 h-1 transition-all duration-300 ${
-              isScrolled ? "bg-sky-600" : "bg-white"
-            }`}
-          ></span>
+          {Array.from({ length: 3 }).map((_, i) => (
+            <span
+              key={i}
+              className={`w-6 h-1 transition-all duration-300 ${
+                isScrolled ? "bg-sky-600" : "bg-white"
+              }`}
+            />
+          ))}
         </button>
       </div>
 
       {/* Mobile menu */}
       {isOpen && (
-        <nav className="md:hidden flex flex-col space-y-2 p-4 bg-white/0 backdrop-blur-md shadow">
+        <nav className="md:hidden flex flex-col space-y-2 p-4 bg-white/90 backdrop-blur-md shadow">
           {menuItems.map((item) => (
             <Link
               key={item.key}
@@ -153,13 +195,16 @@ export default function Navbar() {
               className={`${linkColor} font-medium`}
               onClick={() => setIsOpen(false)}
             >
-              {dictionary[currentLocale][item.key]}
+              {/* {dict[currentLocale][item.key]} */}
             </Link>
           ))}
           <select
             value={currentLocale}
-            onChange={handleChange}
-            className={`mt-2 ${selectBg} font-medium px-2 py-1 rounded`}
+            onChange={(e) => {
+              changeLocale(e.target.value);
+              setIsOpen(false);
+            }}
+            className={`mt-2 ${selectClass}`}
           >
             <option value="en">ENG</option>
             <option value="th">TH</option>

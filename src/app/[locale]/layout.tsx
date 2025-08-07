@@ -2,9 +2,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "../[locale]/globals.css";
 import { setRequestLocale } from "next-intl/server";
-// import { Locale } from "next-intl";
+import { LanguageProvider } from "@/context/LanguageContext";
 import { ReactNode } from "react";
-// import {routing} from '@/i18n/routing';
 
 type Props = {
   children: ReactNode;
@@ -42,17 +41,18 @@ export const metadata = {
 export type Locale = "th" | "en";
 
 export default async function RootLayout({ children, params }: Props) {
-  // const t = await getTranslations({ locale: params.locale });
   const { locale } = await params;
 
   setRequestLocale(locale);
 
   return (
-    <html lang={locale}>
+    <html lang="en">
       <body>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <LanguageProvider>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );

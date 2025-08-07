@@ -4,8 +4,9 @@ import Image from "next/image";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useLanguage } from "@/context/LanguageContext";
 
-interface HomeData {
+type HomeData = {
   home_id: number;
   home_title_th?: string;
   home_title_en?: string;
@@ -15,7 +16,7 @@ interface HomeData {
   home_detail_02_en?: string;
   home_detail_03_th?: string;
   home_detail_03_en?: string;
-}
+};
 
 const imageList = [
   "/assets/imgs/209044.png",
@@ -24,59 +25,24 @@ const imageList = [
   "/assets/imgs/209047.png",
 ];
 
-export default function HomeClient() {
-  const [items, setItems] = useState<HomeData[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
+function getValue(obj: HomeData, key: keyof HomeData): string {
+  return (obj[key] as string) ?? "";
+}
 
-  // const [t, setT] = useState<any>({
-  //   cards: [],
-  //   readMore: "อ่านเพิ่มเติม",
-  // });
+export default function HomePage() {
+  const { lang } = useLanguage();
+  const [data, setData] = useState<HomeData[] | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        const res = await fetch("/api/home");
-        const json = await res.json();
-
-        if (!res.ok) throw new Error(json.error || "Failed to fetch");
-
-        setItems(json.data);
-      } catch (err: any) {
-        setError(err.message || "Unknown error");
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    // สมมติ fetch dictionary ด้วย
-    const fetchDictionary = async () => {
-      // const dict = await getDictionary("th");
-      const dict = {
-        cards: [
-          {
-            title: "การบริการ",
-            subtitle: "รายละเอียดบริการ",
-            link: "/services",
-          },
-          {
-            title: "เกี่ยวกับเรา",
-            subtitle: "รายละเอียดบริษัท",
-            link: "/about",
-          },
-        ],
-        readMore: "อ่านเพิ่มเติม",
-      };
-      // setT(dict);
+      const res = await fetch(`/api/home?lang=${lang}`);
+      console.log(res);
+      const json = await res.json();
+      setData(json.data);
     };
 
     fetchData();
-    fetchDictionary();
-  }, []);
-
-  if (loading) return <p>กำลังโหลดข้อมูล...</p>;
-  if (error) return <p className="text-red-600">เกิดข้อผิดพลาด: {error}</p>;
+  }, [lang]);
 
   return (
     <div className="min-h-screen w-full flex flex-col">
@@ -98,27 +64,29 @@ export default function HomeClient() {
       </div>
 
       {/* Introduction */}
-      {items.map((item) => (
-        <div
-          key={item.home_id}
-          className="bg-white text-black py-12 px-4 sm:px-6 text-center"
-        >
-          <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4">
-            {item.home_title_en}
-          </h1>
-          <div className="max-w-4xl mx-auto">
-            <p className="text-base sm:text-lg md:text-xl text-sky-700 font-bold mb-4">
-              {item.home_detail_01_en}
-            </p>
-            <p className="text-sm sm:text-base md:text-lg mb-4 text-balance">
-              {item.home_detail_02_en}
-            </p>
-            <p className="text-sm sm:text-base md:text-lg mb-4 text-balance">
-              {item.home_detail_03_en}
-            </p>
+      <div>
+        {data?.map((item) => (
+          <div
+            key={item.home_id}
+            className="bg-white text-black py-12 px-4 sm:px-6 text-center"
+          >
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4">
+              {getValue(item, `home_title_${lang}` as keyof HomeData)}
+            </h1>
+            <div className="max-w-4xl mx-auto">
+              <p className="text-base sm:text-lg md:text-xl text-sky-700 font-bold mb-4">
+                {getValue(item, `home_detail_01_${lang}` as keyof HomeData)}
+              </p>
+              <p className="text-sm sm:text-base md:text-lg mb-4 text-balance">
+                {getValue(item, `home_detail_02_${lang}` as keyof HomeData)}
+              </p>
+              <p className="text-sm sm:text-base md:text-lg mb-4 text-balance">
+                {getValue(item, `home_detail_03_${lang}` as keyof HomeData)}
+              </p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
 
       {/* Images */}
       <AnimateOnScroll>
