@@ -58,11 +58,11 @@ const news = [
 
 export default function NewMedia() {
   return (
-    <div className="bg-gradient-to-bl from-sky-700 to-green-200 bg-cover bg-center py-26">
+    <div className="bg-gradient-to-bl from-sky-700 to-green-200 bg-cover bg-center py-30">
       <div className="container mx-auto px-4">
         {/* Header */}
         <h1 className="text-4xl md:text-6xl font-bold text-white drop-shadow mb-10 text-center">
-          NEW & MEDIA
+          NEW & CRS
         </h1>
 
         {/* Card Container */}
