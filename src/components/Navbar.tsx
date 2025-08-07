@@ -58,6 +58,7 @@ export default function Navbar() {
   // ตรวจหา locale ปัจจุบันจาก pathname
   const currentLocale = useMemo<Locale>(() => {
     const segments = pathname.split("/");
+    console.log(segments)
     if (segments[1] === "th" || segments[1] === "en") {
       return segments[1];
     }
@@ -89,37 +90,6 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // const dict = {
-  //   en: {
-  //     Home: "Home",
-  //     OurCompany: "Our Company",
-  //     OurProduct: "Our Product",
-  //     Policy: "Policy",
-  //     NewMedia: "New Media",
-  //     JobOpportunity: "Job Opportunity",
-  //     ContactUs: "Contact Us",
-  //   },
-  //   th: {
-  //     Home: "หน้าแรก",
-  //     OurCompany: "เกี่ยวกับบริษัท",
-  //     OurProduct: "ผลิตภัณฑ์ของเรา",
-  //     Policy: "นโยบาย",
-  //     NewMedia: "สื่อใหม่",
-  //     JobOpportunity: "ร่วมงานกับเรา",
-  //     ContactUs: "ติดต่อเรา",
-  //   },
-  // };
-
-  // const menuItems = [
-  //   { key: "Home", path: "" },
-  //   { key: "OurCompany", path: "OurCompany" },
-  //   { key: "OurProduct", path: "OurProduct" },
-  //   { key: "Policy", path: "Policy" },
-  //   { key: "NewMedia", path: "NewMedia" },
-  //   { key: "JobOpportunity", path: "JobOpportunity" },
-  //   { key: "ContactUs", path: "ContactUs" },
-  // ];
 
   const linkColor = isScrolled ? "text-sky-600" : "text-white";
   const selectClass = `font-bold text-lg ${

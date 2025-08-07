@@ -46,7 +46,7 @@ export default async function RootLayout({ children, params }: Props) {
   setRequestLocale(locale);
 
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body>
         <LanguageProvider>
           <Navbar />

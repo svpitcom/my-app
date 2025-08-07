@@ -5,6 +5,7 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
+import { useParams } from 'next/navigation';
 
 type HomeData = {
   home_id: number;
@@ -32,11 +33,12 @@ function getValue(obj: HomeData, key: keyof HomeData): string {
 export default function HomePage() {
   const { lang } = useLanguage();
   const [data, setData] = useState<HomeData[] | null>(null);
+  const params = useParams();
+  const locale = params.locale;
 
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch(`/api/home?lang=${lang}`);
-      console.log(res);
       const json = await res.json();
       setData(json.data);
     };
@@ -46,6 +48,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen w-full flex flex-col">
+      Locale: {locale}
       {/* Banner */}
       <div className="bg-[url('/assets/imgs/tree.png')] bg-cover bg-center text-center">
         <div className="flex justify-center py-12 sm:py-16 md:py-20 lg:py-24">
@@ -108,9 +111,7 @@ export default function HomePage() {
       {/* Cards */}
       <AnimateOnScroll>
         <div className="bg-sky-50 flex flex-wrap justify-center gap-6 px-4 py-12">
-          {/* {t.cards.map((card: any, index: number) => ( */}
           <div
-            // key={index}
             className="w-full sm:w-[90%] md:w-[45%] lg:w-[30%] bg-white rounded-md flex flex-col items-center text-center p-4 shadow-md hover:shadow-lg transition-transform hover:scale-105 cursor-pointer"
           >
             <Image
@@ -139,7 +140,6 @@ export default function HomePage() {
               HelloWorld
             </a>
           </div>
-          {/* ))} */}
         </div>
       </AnimateOnScroll>
     </div>
