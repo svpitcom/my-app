@@ -195,7 +195,7 @@ export default function Navbar() {
               className={`${linkColor} font-medium`}
               onClick={() => setIsOpen(false)}
             >
-              {/* {dict[currentLocale][item.key]} */}
+              {dict[currentLocale][item.key]}
             </Link>
           ))}
           <select
