@@ -51,19 +51,19 @@ export default function OurCompany() {
     <div className="bg-gradient-to-br from-sky-600 to-green-500 bg-cover bg-center">
       Locale: {locale}
       <div className="bg-[url('/assets/imgs/Office_Green.png')] bg-cover bg-center text-white w-full relative py-30">
-        <div className="flex flex-col text-center items-center px-4">
+        <div className="flex flex-col text-center items-center px-4 py-10">
           <Image
             src="/assets/imgs/AW_LOGO_SVP [Final] + Stroke-01.png"
             alt="LogoSVP"
-            width={260}
-            height={260}
-            className="mb-4"
+            width={180}
+            height={180}
+            className="mb-4 w-40 h-40 md:w-64 md:h-64 object-contain"
           />
         </div>
         {data?.map((item) => (
           <h1
             key={item.our_company_id}
-            className="text-white text-shadow-lg/20 text-center text-6xl font-bold mb-4 py-10"
+            className="text-white text-shadow-lg/20 text-center text-3xl md:text-6xl font-bold mb-4 py-6 md:py-10"
           >
             {getValue(
               item,
@@ -79,13 +79,13 @@ export default function OurCompany() {
             key={item.our_company_id}
             className="text-white p-10 rounded-lg text-balance"
           >
-            <h1 className="text-3xl font-bold text-white py-4">
+            <h1 className="text-xl md:text-3xl font-bold text-white py-2 md:py-4">
               {getValue(
                 item,
                 `our_company_title_${lang}` as keyof OurCompanyData
               )}
             </h1>
-            <p className="text-base mt-2">
+            <p className="text-sm md:text-base mt-2 leading-relaxed whitespace-pre-line">
               {getValue(
                 item,
                 `our_company_detail_01_${lang}` as keyof OurCompanyData
@@ -100,7 +100,7 @@ export default function OurCompany() {
             </p>
             <br />
             <br />
-            <p className="text-base mt-2">
+            <p className="text-sm md:text-base mt-2 leading-relaxed whitespace-pre-line">
               {getValue(
                 item,
                 `our_company_detail_02_${lang}` as keyof OurCompanyData
@@ -109,7 +109,7 @@ export default function OurCompany() {
 
             <br />
             <br />
-            <p className="text-base mt-2">
+            <p className="text-sm md:text-base mt-2 leading-relaxed whitespace-pre-line">
               {getValue(
                 item,
                 `our_company_detail_03_${lang}` as keyof OurCompanyData
@@ -123,7 +123,7 @@ export default function OurCompany() {
             <br />
             <br />
             <br />
-            <p className="text-base mt-2">
+            <p className="text-sm md:text-base mt-2 leading-relaxed whitespace-pre-line">
               {getValue(
                 item,
                 `our_company_detail_04_${lang}` as keyof OurCompanyData
@@ -136,7 +136,7 @@ export default function OurCompany() {
             </p>
             <br />
             <br />
-            <p className="text-base mt-2">
+            <p className="text-sm md:text-base mt-2 leading-relaxed whitespace-pre-line">
               {getValue(
                 item,
                 `our_company_detail_05_${lang}` as keyof OurCompanyData
@@ -149,40 +149,32 @@ export default function OurCompany() {
             </p>
             <br />
             <br />
-            <p className="text-base mt-2">
+            <p className="text-sm md:text-base mt-2 leading-relaxed whitespace-pre-line">
               {getValue(
                 item,
                 `our_company_detail_06_${lang}` as keyof OurCompanyData
               )}
-              {/* We believe that skillful labor and employees, state-of-art
-              technology, creative methodology and strong commitment to research
-              and development will enable Nteq Polymer to be center of
-              excellence in natural rubber processing technology in the future. */}
             </p>
           </div>
         ))}
       </div>
-      {/* </div> */}
-      {/* Vision Box & Missions Box */}
-      <div className="flex flex-col md:flex-row justify-center mx-auto gap-6 md:gap-10 p-4 md:p-16 rounded-lg backdrop-blur-sm">
-        {/* Vision Box */}
-        <div className="bg-gradient-to-r from-sky-500 to-green-300 py-16 px-16 rounded-md shadow-md w-full h-96 md:w-1/2 text-center">
-          <h2 className="text-2xl md:text-5xl font-bold text-blue-700 mb-4">
+      <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-10 p-4 md:p-16 rounded-lg backdrop-blur-sm">
+        <div className="bg-gradient-to-r from-sky-500 to-green-300 p-6 md:py-16 md:px-16 rounded-md shadow-md w-full h-auto md:h-96 text-center">
+          <h2 className="text-xl md:text-5xl font-bold text-blue-700 mb-4">
             Vision
           </h2>
-          <p className="text-white text-base md:text-lg">
+          <p className="text-white text-sm md:text-lg leading-relaxed">
             Lead the different and be the benchmark
             <br />
             through synergy in natural rubber industry
           </p>
         </div>
 
-        {/* Missions Box */}
-        <div className="bg-gradient-to-r from-sky-500 to-green-300 py-16 px-16 rounded-md shadow-md w-full md:w-1/2 text-center">
-          <h2 className="text-2xl md:text-5xl font-bold text-blue-700 mb-4">
+        <div className="bg-gradient-to-r from-sky-500 to-green-300 p-6 md:py-16 md:px-16 rounded-md shadow-md w-full h-auto md:h-96 text-center">
+          <h2 className="text-xl md:text-5xl font-bold text-blue-700 mb-4">
             Missions
           </h2>
-          <p className="text-white text-base md:text-lg">
+          <p className="text-white text-sm md:text-lg leading-relaxed">
             Advance technology innovative material
             <br />
             Create customer satisfaction and produce products at the highest

@@ -48,7 +48,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen w-full flex flex-col">
-      Locale: {locale}
+      {/* Locale: {locale} */}
       {/* Banner */}
       <div className="bg-[url('/assets/imgs/tree.png')] bg-cover bg-center text-center">
         <div className="flex justify-center py-12 sm:py-16 md:py-20 lg:py-24">
