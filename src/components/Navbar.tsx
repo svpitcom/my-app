@@ -12,7 +12,7 @@ type MenuKey =
   | "OurCompany"
   | "OurProduct"
   | "Policy"
-  | "NewMedia"
+  | "NewCSR"
   | "JobOpportunity"
   | "ContactUs";
 
@@ -22,7 +22,7 @@ const dict: Record<Locale, Record<MenuKey, string>> = {
     OurCompany: "Our Company",
     OurProduct: "Our Product",
     Policy: "Policy",
-    NewMedia: "New Media",
+    NewCSR: "NewCSR",
     JobOpportunity: "Job Opportunity",
     ContactUs: "Contact Us",
   },
@@ -31,7 +31,7 @@ const dict: Record<Locale, Record<MenuKey, string>> = {
     OurCompany: "เกี่ยวกับบริษัท",
     OurProduct: "ผลิตภัณฑ์ของเรา",
     Policy: "นโยบาย",
-    NewMedia: "สื่อใหม่",
+    NewCSR: "สื่อใหม่และกิจกรรม",
     JobOpportunity: "ร่วมงานกับเรา",
     ContactUs: "ติดต่อเรา",
   },
@@ -42,7 +42,7 @@ const menuItems: { key: MenuKey; path: string }[] = [
   { key: "OurCompany", path: "OurCompany" },
   { key: "OurProduct", path: "OurProduct" },
   { key: "Policy", path: "Policy" },
-  { key: "NewMedia", path: "NewMedia" },
+  { key: "NewCSR", path: "NewCSR" },
   { key: "JobOpportunity", path: "JobOpportunity" },
   { key: "ContactUs", path: "ContactUs" },
 ];
@@ -58,7 +58,7 @@ export default function Navbar() {
   // ตรวจหา locale ปัจจุบันจาก pathname
   const currentLocale = useMemo<Locale>(() => {
     const segments = pathname.split("/");
-    console.log(segments)
+    // console.log(segments)
     if (segments[1] === "th" || segments[1] === "en") {
       return segments[1];
     }

@@ -65,7 +65,6 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-
       {/* Introduction */}
       <div>
         {data?.map((item) => (
@@ -90,7 +89,6 @@ export default function HomePage() {
           </div>
         ))}
       </div>
-
       {/* Images */}
       <AnimateOnScroll>
         <div className="bg-gradient-to-br from-sky-600 to-green-500 flex flex-wrap justify-center gap-4 px-4 py-8">
@@ -99,15 +97,14 @@ export default function HomePage() {
               <Image
                 src={src}
                 alt={`Company image ${index + 1}`}
-                width={500}
-                height={500}
+                width={350}
+                height={350}
                 className="w-full h-auto object-cover rounded-lg shadow-md"
               />
             </div>
           ))}
         </div>
       </AnimateOnScroll>
-
       {/* Cards */}
       <AnimateOnScroll>
         <div className="bg-sky-50 flex flex-wrap justify-center gap-6 px-4 py-12">
@@ -142,6 +139,7 @@ export default function HomePage() {
           </div>
         </div>
       </AnimateOnScroll>
+     
     </div>
   );
 }

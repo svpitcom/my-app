@@ -1,5 +1,9 @@
 // next.config.ts
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    domains: ["your-image-domain.com"],
+  },
+};
 
 export default nextConfig;
