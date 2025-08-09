@@ -19,6 +19,20 @@ type HomeData = {
   home_detail_03_en?: string;
 };
 
+// type NewCrsData = {
+//   new_csr_id: number;
+//   new_csr_header_en: string;
+//   new_csr_header_th: string;
+//   new_csr_title_en: string;
+//   new_csr_title_th: string;
+//   new_csr_bt_en: string;
+//   new_csr_bt_th: string;
+//   new_csr_detail_en: string;
+//   new_csr_detail_th: string;
+//   new_csr_img: string;
+//   created_at: string;
+// };
+
 const imageList = [
   "/assets/imgs/209044.png",
   "/assets/imgs/209045.png",
@@ -30,11 +44,13 @@ function getValue(obj: HomeData, key: keyof HomeData): string {
   return (obj[key] as string) ?? "";
 }
 
+// function getValueNewCRS(obj: NewCrsData, key: keyof NewCrsData): string {
+//   return (obj[key] as string) ?? "";
+// }
+
 export default function HomePage() {
   const { lang } = useLanguage();
   const [data, setData] = useState<HomeData[] | null>(null);
-  // const params = useParams();
-  // const locale = params.locale;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -108,9 +124,7 @@ export default function HomePage() {
       {/* Cards */}
       <AnimateOnScroll>
         <div className="bg-sky-50 flex flex-wrap justify-center gap-6 px-4 py-12">
-          <div
-            className="w-full sm:w-[90%] md:w-[45%] lg:w-[30%] bg-white rounded-md flex flex-col items-center text-center p-4 shadow-md hover:shadow-lg transition-transform hover:scale-105 cursor-pointer"
-          >
+          <div className="w-full sm:w-[90%] md:w-[45%] lg:w-[30%] bg-white rounded-md flex flex-col items-center text-center p-4 shadow-md hover:shadow-lg transition-transform hover:scale-105 cursor-pointer">
             <Image
               src="/assets/imgs/Card-box-1.png"
               alt="image"
@@ -139,7 +153,6 @@ export default function HomePage() {
           </div>
         </div>
       </AnimateOnScroll>
-     
     </div>
   );
 }

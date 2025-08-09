@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import Image from "next/image";
-// import { useParams } from "next/navigation";
 import Link from "next/link";
 
 type NewCrsData = {
@@ -27,10 +26,11 @@ function getValue(obj: NewCrsData, key: keyof NewCrsData): string {
 export default function NewCSR() {
   const { lang } = useLanguage();
   const [data, setData] = useState<NewCrsData[] | null>(null);
+  console.log(data);
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch(`/api/ourcompany?lang=${lang}`);
+      const res = await fetch(`/api/newcsr?lang=${lang}`);
       const json = await res.json();
       setData(json.data);
     };
@@ -68,7 +68,7 @@ export default function NewCSR() {
                   >
                     {getValue(
                       item,
-                      `new_csr_title_${lang}` as keyof NewCrsData
+                      `new_csr_header_${lang}` as keyof NewCrsData
                     )}
                   </Link>
 
@@ -82,15 +82,11 @@ export default function NewCSR() {
                     )}
                   </Link>
 
-                  <a
-                    href="#"
-                    className="mt-auto w-full bg-gradient-to-r from-sky-500 to-green-300 hover:from-green-300 hover:to-sky-500 text-white font-medium rounded p-2 transition duration-300 ease-in-out cursor-pointer"
-                  >
-                    {getValue(
-                      item,
-                      `new_csr_title_${lang}` as keyof NewCrsData
-                    )}
-                  </a>
+                  <Link href={`/NewCSR/${item.new_csr_id}?lang=${lang}`}>
+                    <button className="mt-auto w-full bg-gradient-to-r from-sky-500 to-green-300 hover:from-green-300 hover:to-sky-500 text-white font-medium rounded py-2 px-10 transition duration-300 ease-in-out cursor-pointer">
+                      {getValue(item, `new_csr_bt_${lang}` as keyof NewCrsData)}
+                    </button>
+                  </Link>
                 </div>
               </div>
             );

@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import Image from "next/image";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
-import { useParams } from "next/navigation";
 
 type OurCompanyData = {
   our_company_id: number;
@@ -32,8 +31,7 @@ function getValue(obj: OurCompanyData, key: keyof OurCompanyData): string {
 export default function OurCompany() {
   const { lang } = useLanguage();
   const [data, setData] = useState<OurCompanyData[] | null>(null);
-  const params = useParams();
-  const locale = params.locale;
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -49,8 +47,7 @@ export default function OurCompany() {
 
   return (
     <div className="bg-gradient-to-br from-sky-600 to-green-500 bg-cover bg-center">
-      Locale: {locale}
-      <div className="bg-[url('/assets/imgs/Office_Green.png')] bg-cover bg-center text-white w-full relative py-30">
+      <div className="bg-[url('/assets/imgs/Ourcompanyv3.png')] bg-cover bg-center text-white w-full relative py-30">
         <div className="flex flex-col text-center items-center px-4 py-10">
           <Image
             src="/assets/imgs/AW_LOGO_SVP [Final] + Stroke-01.png"

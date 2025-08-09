@@ -120,7 +120,7 @@ export default function Policy() {
             </div>
           </div>
         </AnimateOnScroll>
-        <div className="bg-sky-600 flex flex-row justify-center items-center gap-6 p-4 w-full">
+        <div className="bg-gradient-to-br from-sky-600 to-green-500 text-white flex flex-row justify-center items-center gap-6 p-4 w-full">
           นโยบายสิ่งแวดล้อม บริษัท เอ็นเทค โพลิเมอร์ จำกัด
           ดำเนินธุรกิจด้านผลิตยางแท่ง
           ซึ่งตระหนักถึงความสำคัญของระบบบริหารงานด้านสิ่งแวดล้อม
