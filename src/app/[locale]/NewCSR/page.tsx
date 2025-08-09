@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import Image from "next/image";
-import { useParams } from "next/navigation";
+// import { useParams } from "next/navigation";
 import Link from "next/link";
 
 type NewCrsData = {
@@ -27,8 +27,8 @@ function getValue(obj: NewCrsData, key: keyof NewCrsData): string {
 export default function NewCSR() {
   const { lang } = useLanguage();
   const [data, setData] = useState<NewCrsData[] | null>(null);
-  const params = useParams();
-  const locale = params.locale;
+  // const params = useParams();
+  // const locale = params.locale;
 
   useEffect(() => {
     const fetchData = async () => {

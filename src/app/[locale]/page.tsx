@@ -5,7 +5,7 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { useParams } from 'next/navigation';
+// import { useParams } from 'next/navigation';
 
 type HomeData = {
   home_id: number;
@@ -33,8 +33,8 @@ function getValue(obj: HomeData, key: keyof HomeData): string {
 export default function HomePage() {
   const { lang } = useLanguage();
   const [data, setData] = useState<HomeData[] | null>(null);
-  const params = useParams();
-  const locale = params.locale;
+  // const params = useParams();
+  // const locale = params.locale;
 
   useEffect(() => {
     const fetchData = async () => {
