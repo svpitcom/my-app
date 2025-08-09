@@ -27,8 +27,6 @@ function getValue(obj: NewCrsData, key: keyof NewCrsData): string {
 export default function NewCSR() {
   const { lang } = useLanguage();
   const [data, setData] = useState<NewCrsData[] | null>(null);
-  // const params = useParams();
-  // const locale = params.locale;
 
   useEffect(() => {
     const fetchData = async () => {
