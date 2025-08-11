@@ -64,7 +64,7 @@ export default function Policy() {
             <h1 className="text-3xl md:text-6xl font-bold mb-3">
               Energy Conservation Policy
             </h1>
-            <p className="max-w-4xl mx-auto text-base md:text-xl">
+            <p className="max-w-4xl mx-auto text-base text-balance md:text-xl">
               Energy is a valuable resource. The production of energy and its
               consumption has environmental impacts. The following policy is
               established as guidelines to conservation and promotes efficient

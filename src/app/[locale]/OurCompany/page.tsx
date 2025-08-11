@@ -48,8 +48,14 @@ export default function OurCompany() {
 
   return (
     <div className="bg-gradient-to-br from-sky-600 to-green-500 bg-cover bg-center">
-      <div className="bg-[url('/assets/imgs/Ourcompanyv3.png')] bg-cover bg-center text-white w-full relative py-20">
-        <div className="flex flex-col text-center items-center px-4 py-16">
+      <div
+        className="
+                    bg-[url('/assets/imgs/Ourcompanyv3.png')]
+                    sm:bg-[url('/assets/imgs/Ourcompanyv3-mobile.png')]
+                    bg-cover bg-center text-white w-full relative py-20
+                  "
+      >
+        <div className="flex flex-col text-center items-center px-4 py-4">
           <Image
             src="/assets/imgs/AW_LOGO_SVP [Final] + Stroke-01.png"
             alt="LogoSVP"

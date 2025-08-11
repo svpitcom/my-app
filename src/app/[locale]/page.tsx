@@ -5,7 +5,6 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
-// import { useParams } from 'next/navigation';
 
 type HomeData = {
   home_id: number;
@@ -19,19 +18,19 @@ type HomeData = {
   home_detail_03_en?: string;
 };
 
-// type NewCrsData = {
-//   new_csr_id: number;
-//   new_csr_header_en: string;
-//   new_csr_header_th: string;
-//   new_csr_title_en: string;
-//   new_csr_title_th: string;
-//   new_csr_bt_en: string;
-//   new_csr_bt_th: string;
-//   new_csr_detail_en: string;
-//   new_csr_detail_th: string;
-//   new_csr_img: string;
-//   created_at: string;
-// };
+type NewCrsData = {
+  new_csr_id: number;
+  new_csr_header_en: string;
+  new_csr_header_th: string;
+  new_csr_title_en: string;
+  new_csr_title_th: string;
+  new_csr_bt_en: string;
+  new_csr_bt_th: string;
+  new_csr_detail_en: string;
+  new_csr_detail_th: string;
+  new_csr_img: string;
+  created_at: string;
+};
 
 const imageList = [
   "/assets/imgs/209044.png",
@@ -44,30 +43,41 @@ function getValue(obj: HomeData, key: keyof HomeData): string {
   return (obj[key] as string) ?? "";
 }
 
-// function getValueNewCRS(obj: NewCrsData, key: keyof NewCrsData): string {
-//   return (obj[key] as string) ?? "";
-// }
+function getValueNewCRS(obj: NewCrsData, key: keyof NewCrsData): string {
+  return (obj[key] as string) ?? "";
+}
 
 export default function HomePage() {
   const { lang } = useLanguage();
   const [data, setData] = useState<HomeData[] | null>(null);
+  const [newCsr, setNewCsr] = useState<NewCrsData[] | null>(null);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchHome = async () => {
       const res = await fetch(`/api/home?lang=${lang}`);
       const json = await res.json();
       setData(json.data);
     };
 
-    fetchData();
+    const fetchNewCSR = async () => {
+      const res = await fetch(`/api/newcsr?lang=${lang}`);
+      const json = await res.json();
+      setNewCsr(json.data);
+    };
+
+    fetchHome();
+    fetchNewCSR();
   }, [lang]);
 
   return (
     <div className="min-h-screen w-full flex flex-col">
-      {/* Locale: {locale} */}
       {/* Banner */}
-      <div className="bg-[url('/assets/imgs/tree.png')] bg-cover bg-center text-center">
-        <div className="flex justify-center py-12 sm:py-16 md:py-20 lg:py-24">
+      <div className="relative text-center">
+        <div
+          className="absolute inset-0 bg-[url('/assets/imgs/tree.png')] bg-cover bg-center"
+        ></div>
+        {/* <div className="absolute inset-0 bg-white/20"></div> */}
+        <div className="relative z-10 flex justify-center py-12 sm:py-16 md:py-20 lg:py-24">
           <div className="relative px-4 py-10 sm:py-16">
             <div className="flex flex-col items-center text-center">
               <Image
@@ -81,6 +91,7 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+
       {/* Introduction */}
       <div>
         {data?.map((item) => (
@@ -105,6 +116,7 @@ export default function HomePage() {
           </div>
         ))}
       </div>
+
       {/* Images */}
       <AnimateOnScroll>
         <div className="bg-gradient-to-br from-sky-600 to-green-500 flex flex-col md:flex-row items-center justify-center gap-6 px-4 py-8">
@@ -121,38 +133,58 @@ export default function HomePage() {
           ))}
         </div>
       </AnimateOnScroll>
-      {/* Cards */}
-      <AnimateOnScroll>
-        <div className="bg-sky-50 flex flex-wrap justify-center gap-6 px-4 py-12">
-          <div className="w-full sm:w-[90%] md:w-[45%] lg:w-[30%] bg-white rounded-md flex flex-col items-center text-center p-4 shadow-md hover:shadow-lg transition-transform hover:scale-105 cursor-pointer">
-            <Image
-              src="/assets/imgs/Card-box-1.png"
-              alt="image"
-              width={350}
-              height={350}
-              className="w-full h-auto p-2"
-            />
-            <Link
-              href="#"
-              className="font-bold text-xl md:text-2xl text-sky-600 hover:text-sky-400"
-            >
-              Hello
-            </Link>
-            <Link
-              href="#"
-              className="font-semibold text-base md:text-lg text-sky-600 hover:text-sky-400"
-            >
-              Hello
-            </Link>
-            <a
-              className="bg-sky-700 text-base md:text-lg w-full hover:bg-blue-800 text-white rounded p-2 mt-2"
-              href="#"
-            >
-              HelloWorld
-            </a>
+
+      {/* New & CSR */}
+      {newCsr && newCsr.length > 0 && (
+        <AnimateOnScroll>
+          <div className="bg-white py-12 px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center mb-8">
+              {lang === "th" ? "ข่าวสารและกิจกรรม" : "News & CSR"}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {newCsr.map((item) => (
+                <div
+                  key={item.new_csr_id}
+                  className="bg-sky-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-transform hover:scale-105"
+                >
+                  <Image
+                    src={item.new_csr_img}
+                    alt={getValueNewCRS(
+                      item,
+                      `new_csr_title_${lang}` as keyof NewCrsData
+                    )}
+                    width={500}
+                    height={300}
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="p-4">
+                    <h3 className="text-xl font-bold mb-2">
+                      {getValueNewCRS(
+                        item,
+                        `new_csr_title_${lang}` as keyof NewCrsData
+                      )}
+                    </h3>
+                    {/* <p className="text-sm mb-4">
+                      {getValueNewCRS(
+                        item,
+                        `new_csr_detail_${lang}` as keyof NewCrsData
+                      )}
+                    </p> */}
+                    <Link href={`/NewCSR/${item.new_csr_id}?lang=${lang}`}>
+                      <button className="mt-auto w-full bg-gradient-to-r from-sky-500 to-green-300 hover:from-green-300 hover:to-sky-500 text-white font-medium rounded py-2 px-10 transition duration-300 ease-in-out cursor-pointer">
+                        {getValueNewCRS(
+                          item,
+                          `new_csr_bt_${lang}` as keyof NewCrsData
+                        )}
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </AnimateOnScroll>
+        </AnimateOnScroll>
+      )}
     </div>
   );
 }

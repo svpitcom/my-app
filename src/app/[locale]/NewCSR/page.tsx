@@ -58,8 +58,9 @@ export default function NewCSR() {
                     src={imgSrc}
                     alt="Company Logo"
                     width={260}
-                    height={260}
-                    className="mb-4"
+                    height={240}
+                    className="mb-4 object-cover"
+                    style={{ height: "220px" }}
                   />
 
                   <Link

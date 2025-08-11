@@ -51,7 +51,7 @@ export default function NewCSRDetail() {
 
   return (
     <div className="bg-gradient-to-br from-sky-600 to-green-500 py-30 px-20">
-      <div className="container mx-auto px-4 bg-white">
+      <div className="container mx-auto p-6 bg-white rounded-sm">
         <Link href="/NewCSR" className="text-sky-500 hover:underline">
           ← Back
         </Link>
@@ -67,20 +67,13 @@ export default function NewCSRDetail() {
             data.new_csr_img_04,
           ].filter((img) => img && img.trim() !== "")}
         />
-        <h2 className="text-2xl font-semibold text-sky-600 mb-4">
+        <h2 className="text-2xl font-semibold text-sky-600 mb-4 px-36">
           {getValue(data, `new_csr_title_${currentLang}` as keyof NewCrsData)}
         </h2>
-        <p className="text-lg leading-relaxed text-gray-700 whitespace-pre-line">
+        <p className="text-lg leading-relaxed text-gray-700 whitespace-pre-line px-36">
           {getValue(data, `new_csr_detail_${currentLang}` as keyof NewCrsData)}
         </p>
       </div>
-      {/* <Image
-            src="/assets/csr/baby-day/619304_0.jpg"
-            alt="LogoSVP"
-            width={180}
-            height={180}
-            className="mb-4 w-40 h-40 md:w-64 md:h-64 object-contain"
-          /> */}
     </div>
   );
 }
