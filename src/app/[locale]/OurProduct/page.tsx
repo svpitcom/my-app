@@ -4,28 +4,28 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 export default function OurProduct() {
   return (
-    <div className="bg-gradient-to-r from-sky-500 to-green-300 bg-cover bg-center w-full">
-      <div className="bg-[url('/assets/imgs/OurProduction.png')] bg-cover bg-center text-white w-full relative py-30">
+    <div className="bg-gradient-to-r from-sky-500 to-green-300 bg-cover bg-center w-full py-30 sm:py-30">
+      <div className="bg-[url('/assets/imgs/OurProduction.png')] bg-cover bg-center text-white w-full relative ">
         <div className="flex justify-center items-center">
           <Image
             src="/assets/imgs/AW_LOGO_SVP [Final] + Stroke-01.png"
             alt="LogoSVP"
-            width={240}
-            height={240}
-            className="mb-4"
+            width={160} // ขนาดเริ่มต้นสำหรับมือถือ
+            height={160}
+            className="mb-4 sm:w-[200px] sm:h-[200px] md:w-[240px] md:h-[240px] object-contain"
           />
         </div>
       </div>
 
       <div className="bg-cover bg-center">
-        <div className="flex justify-center py-12 md:py-16">
-          <h1 className="text-white text-shadow-lg/20 text-4xl md:text-6xl font-bold p-4 md:p-8 rounded text-center">
+        <div className="flex justify-center py-10 md:py-12">
+          <h1 className="text-white text-shadow-lg/20 text-4xl md:text-6xl font-bold p-4 md:p-6 rounded text-center">
             OurProducts
           </h1>
         </div>
         <div className="bg-neutral-50 text-black py-10 md:py-16 px-4 md:px-10 text-center">
           <div className="max-w-5xl mx-auto">
-            <h1 className="text-4xl md:text-4xl font-bold mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold mb-4">
               Technically Specified Rubber
             </h1>
             <br />
@@ -39,8 +39,6 @@ export default function OurProduct() {
               STR10, and STR20 as well as Mooney viscosity controlled 9710 and
               9720.
             </p>
-            <br />
-            <br />
             <br />
             <p className="text-base md:text-lg text-left leading-relaxed">
               Customization of products or special request specifications of

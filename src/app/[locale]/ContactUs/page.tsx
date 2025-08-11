@@ -29,7 +29,7 @@ export default function ContactUs() {
   };
   return (
     <div className="bg-cover bg-center w-full h-full">
-      <div className="bg-[url('/assets/imgs/Contnot.jpg')] bg-cover bg-center bg-radial text-white py-30">
+      <div className="bg-[url('/assets/imgs/Contnot-editai.jpg')] bg-cover bg-center bg-radial text-white py-30">
         <div className="flex flex-col text-center items-center px-4">
           <Image
             src="/assets/imgs/AW_LOGO_SVP [Final] + Stroke-01.png"

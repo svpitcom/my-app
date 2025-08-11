@@ -73,9 +73,7 @@ export default function HomePage() {
     <div className="min-h-screen w-full flex flex-col">
       {/* Banner */}
       <div className="relative text-center">
-        <div
-          className="absolute inset-0 bg-[url('/assets/imgs/tree.png')] bg-cover bg-center"
-        ></div>
+        <div className="absolute inset-0 bg-[url('/assets/imgs/tree.png')] bg-cover bg-center"></div>
         {/* <div className="absolute inset-0 bg-white/20"></div> */}
         <div className="relative z-10 flex justify-center py-12 sm:py-16 md:py-20 lg:py-24">
           <div className="relative px-4 py-10 sm:py-16">
@@ -91,7 +89,6 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-
       {/* Introduction */}
       <div>
         {data?.map((item) => (
@@ -116,7 +113,6 @@ export default function HomePage() {
           </div>
         ))}
       </div>
-
       {/* Images */}
       <AnimateOnScroll>
         <div className="bg-gradient-to-br from-sky-600 to-green-500 flex flex-col md:flex-row items-center justify-center gap-6 px-4 py-8">
@@ -133,7 +129,6 @@ export default function HomePage() {
           ))}
         </div>
       </AnimateOnScroll>
-
       {/* New & CSR */}
       {newCsr && newCsr.length > 0 && (
         <AnimateOnScroll>
@@ -142,7 +137,7 @@ export default function HomePage() {
               {lang === "th" ? "ข่าวสารและกิจกรรม" : "News & CSR"}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {newCsr.map((item) => (
+              {newCsr.slice(0, 3).map((item) => (
                 <div
                   key={item.new_csr_id}
                   className="bg-sky-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-transform hover:scale-105"
@@ -164,12 +159,7 @@ export default function HomePage() {
                         `new_csr_title_${lang}` as keyof NewCrsData
                       )}
                     </h3>
-                    {/* <p className="text-sm mb-4">
-                      {getValueNewCRS(
-                        item,
-                        `new_csr_detail_${lang}` as keyof NewCrsData
-                      )}
-                    </p> */}
+
                     <Link href={`/NewCSR/${item.new_csr_id}?lang=${lang}`}>
                       <button className="mt-auto w-full bg-gradient-to-r from-sky-500 to-green-300 hover:from-green-300 hover:to-sky-500 text-white font-medium rounded py-2 px-10 transition duration-300 ease-in-out cursor-pointer">
                         {getValueNewCRS(

@@ -51,7 +51,7 @@ export default function OurCompany() {
       <div
         className="
                     bg-[url('/assets/imgs/Ourcompanyv3.png')]
-                    sm:bg-[url('/assets/imgs/Ourcompanyv3-mobile.png')]
+                    sm:bg-[url('/assets/imgs/Ourcompanyv3.png')]
                     bg-cover bg-center text-white w-full relative py-20
                   "
       >
@@ -133,39 +133,36 @@ export default function OurCompany() {
         ))}
       </div>
       <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-10 p-4 md:p-16 rounded-lg backdrop-blur-sm">
-        <div className="bg-gradient-to-r from-sky-500 to-green-300 p-6 md:py-16 md:px-16 rounded-md shadow-md w-full h-auto md:h-96 text-center">
+        <div className="bg-gradient-to-r from-sky-500 to-green-300 p-6 md:py-16 md:px-16 rounded-md shadow-md w-full h-auto md:h-96 text-center text-balance">
           <h2 className="text-xl md:text-5xl font-bold text-blue-700 mb-4">
             Vision
           </h2>
           <p className="text-white text-sm md:text-lg leading-relaxed">
-            Lead the different and be the benchmark
-            <br />
-            through synergy in natural rubber industry
+            Lead the different and be the benchmark through synergy in natural
+            rubber industry
           </p>
         </div>
 
-        <div className="bg-gradient-to-r from-sky-500 to-green-300 p-6 md:py-16 md:px-16 rounded-md shadow-md w-full h-auto md:h-96 text-center">
+        <div className="bg-gradient-to-r from-sky-500 to-green-300 p-6 md:py-16 md:px-16 rounded-md shadow-md w-full h-auto md:h-96 text-center text-balance">
           <h2 className="text-xl md:text-5xl font-bold text-blue-700 mb-4">
             Missions
           </h2>
           <p className="text-white text-sm md:text-lg leading-relaxed">
-            Advance technology innovative material
-            <br />
-            Create customer satisfaction and produce products at the highest
-            quality
-            <br />
-            Clean and environmentally friendly factory that help develop and
-            improve standard of living
+            Advance technology innovative material Create customer satisfaction
+            and produce products at the highest quality Clean and
+            environmentally friendly factory that help develop and improve
+            standard of living
           </p>
         </div>
       </div>
-      <div className="flex justify-center items-center mt-6">
+      <div className="bg-white w-full text-center justify-center items-center py-8">
+        <h1 className="text-xl md:text-5xl py-8 text-blue-700">Oraganization Chart</h1>
         <Image
-          src="/assets/imgs/Borad.png"
+          src="/assets/imgs/Borad-v1.png"
           alt="Borad"
           width={1366}
           height={800}
-          className="w-full max-w-[1366px] object-contain"
+          className="w-full max-w-full object-contain"
         />
       </div>
       <AnimateOnScroll>
