@@ -45,7 +45,7 @@ export default function NewCSRDetail() {
   if (!data) return <div className="text-center py-20">Loading...</div>;
 
   return (
-    <div className="bg-sky-50 py-20">
+    <div className="bg-sky-50 py-30">
       <div className="container mx-auto px-4">
         <Link href="/" className="text-sky-500 hover:underline">
           ← Back

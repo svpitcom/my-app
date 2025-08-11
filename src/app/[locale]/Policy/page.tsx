@@ -58,21 +58,21 @@ export default function Policy() {
         </div>
       </div>
 
-      <AnimateOnScroll>
-        <div className="bg-gradient-to-br from-sky-600 to-green-500 text-white py-10 text-center px-4">
-          <h1 className="text-3xl md:text-6xl font-bold mb-3">
-            Energy Conservation Policy
-          </h1>
-          <p className="max-w-4xl mx-auto text-base md:text-xl">
-            Energy is a valuable resource. The production of energy and its
-            consumption has environmental impacts. The following policy is
-            established as guidelines to conservation and promotes efficient use
-            of energy.
-          </p>
-        </div>
-      </AnimateOnScroll>
+      <div className="bg-[url('/assets/imgs/EnergyConservation.jpg')] bg-cover bg-center h-full">
+        <AnimateOnScroll>
+          <div className="bg-gradient-to-br from-sky-600 to-green-500 text-white py-10 text-center px-4">
+            <h1 className="text-3xl md:text-6xl font-bold mb-3">
+              Energy Conservation Policy
+            </h1>
+            <p className="max-w-4xl mx-auto text-base md:text-xl">
+              Energy is a valuable resource. The production of energy and its
+              consumption has environmental impacts. The following policy is
+              established as guidelines to conservation and promotes efficient
+              use of energy.
+            </p>
+          </div>
+        </AnimateOnScroll>
 
-      <div className="bg-white/75 bg-cover bg-center ">
         <AnimateOnScroll>
           <div className="bg-white/60 bg-cover bg-center p-4">
             <div className="flex flex-col md:flex-row justify-center items-center gap-4 py-8">
@@ -96,7 +96,7 @@ export default function Policy() {
         </AnimateOnScroll>
 
         <AnimateOnScroll>
-          <div className="flex mx-auto py-4 justify-center items-center bg-white rounded-lg w-full px-4">
+          <div className="flex mx-auto py-4 justify-center items-center bg-white/60 rounded-lg w-full px-4">
             <div className="max-w-3xl text-center">
               <p className="text-sm md:text-xl text-gray-700 mb-4">
                 Energy conservation is the responsibility of executives and
@@ -104,12 +104,11 @@ export default function Policy() {
                 to comply with measures specified for monitoring and reporting
                 in accordance with laws.
               </p>
-              
             </div>
           </div>
         </AnimateOnScroll>
 
-        <div className="bg-sky-700 flex flex-row justify-center items-center gap-6 p-4 w-full">
+        <div className="flex flex-row justify-center items-center gap-6 p-4 w-full">
           <ImagePopup
             src="/assets/imgs/Certificate14001_SV_Polymer_page-0001.jpg"
             alt="Sample"

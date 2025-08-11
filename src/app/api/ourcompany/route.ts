@@ -11,6 +11,7 @@ export async function GET(req: NextRequest) {
   const fields = [
     "our_company_id",
     `our_company_title_${lang}`,
+    `our_company_subtitle_${lang}`,
     `our_company_detail_01_${lang}`,
     `our_company_detail_02_${lang}`,
     `our_company_detail_03_${lang}`,

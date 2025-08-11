@@ -21,6 +21,8 @@ type OurCompanyData = {
   our_company_detail_05_th: string;
   our_company_detail_06_en: string;
   our_company_detail_06_th: string;
+  our_company_subtitle_en: string;
+  our_company_subtitle_th: string;
   created_at: string; // หรือ Date ถ้าคุณแปลงเป็น Date object
 };
 
@@ -31,7 +33,6 @@ function getValue(obj: OurCompanyData, key: keyof OurCompanyData): string {
 export default function OurCompany() {
   const { lang } = useLanguage();
   const [data, setData] = useState<OurCompanyData[] | null>(null);
-
 
   useEffect(() => {
     const fetchData = async () => {
@@ -69,7 +70,7 @@ export default function OurCompany() {
           </h1>
         ))}
       </div>
-      {/* <div className="bg-gradient-to-b bg-white/20 via-white to-white bg-cover bg-center text-white h-full py-2"> */}
+
       <div className="max-w-4xl mx-auto">
         {data?.map((item) => (
           <div
@@ -79,7 +80,7 @@ export default function OurCompany() {
             <h1 className="text-xl md:text-3xl font-bold text-white py-2 md:py-4">
               {getValue(
                 item,
-                `our_company_title_${lang}` as keyof OurCompanyData
+                `our_company_subtitle_${lang}` as keyof OurCompanyData
               )}
             </h1>
             <p className="text-sm md:text-base mt-2 leading-relaxed whitespace-pre-line">
@@ -87,15 +88,7 @@ export default function OurCompany() {
                 item,
                 `our_company_detail_01_${lang}` as keyof OurCompanyData
               )}
-              {/* is a European based joint venture BOI approved natural rubber
-              processing and export company established in 26th July 2010. With
-              combined experience of over 150 years in natural rubber business
-              from world class tire maker (Michelin) and experience natural
-              rubber processor (Mr. Chee Wan Lee, Mr. Payungsak Kerdvonbundit)
-              who shared common vision to create sustainable value added product
-              and service through research and development. */}
             </p>
-            <br />
             <br />
             <p className="text-sm md:text-base mt-2 leading-relaxed whitespace-pre-line">
               {getValue(
@@ -103,48 +96,28 @@ export default function OurCompany() {
                 `our_company_detail_02_${lang}` as keyof OurCompanyData
               )}
             </p>
-
-            <br />
             <br />
             <p className="text-sm md:text-base mt-2 leading-relaxed whitespace-pre-line">
               {getValue(
                 item,
                 `our_company_detail_03_${lang}` as keyof OurCompanyData
               )}
-              {/* To achieve sustainability in the natural rubber industry it is
-              essential to continually develop process efficiency and quality,
-              maintain high corporate social responsibility through breakthrough
-              innovation to adapt to the ongoing changes in the world’s economy
-              and environment. */}
             </p>
             <br />
-            <br />
-            <br />
+
             <p className="text-sm md:text-base mt-2 leading-relaxed whitespace-pre-line">
               {getValue(
                 item,
                 `our_company_detail_04_${lang}` as keyof OurCompanyData
               )}
-              {/* We understand the importance of quality and its impact on the
-              final products which may have save lives. Therefore, we are
-              committed to manufacturing rubber with stringent quality control
-              policy that our company always upheld to meet the requirements of
-              our customers. */}
             </p>
-            <br />
             <br />
             <p className="text-sm md:text-base mt-2 leading-relaxed whitespace-pre-line">
               {getValue(
                 item,
                 `our_company_detail_05_${lang}` as keyof OurCompanyData
               )}
-              {/* As we aim best in producing highest eco-quality standardized
-              natural rubber. To prove our commitment, we had already been
-              certified with ISO9001:2008, ISO14001:2015, TLS8001:2010, Silver
-              Medal in Ecovadis with highest score in environmental aspect,
-              Green industry award and soon ISO/IEC 17025:2005. */}
             </p>
-            <br />
             <br />
             <p className="text-sm md:text-base mt-2 leading-relaxed whitespace-pre-line">
               {getValue(
