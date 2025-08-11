@@ -3,8 +3,9 @@
 import { useEffect, useState } from "react";
 import { useParams, useSearchParams } from "next/navigation";
 import { useLanguage } from "@/context/LanguageContext";
-import Image from "next/image";
 import Link from "next/link";
+import Carousel from "@/components/Carousel";
+// import Image from "next/image";
 
 type NewCrsData = {
   new_csr_id: number;
@@ -17,6 +18,10 @@ type NewCrsData = {
   new_csr_detail_en: string;
   new_csr_detail_th: string;
   new_csr_img: string;
+  new_csr_img_01: string;
+  new_csr_img_02: string;
+  new_csr_img_03: string;
+  new_csr_img_04: string;
   created_at: string;
 };
 
@@ -45,20 +50,22 @@ export default function NewCSRDetail() {
   if (!data) return <div className="text-center py-20">Loading...</div>;
 
   return (
-    <div className="bg-sky-50 py-30">
-      <div className="container mx-auto px-4">
-        <Link href="/" className="text-sky-500 hover:underline">
+    <div className="bg-gradient-to-br from-sky-600 to-green-500 py-30 px-20">
+      <div className="container mx-auto px-4 bg-white">
+        <Link href="/NewCSR" className="text-sky-500 hover:underline">
           ← Back
         </Link>
         <h1 className="text-4xl font-bold text-sky-700 mb-6">
           {getValue(data, `new_csr_header_${currentLang}` as keyof NewCrsData)}
         </h1>
-        <Image
-          src={data.new_csr_img || "/images/no-image.png"}
-          alt="CSR Image"
-          width={800}
-          height={500}
-          className="rounded-lg shadow-lg mb-6 mx-auto"
+        <Carousel
+          images={[
+            data.new_csr_img,
+            data.new_csr_img_01,
+            data.new_csr_img_02,
+            data.new_csr_img_03,
+            data.new_csr_img_04,
+          ].filter((img) => img && img.trim() !== "")}
         />
         <h2 className="text-2xl font-semibold text-sky-600 mb-4">
           {getValue(data, `new_csr_title_${currentLang}` as keyof NewCrsData)}
@@ -67,6 +74,13 @@ export default function NewCSRDetail() {
           {getValue(data, `new_csr_detail_${currentLang}` as keyof NewCrsData)}
         </p>
       </div>
+      {/* <Image
+            src="/assets/csr/baby-day/619304_0.jpg"
+            alt="LogoSVP"
+            width={180}
+            height={180}
+            className="mb-4 w-40 h-40 md:w-64 md:h-64 object-contain"
+          /> */}
     </div>
   );
 }

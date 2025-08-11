@@ -9,5 +9,9 @@ export interface NewCsrData {
   new_csr_detail_en: string;
   new_csr_detail_th: string;
   new_csr_img: string;
+  new_csr_img_01: string;
+  new_csr_img_02: string;
+  new_csr_img_03: string;
+  new_csr_img_04: string;
   created_at: string;
 }

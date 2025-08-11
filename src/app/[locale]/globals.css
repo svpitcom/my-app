@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+/* จางภาพที่ไม่อยู่ตรงกลาง */
+.carousel-custom .slick-slide {
+  opacity: 0.4;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-custom .slick-center {
+  opacity: 1;
+}

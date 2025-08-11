@@ -48,8 +48,8 @@ export default function OurCompany() {
 
   return (
     <div className="bg-gradient-to-br from-sky-600 to-green-500 bg-cover bg-center">
-      <div className="bg-[url('/assets/imgs/Ourcompanyv3.png')] bg-cover bg-center text-white w-full relative py-30">
-        <div className="flex flex-col text-center items-center px-4 py-10">
+      <div className="bg-[url('/assets/imgs/Ourcompanyv3.png')] bg-cover bg-center text-white w-full relative py-20">
+        <div className="flex flex-col text-center items-center px-4 py-16">
           <Image
             src="/assets/imgs/AW_LOGO_SVP [Final] + Stroke-01.png"
             alt="LogoSVP"
@@ -61,7 +61,7 @@ export default function OurCompany() {
         {data?.map((item) => (
           <h1
             key={item.our_company_id}
-            className="text-white text-shadow-lg/20 text-center text-3xl md:text-6xl font-bold mb-4 py-6 md:py-10"
+            className="text-white text-shadow-lg/20 text-center text-3xl md:text-6xl font-bold mb-4 py-6 md:py-6"
           >
             {getValue(
               item,
@@ -70,7 +70,6 @@ export default function OurCompany() {
           </h1>
         ))}
       </div>
-
       <div className="max-w-4xl mx-auto">
         {data?.map((item) => (
           <div
@@ -104,7 +103,6 @@ export default function OurCompany() {
               )}
             </p>
             <br />
-
             <p className="text-sm md:text-base mt-2 leading-relaxed whitespace-pre-line">
               {getValue(
                 item,
@@ -174,7 +172,6 @@ export default function OurCompany() {
               fill
             />
           </div>
-
           <div className="w-full md:w-1/2 bg-gradient-to-br from-sky-600 to-green-500 text-white flex items-center">
             <div className="p-4 md:p-10 space-y-3">
               <h1 className="text-2xl md:text-4xl font-bold text-center md:text-left">

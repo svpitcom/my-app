@@ -20,21 +20,17 @@ export async function GET(req: NextRequest) {
     console.error("Supabase select error:", error);
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
-
   return NextResponse.json({ data });
 }
 
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json();
-
+    const body = await req.json()
     const { data, error } = await supabase.from("home").insert([body]);
-
     if (error) {
       console.error("Supabase insert error:", error);
       return NextResponse.json({ error: error.message }, { status: 500 });
     }
-
     return NextResponse.json({ data }, { status: 201 });
   } catch (err) {
     console.error("Request parse error:", err);

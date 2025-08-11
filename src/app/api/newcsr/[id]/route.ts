@@ -19,6 +19,10 @@ export async function GET(
     `new_csr_bt_${lang}`,
     `new_csr_detail_${lang}`,
     `new_csr_img`,
+    `new_csr_img_01`,
+    `new_csr_img_02`,
+    `new_csr_img_03`,
+    `new_csr_img_04`,
   ];
   const selectFields = fields.join(", ");
 

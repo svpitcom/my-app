@@ -22,7 +22,7 @@ const dict: Record<Locale, Record<MenuKey, string>> = {
     OurCompany: "Our Company",
     OurProduct: "Our Product",
     Policy: "Policy",
-    NewCSR: "NewCSR",
+    NewCSR: "New&CSR",
     JobOpportunity: "Job Opportunity",
     ContactUs: "Contact Us",
   },
@@ -64,14 +64,12 @@ export default function Navbar() {
     }
     return "en";
   }, [pathname]);
-
   // sync lang context กับ currentLocale
   useEffect(() => {
     if (lang !== currentLocale) {
       setLang(currentLocale as "th" | "en");
     }
   }, [currentLocale, lang, setLang]);
-
   // เปลี่ยน URL ตาม locale และ update context
   const changeLocale = (newLocale: string) => {
     const segments = pathname.split("/");
