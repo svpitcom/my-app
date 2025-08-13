@@ -13,13 +13,14 @@ export default function Policy() {
             alt="LogoSVP"
             width={260}
             height={260}
-            className="mb-4"
+            className="mb-4 w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64"
+            priority
           />
           <h1 className="text-4xl md:text-6xl font-bold py-2">Policy</h1>
           <h1
-            className="text-lg md:text-4xl font-black uppercase text-sky-700 mt-2"
+            className="text-base sm:text-lg md:text-4xl font-black uppercase text-sky-700 mt-2"
             style={{
-              WebkitTextStroke: "2px white",
+              WebkitTextStroke: "1px white", // เล็กลงในมือถือ
               WebkitFontSmoothing: "antialiased",
             }}
           >

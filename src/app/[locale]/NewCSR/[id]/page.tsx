@@ -52,8 +52,11 @@ export default function NewCSRDetail() {
   return (
     <div className="bg-gradient-to-br from-sky-600 to-green-500 py-30 px-20">
       <div className="container mx-auto p-6 bg-white rounded-sm">
-        <Link href="/NewCSR" className="text-sky-500 hover:underline">
-          ← Back
+        <Link
+          href="/NewCSR"
+          className="text-sky-500 hover:underline block mb-4"
+        >
+          ← {currentLang === "th" ? "ย้อนกลับ" : "Back"}
         </Link>
         <h1 className="text-4xl font-bold text-sky-700 mb-6">
           {getValue(data, `new_csr_header_${currentLang}` as keyof NewCrsData)}

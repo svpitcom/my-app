@@ -9,42 +9,45 @@ interface ImagePopupProps {
   height?: number;
 }
 
-export default function ImagePopup({ src, alt, width = 360, height = 200 }: ImagePopupProps) {
+export default function ImagePopup({
+  src,
+  alt,
+  width = 360,
+  height = 200,
+}: ImagePopupProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      {/* รูปปกติ */}
-      <div
-        className="cursor-pointer"
-        onClick={() => setIsOpen(true)}
-      >
+      {/* Thumbnail */}
+      <div className="cursor-pointer" onClick={() => setIsOpen(true)}>
         <Image
           src={src}
           alt={alt}
           width={width}
           height={height}
-          className="rounded-lg shadow-md hover:opacity-80 transition"
+          className="rounded-lg shadow-md hover:opacity-80 transition w-40 sm:w-64"
         />
       </div>
+
       {/* Modal */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-white bg-opacity-40 flex justify-center items-center"
+          className="fixed inset-0 bg-white/40 backdrop-blur-sm flex justify-center items-center z-50 p-2"
           onClick={() => setIsOpen(false)}
         >
           <div
-            className="relative w-[70vw] h-[70vh] p-4"
+            className="relative w-full max-w-5xl h-full max-h-[90vh]"
             onClick={(e) => e.stopPropagation()}
           >
             <Image
               src={src}
               alt={alt}
               fill
-              className="rounded-lg shadow-lg object-contain"
+              className="object-contain rounded-lg"
             />
             <button
-              className="absolute top-2 right-2 bg-white text-black rounded-full px-3 py-1 shadow-md"
+              className="absolute top-4 right-4 bg-white text-black rounded-full px-3 py-1 shadow-md text-xl"
               onClick={() => setIsOpen(false)}
             >
               ✕

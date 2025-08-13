@@ -70,7 +70,7 @@ export default function OurCompany() {
           ))}
         </div>
       </div>
-      <div className="bg-gradient-to-br from-sky-600 to-green-500">
+      <div className="bg-gradient-to-br from-sky-600 to-green-500 text-pretty md:text-balance">
         <div className="max-w-5xl mx-auto">
           {data?.map((item) => (
             <div
@@ -83,21 +83,21 @@ export default function OurCompany() {
                   `our_company_subtitle_${lang}` as keyof OurCompanyData
                 )}
               </h1>
-              <p className="text-sm md:text-lg mt-2 leading-relaxed text-balance">
+              <p className="text-sm md:text-lg mt-2 leading-relaxed">
                 {getValue(
                   item,
                   `our_company_detail_01_${lang}` as keyof OurCompanyData
                 )}
               </p>
               <br />
-              <p className="text-sm md:text-lg mt-2 leading-relaxed text-balance">
+              <p className="text-sm md:text-lg mt-2 leading-relaxed">
                 {getValue(
                   item,
                   `our_company_detail_02_${lang}` as keyof OurCompanyData
                 )}
               </p>
               <br />
-              <p className="text-sm md:text-lg mt-2 leading-relaxed text-balance">
+              <p className="text-sm md:text-lg mt-2 leading-relaxed">
                 {getValue(
                   item,
                   `our_company_detail_03_${lang}` as keyof OurCompanyData

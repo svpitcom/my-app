@@ -71,7 +71,7 @@ export default function NewCSR() {
 
                 <div className="flex flex-col flex-grow p-4 text-center">
                   <Link
-                    href="/"
+                    href={`/NewCSR/${item.new_csr_id}?lang=${lang}`}
                     className="font-bold text-lg sm:text-xl text-sky-700 hover:text-sky-500 mb-2"
                   >
                     {getValue(
@@ -81,7 +81,7 @@ export default function NewCSR() {
                   </Link>
 
                   <Link
-                    href="/"
+                    href={`/NewCSR/${item.new_csr_id}?lang=${lang}`}
                     className="font-semibold text-base sm:text-lg text-sky-600 hover:text-sky-400 mb-4"
                   >
                     {getValue(

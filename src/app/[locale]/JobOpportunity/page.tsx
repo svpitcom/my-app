@@ -89,7 +89,7 @@ export default function JobOpportunity() {
     <div className="min-h-screen flex flex-col">
       {/* Banner Section */}
       <div className="bg-[url('/assets/imgs/svp-office-tree.jpg')] bg-cover bg-center text-white w-full relative">
-        <div className="flex flex-col text-center items-center justify-center bg-white/50 w-full h-full py-20">
+        <div className="flex flex-col text-center items-center justify-center bg-white/50 w-full h-full py-28">
           <Image
             src="/assets/imgs/LogoSVP.png"
             alt="LogoSVP"
