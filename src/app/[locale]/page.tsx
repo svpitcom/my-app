@@ -74,7 +74,6 @@ export default function HomePage() {
       {/* Banner */}
       <div className="relative text-center">
         <div className="absolute inset-0 bg-[url('/assets/imgs/tree.png')] bg-cover bg-center"></div>
-        {/* <div className="absolute inset-0 bg-white/20"></div> */}
         <div className="relative z-10 flex justify-center py-12 sm:py-16 md:py-20 lg:py-24">
           <div className="relative px-4 py-10 sm:py-16">
             <div className="flex flex-col items-center text-center">
