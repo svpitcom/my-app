@@ -71,54 +71,54 @@ export default function OurCompany() {
         </div>
       </div>
       <div className="bg-gradient-to-br from-sky-600 to-green-500">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           {data?.map((item) => (
             <div
               key={item.our_company_id}
               className="text-white p-8 rounded-lg text-balance"
             >
-              <h1 className="text-xl md:text-3xl font-bold text-white py-2 md:py-4">
+              <h1 className="text-xl md:text-3xl font-bold text-white py-2 md:py-2">
                 {getValue(
                   item,
                   `our_company_subtitle_${lang}` as keyof OurCompanyData
                 )}
               </h1>
-              <p className="text-sm md:text-base mt-2 leading-relaxed whitespace-pre-line">
+              <p className="text-sm md:text-lg mt-2 leading-relaxed text-balance">
                 {getValue(
                   item,
                   `our_company_detail_01_${lang}` as keyof OurCompanyData
                 )}
               </p>
               <br />
-              <p className="text-sm md:text-base mt-2 leading-relaxed whitespace-pre-line">
+              <p className="text-sm md:text-lg mt-2 leading-relaxed text-balance">
                 {getValue(
                   item,
                   `our_company_detail_02_${lang}` as keyof OurCompanyData
                 )}
               </p>
               <br />
-              <p className="text-sm md:text-base mt-2 leading-relaxed whitespace-pre-line">
+              <p className="text-sm md:text-lg mt-2 leading-relaxed text-balance">
                 {getValue(
                   item,
                   `our_company_detail_03_${lang}` as keyof OurCompanyData
                 )}
               </p>
               <br />
-              <p className="text-sm md:text-base mt-2 leading-relaxed whitespace-pre-line">
+              <p className="text-sm md:text-lg mt-2 leading-relaxed text-balance">
                 {getValue(
                   item,
                   `our_company_detail_04_${lang}` as keyof OurCompanyData
                 )}
               </p>
               <br />
-              <p className="text-sm md:text-base mt-2 leading-relaxed whitespace-pre-line">
+              <p className="text-sm md:text-lg mt-2 leading-relaxed text-balance">
                 {getValue(
                   item,
                   `our_company_detail_05_${lang}` as keyof OurCompanyData
                 )}
               </p>
               <br />
-              <p className="text-sm md:text-base mt-2 leading-relaxed whitespace-pre-line">
+              <p className="text-sm md:text-lg mt-2 leading-relaxed text-balance">
                 {getValue(
                   item,
                   `our_company_detail_06_${lang}` as keyof OurCompanyData
