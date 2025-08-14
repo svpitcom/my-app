@@ -5,15 +5,20 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 export default function OurProduct() {
   return (
     <div>
-      {/* bg-[url('/assets/imgs/Ourcompanyv3.png')] sm:bg-[url('/assets/imgs/Ourcompanyv3.png')] bg-cover bg-center text-white relative py-20 */}
-      <div className="bg-[url('/assets/imgs/OurProduction.png')] sm:bg-[url('/assets/imgs/OurProduction.png')] bg-cover bg-center text-white relative py-30">
+      <div
+        className="bg-[url('/assets/imgs/Ourproduction-v2.png')]
+                    bg-cover sm:bg-cover md:bg-cover
+                    sm:bg-center
+                    bg-top text-white py-20 sm:py-28bg-[url('/assets/imgs/Ourproduction-v2.png')]
+                    bg-cover sm:bg-cover md:bg-cover sm:bg-center bg-top text-white py-26 sm:py-30"
+      >
         <div className="flex justify-center items-center">
           <Image
             src="/assets/imgs/AW_LOGO_SVP [Final] + Stroke-01.png"
             alt="LogoSVP"
-            width={240}
-            height={240}
-            className="mb-4 w-[120px] h-[120px] sm:w-[160px] sm:h-[160px] md:w-[200px] md:h-[200px] object-contain"
+            width={260}
+            height={260}
+            className="mb-4 w-38 h-38 sm:w-46 sm:h-46 md:w-64 md:h-64"
           />
         </div>
       </div>

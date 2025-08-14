@@ -146,7 +146,7 @@ export default function OurCompany() {
               Advance technology innovative material Create customer
               satisfaction and produce products at the highest quality Clean and
               environmentally friendly factory that help develop and improve
-              standard of living
+              standard of livings
             </p>
           </div>
         </div>
