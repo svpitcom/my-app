@@ -14,10 +14,10 @@ function PrevArrow({ onClick }: CustomArrowProps) {
   return (
     <button
       onClick={onClick}
-      className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/70 hover:bg-white rounded-full p-2 shadow-lg"
+      className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/70 hover:bg-white rounded-full p-1 sm:p-2 shadow-lg"
       aria-label="Previous Slide"
     >
-      <FaChevronLeft className="text-green-700" />
+      <FaChevronLeft className="text-green-700 text-sm sm:text-base" />
     </button>
   );
 }
@@ -26,10 +26,10 @@ function NextArrow({ onClick }: CustomArrowProps) {
   return (
     <button
       onClick={onClick}
-      className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/70 hover:bg-white rounded-full p-2 shadow-lg"
+      className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/70 hover:bg-white rounded-full p-1 sm:p-2 shadow-lg"
       aria-label="Next Slide"
     >
-      <FaChevronRight className="text-green-700" />
+      <FaChevronRight className="text-green-700 text-sm sm:text-base" />
     </button>
   );
 }
@@ -50,7 +50,8 @@ export default function Carousel({ images }: CarouselProps) {
       {
         breakpoint: 768,
         settings: {
-          centerPadding: "40px",
+          centerMode: false, // ให้เต็มจอในมือถือ
+          centerPadding: "0px",
         },
       },
     ],
@@ -60,13 +61,13 @@ export default function Carousel({ images }: CarouselProps) {
     <div className="relative w-full max-w-5xl mx-auto carousel-custom">
       <Slider {...settings}>
         {images.map((src: string, index: number) => (
-          <div key={index} className="px-2">
+          <div key={index} className="px-1 sm:px-2">
             <Image
               src={src || "/images/no-image.png"}
               alt={`Slide ${index}`}
               width={800}
               height={500}
-              className="rounded-lg shadow-lg mx-auto transition-all duration-500"
+              className="rounded-lg shadow-lg mx-auto h-auto w-full object-cover transition-all duration-500"
             />
           </div>
         ))}
