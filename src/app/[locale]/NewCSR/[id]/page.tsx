@@ -49,30 +49,41 @@ export default function NewCSRDetail() {
   if (!data) return <div className="text-center py-20">Loading...</div>;
 
   return (
-    <div className="bg-gradient-to-br from-sky-600 to-green-500 py-28 sm:py-20 px-4 sm:px-10">
-      <div className="container mx-auto p-4 sm:p-6 bg-white rounded-sm">
+    <div className="bg-gradient-to-br from-sky-600 to-green-500 py-28 sm:py-30 px-3 sm:px-10">
+      <div className="mx-auto p-4 sm:p-6 bg-white rounded-sm w-full sm:max-w-5xl">
+        {/* ปุ่ม Back */}
         <Link
           href="/NewCSR"
           className="text-sky-500 hover:underline block mb-4 text-sm sm:text-base"
         >
           ← {currentLang === "th" ? "ย้อนกลับ" : "Back"}
         </Link>
+
+        {/* หัวข้อหลัก */}
         <h1 className="text-2xl sm:text-4xl font-bold text-sky-700 mb-6">
           {getValue(data, `new_csr_header_${currentLang}` as keyof NewCrsData)}
         </h1>
-        <Carousel
-          images={[
-            data.new_csr_img,
-            data.new_csr_img_01,
-            data.new_csr_img_02,
-            data.new_csr_img_03,
-            data.new_csr_img_04,
-          ].filter((img) => img && img.trim() !== "")}
-        />
-        <h2 className="text-lg sm:text-2xl font-semibold text-sky-600 mb-4 px-2 sm:px-10">
+
+        {/* Carousel ปรับมือถือเต็มจอ */}
+        <div className="mb-6">
+          <Carousel
+            images={[
+              data.new_csr_img,
+              data.new_csr_img_01,
+              data.new_csr_img_02,
+              data.new_csr_img_03,
+              data.new_csr_img_04,
+            ].filter((img) => img && img.trim() !== "")}
+          />
+        </div>
+
+        {/* หัวข้อย่อย */}
+        <h2 className="text-lg sm:text-2xl font-semibold text-sky-600 mb-4 px-1 sm:px-10 py-2 sm:py-6">
           {getValue(data, `new_csr_title_${currentLang}` as keyof NewCrsData)}
         </h2>
-        <p className="text-base sm:text-lg leading-relaxed text-gray-700 whitespace-pre-line px-2 sm:px-10">
+
+        {/* เนื้อหา */}
+        <p className="text-base sm:text-lg leading-relaxed text-gray-700 whitespace-pre-line px-1 sm:px-10 pb-4">
           {getValue(data, `new_csr_detail_${currentLang}` as keyof NewCrsData)}
         </p>
       </div>
