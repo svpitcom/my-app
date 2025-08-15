@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import Balancer from "react-wrap-balancer";
+import HoverImage from "@/components/HoverImage";
 
 type HomeData = {
   home_id: number;
@@ -34,11 +35,30 @@ type NewCrsData = {
 };
 
 const imageList = [
-  "/assets/imgs/home_Imgae_v1.png",
-  "/assets/imgs/home_Imgae_v2.png",
-  "/assets/imgs/Laboratory.jpg",
-  "/assets/imgs/home_Imgae_v4.png",
+  {
+    default: "/assets/imgs/home_Imgae_v1.png",
+    hover: "/assets/imgs/209044.png",
+  },
+  {
+    default: "/assets/imgs/home_Imgae_v2.png",
+    hover: "/assets/imgs/209045.png",
+  },
+  {
+    default: "/assets/imgs/Laboratory.jpg",
+    hover: "/assets/imgs/209046.png",
+  },
+  {
+    default: "/assets/imgs/home_Imgae_v4.png",
+    hover: "/assets/imgs/209047.png",
+  },
 ];
+
+// const imageList = [
+//   "/assets/imgs/home_Imgae_v1.png",
+//   "/assets/imgs/home_Imgae_v2.png",
+//   "/assets/imgs/Laboratory.jpg",
+//   "/assets/imgs/home_Imgae_v4.png",
+// ];
 
 function getValue(obj: HomeData, key: keyof HomeData): string {
   return (obj[key] as string) ?? "";
@@ -121,15 +141,17 @@ export default function HomePage() {
       </div>
       {/* Images */}
       <AnimateOnScroll>
-        <div className="bg-gradient-to-br from-sky-600 to-green-500 flex flex-wrap justify-center items-center min-h-[400px] px-4 py-8">
-          {imageList.map((src, index) => (
-            <div key={index} className="w-[360px] h-[380px]">
-              <Image
-                src={src}
+        <div className="bg-gradient-to-br from-sky-600 to-green-500 flex flex-wrap justify-center items-center min-h-[400px] px-2 py-6">
+          {imageList.map((img, index) => (
+            <div key={index} className="w-[350px] h-[390px]">
+              <HoverImage
+                key={index}
+                defaultSrc={img.default}
+                hoverSrc={img.hover}
                 alt={`Company image ${index + 1}`}
-                width={200}
-                height={200}
-                className="w-full h-full object-cover shadow-md"
+                // width={200}
+                // height={200}
+                // className="w-full h-full object-cover shadow-md"
               />
             </div>
           ))}
@@ -138,10 +160,10 @@ export default function HomePage() {
       {/* New & CSR */}
       {newCsr && newCsr.length > 0 && (
         <AnimateOnScroll>
-          <div className="bg-white py-12 px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center mb-8">
+          <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-sky-700 drop-shadow mb-8 text-center">
               {lang === "th" ? "ข่าวสารและกิจกรรม" : "News & CSR"}
-            </h2>
+            </h1>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {newCsr.slice(0, 3).map((item) => (
                 <div
@@ -155,11 +177,11 @@ export default function HomePage() {
                       `new_csr_title_${lang}` as keyof NewCrsData
                     )}
                     width={500}
-                    height={300}
-                    className="w-full h-48 object-cover"
+                    height={400}
+                    className="w-full h-66 object-cover"
                   />
                   <div className="p-4">
-                    <h3 className="text-xl font-bold mb-2">
+                    <h3 className="text-xl text-sky-700 font-bold mb-2">
                       {getValueNewCRS(
                         item,
                         `new_csr_title_${lang}` as keyof NewCrsData
