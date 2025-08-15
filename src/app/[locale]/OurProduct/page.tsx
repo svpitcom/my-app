@@ -77,7 +77,7 @@ export default function OurProduct() {
                     <p className="font-semibold">Standard Thai Rubber 20</p>
                     <p className="font-semibold">Standard Thai Rubber 20M</p>
                     <p className="font-semibold">
-                      Mooney Viscosity Controlled 9710
+                      Mooney Viscosity Controlleds 9710
                     </p>
                     <p className="font-semibold">
                       Mooney Viscosity Controlled 9720
