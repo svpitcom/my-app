@@ -49,7 +49,7 @@ export default function OurProduct() {
   return (
     <div>
       {/* Header Section */}
-      <div className="bg-[url('/assets/imgs/Ourproduction-v2.png')] bg-cover sm:bg-center bg-top text-white py-20 sm:py-28">
+      <div className="bg-[url('/assets/imgs/Ourproduction-v2.png')] bg-cover sm:bg-center bg-top text-white py-28 sm:py-28">
         <div className="flex justify-center items-center">
           <Image
             src="/assets/imgs/AW_LOGO_SVP [Final] + Stroke-01.png"
