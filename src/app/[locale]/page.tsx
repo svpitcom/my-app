@@ -34,10 +34,10 @@ type NewCrsData = {
 };
 
 const imageList = [
-  "/assets/imgs/209044.png",
-  "/assets/imgs/209045.png",
-  "/assets/imgs/209046.png",
-  "/assets/imgs/209047.png",
+  "/assets/imgs/home_Imgae_v1.png",
+  "/assets/imgs/home_Imgae_v2.png",
+  "/assets/imgs/Laboratory.jpg",
+  "/assets/imgs/home_Imgae_v4.png",
 ];
 
 function getValue(obj: HomeData, key: keyof HomeData): string {
@@ -105,12 +105,12 @@ export default function HomePage() {
                   {getValue(item, `home_detail_01_${lang}` as keyof HomeData)}
                 </Balancer>
               </p>
-              <p className="text-sm sm:text-base md:text-lg mb-4 text-balance">
+              <p className="text-sm sm:text-base md:text-lg mb-4 whitespace-nowrap">
                 <Balancer>
                   {getValue(item, `home_detail_02_${lang}` as keyof HomeData)}
                 </Balancer>
               </p>
-              <p className="text-sm sm:text-base md:text-lg mb-4 text-balance">
+              <p className="text-base sm:text-base md:text-lg mb-4 leading-relaxed whitespace-nowrap">
                 <Balancer>
                   {getValue(item, `home_detail_03_${lang}` as keyof HomeData)}
                 </Balancer>
@@ -121,15 +121,15 @@ export default function HomePage() {
       </div>
       {/* Images */}
       <AnimateOnScroll>
-        <div className="bg-gradient-to-br from-sky-600 to-green-500 flex flex-col md:flex-row items-center justify-center gap-6 px-4 py-8">
+        <div className="bg-gradient-to-br from-sky-600 to-green-500 flex flex-wrap justify-center items-center min-h-[400px] px-4 py-8">
           {imageList.map((src, index) => (
-            <div key={index} className="w-full w-1/2 md:w-1/4">
+            <div key={index} className="w-[360px] h-[380px]">
               <Image
                 src={src}
                 alt={`Company image ${index + 1}`}
-                width={180}
-                height={180}
-                className="w-full h-auto object-cover rounded-lg shadow-md"
+                width={200}
+                height={200}
+                className="w-full h-full object-cover shadow-md"
               />
             </div>
           ))}
