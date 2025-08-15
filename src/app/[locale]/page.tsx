@@ -5,6 +5,7 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
+import Balancer from "react-wrap-balancer";
 
 type HomeData = {
   home_id: number;
@@ -100,13 +101,19 @@ export default function HomePage() {
             </h1>
             <div className="max-w-4xl mx-auto">
               <p className="text-base sm:text-lg md:text-xl text-sky-700 font-bold mb-4">
-                {getValue(item, `home_detail_01_${lang}` as keyof HomeData)}
+                <Balancer>
+                  {getValue(item, `home_detail_01_${lang}` as keyof HomeData)}
+                </Balancer>
               </p>
               <p className="text-sm sm:text-base md:text-lg mb-4 text-balance">
-                {getValue(item, `home_detail_02_${lang}` as keyof HomeData)}
+                <Balancer>
+                  {getValue(item, `home_detail_02_${lang}` as keyof HomeData)}
+                </Balancer>
               </p>
               <p className="text-sm sm:text-base md:text-lg mb-4 text-balance">
-                {getValue(item, `home_detail_03_${lang}` as keyof HomeData)}
+                <Balancer>
+                  {getValue(item, `home_detail_03_${lang}` as keyof HomeData)}
+                </Balancer>
               </p>
             </div>
           </div>
