@@ -15,7 +15,7 @@ export const metadata = {
     default: "SV Polymer Co., Ltd.",
     template: "%s | SV Polymer Co., Ltd.",
   },
-  description: "ผู้ผลิตและจำหน่ายผลิตภัณฑ์โพลิเมอร์ในประเทศไทย",
+  description: "ผู้ผลิตและผู้จำหน่ายผลิตภัณฑ์แปรรูปยางพาราที่มีคุณภาพในประเทศไทย",
   keywords: [
     "SV Polymer",
     "พลาสติก",
@@ -26,7 +26,7 @@ export const metadata = {
   ],
   openGraph: {
     title: "SV Polymer Co., Ltd.",
-    description: "ผู้ผลิตและจำหน่ายผลิตภัณฑ์โพลิเมอร์ในประเทศไทย",
+    description: "ผู้ผลิตและผู้จำหน่ายผลิตภัณฑ์แปรรูปยางพาราที่มีคุณภาพในประเทศไทย",
     url: "https://sv-polymer.com",
     siteName: "SV Polymer Co., Ltd.",
     locale: "en_EN",
