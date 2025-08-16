@@ -178,7 +178,7 @@ export default function HomePage() {
                     )}
                     width={500}
                     height={400}
-                    className="w-full h-66 object-cover"
+                    className="w-full h-72 object-cover"
                   />
                   <div className="p-4">
                     <h3 className="text-xl text-sky-700 font-bold mb-2">

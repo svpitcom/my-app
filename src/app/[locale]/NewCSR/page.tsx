@@ -65,8 +65,8 @@ export default function NewCSR() {
                   src={imgSrc}
                   alt="Company Logo"
                   width={500}
-                  height={300}
-                  className="w-full h-48 object-cover rounded-t-md"
+                  height={340}
+                  className="w-full h-72 object-cover rounded-t-md"
                 />
 
                 <div className="flex flex-col flex-grow p-4 text-center">
