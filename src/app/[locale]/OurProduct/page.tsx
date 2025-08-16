@@ -49,14 +49,24 @@ export default function OurProduct() {
   return (
     <div>
       {/* Header Section */}
-      <div className="bg-[url('/assets/imgs/Ourproduction-v2.png')] bg-cover sm:bg-center bg-top text-white py-28 sm:py-28">
-        <div className="flex justify-center items-center">
+      {/* <div className="bg-[url('/assets/imgs/Ourproduction-v2.png')] bg-cover sm:bg-center bg-top text-white py-28 sm:py-28"> */}
+      <div className="relative">
+        {/* พื้นหลัง grid 4 รูป */}
+        <div className="grid grid-cols-2 md:grid-cols-4">
+          <div className="w-full h-56 md:h-128 bg-[url('/assets/imgs/ourpv1.png')] bg-cover bg-center"></div>
+          <div className="w-full h-56 md:h-128 bg-[url('/assets/imgs/ourpv2.png')] bg-cover bg-center"></div>
+          <div className="w-full h-56 md:h-128 bg-[url('/assets/imgs/ourpv3.png')] bg-cover bg-center"></div>
+          <div className="w-full h-56 md:h-128 bg-[url('/assets/imgs/ourpv4.png')] bg-cover bg-center"></div>
+        </div>
+
+        {/* โลโก้ SVP ตรงกลาง */}
+        <div className="absolute inset-0 flex justify-center items-center z-10">
           <Image
             src="/assets/imgs/AW_LOGO_SVP [Final] + Stroke-01.png"
             alt="LogoSVP"
             width={260}
             height={260}
-            className="mb-4 w-38 h-38 sm:w-46 sm:h-46 md:w-64 md:h-64"
+            className="mb-4 w-46 h-46 sm:w-46 sm:h-46 md:w-64 md:h-64 drop-shadow-lg"
           />
         </div>
       </div>
