@@ -101,38 +101,42 @@ export default function OurCompany() {
       </div>
 
       {/* ---------- Company Detail Section ---------- */}
-      <div className="bg-gradient-to-br from-sky-600 to-green-500 text-pretty md:text-balance">
-        <div className="max-w-5xl mx-auto">
-          {companyData?.map((item) => (
-            <div
-              key={item.our_company_id}
-              className="text-white p-8 rounded-lg text-balance"
-            >
-              <h1 className="text-xl md:text-3xl font-bold text-white py-2">
-                {getValue(
-                  item,
-                  `our_company_subtitle_${lang}` as keyof OurCompanyData
-                )}
-              </h1>
-
-              {Array.from({ length: 6 }, (_, i) => (
-                <p
-                  key={i}
-                  className="text-sm md:text-lg mt-2 leading-relaxed mb-4"
-                >
+      <div className="bg-gradient-to-r from-sky-500 to-green-300 p-4">
+        <div className="bg-gradient-to-br from-sky-600 to-green-500 text-balance">
+          <div className="max-w-5xl mx-auto">
+            {companyData?.map((item) => (
+              <div
+                key={item.our_company_id}
+                className="text-white p-8 rounded-lg text-balance"
+              >
+                <h1 className="text-xl md:text-3xl font-bold text-white py-2">
                   {getValue(
                     item,
-                    `our_company_detail_0${
-                      i + 1
-                    }_${lang}` as keyof OurCompanyData
+                    `our_company_subtitle_${lang}` as keyof OurCompanyData
                   )}
-                </p>
-              ))}
-            </div>
-          ))}
-        </div>
+                </h1>
 
-        {/* ---------- Banner Section ---------- */}
+                {Array.from({ length: 6 }, (_, i) => (
+                  <p
+                    key={i}
+                    className="text-sm md:text-lg mt-2 leading-relaxed mb-4"
+                  >
+                    {getValue(
+                      item,
+                      `our_company_detail_0${
+                        i + 1
+                      }_${lang}` as keyof OurCompanyData
+                    )}
+                  </p>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* ---------- Banner Section ---------- */}
+      <div className="bg-[url('/assets/imgs/our_sv.png')] bg-cover bg-center">
         <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-10 p-4 md:p-16 rounded-lg backdrop-blur-sm">
           {banner1 && (
             <div className="bg-gradient-to-r from-sky-500 to-green-300 p-6 md:py-16 md:px-16 rounded-md shadow-md w-full h-auto md:h-96 text-center">
@@ -156,7 +160,6 @@ export default function OurCompany() {
             </div>
           )}
         </div>
-
         {/* ---------- Organization Chart ---------- */}
         <div className="bg-white w-full text-center py-8">
           <h1 className="text-xl md:text-5xl py-8 text-blue-700">
@@ -170,40 +173,40 @@ export default function OurCompany() {
             className="w-full max-w-full object-contain"
           />
         </div>
+      </div>
 
-        {/* ---------- Board of Directors ---------- */}
-        <AnimateOnScroll>
-          <div className="flex flex-col md:flex-row w-full h-auto mt-6">
-            <div className="w-full md:w-1/2 relative h-64 md:h-auto">
-              <Image
-                src="/assets/imgs/Rectangle27.png"
-                alt="Boardroom"
-                className="object-cover"
-                fill
-              />
-            </div>
-            <div className="w-full md:w-1/2 bg-gradient-to-br from-sky-600 to-green-500 text-white flex items-center">
-              <div className="p-4 md:p-10 space-y-3">
-                <h1 className="text-2xl md:text-4xl font-bold text-center md:text-left">
-                  Board of Directors
-                </h1>
-                <div className="space-y-2 text-sm md:text-base">
-                  <p className="font-semibold">Mr. Chaipon Kerdvonbundit</p>
-                  <p>Chief Executive Officer</p>
-                  <p className="font-semibold">Mrs. Wei-Mei Wang</p>
-                  <p>Executive Director</p>
-                  <p className="font-semibold">Mr. Gnoh Tong Tan</p>
-                  <p>Executive Director</p>
-                  <p className="font-semibold">Mr. Segsarn Trai Ukos</p>
-                  <p>Executive Director</p>
-                  <p className="font-semibold">Mr. Sethasit Nitayakul</p>
-                  <p>Executive Director</p>
-                </div>
+      {/* ---------- Board of Directors ---------- */}
+      <AnimateOnScroll>
+        <div className="flex flex-col md:flex-row w-full h-auto mt-6">
+          <div className="w-full md:w-1/2 relative h-64 md:h-auto">
+            <Image
+              src="/assets/imgs/Rectangle27.png"
+              alt="Boardroom"
+              className="object-cover"
+              fill
+            />
+          </div>
+          <div className="w-full md:w-1/2 bg-gradient-to-br from-sky-600 to-green-500 text-white flex items-center">
+            <div className="p-4 md:p-10 space-y-3">
+              <h1 className="text-2xl md:text-4xl font-bold text-center md:text-left">
+                Board of Directors
+              </h1>
+              <div className="space-y-2 text-sm md:text-base">
+                <p className="font-semibold">Mr. Chaipon Kerdvonbundit</p>
+                <p>Chief Executive Officer</p>
+                <p className="font-semibold">Mrs. Wei-Mei Wang</p>
+                <p>Executive Director</p>
+                <p className="font-semibold">Mr. Gnoh Tong Tan</p>
+                <p>Executive Director</p>
+                <p className="font-semibold">Mr. Segsarn Trai Ukos</p>
+                <p>Executive Director</p>
+                <p className="font-semibold">Mr. Sethasit Nitayakul</p>
+                <p>Executive Director</p>
               </div>
             </div>
           </div>
-        </AnimateOnScroll>
-      </div>
+        </div>
+      </AnimateOnScroll>
     </div>
   );
 }

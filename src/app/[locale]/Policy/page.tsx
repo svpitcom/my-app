@@ -123,6 +123,12 @@ export default function Policy() {
             width={220}
             height={220}
           />
+          <ImagePopup
+            src="/assets/imgs/Green_industry_SVP_68-71.jpg"
+            alt="LogoSVP"
+            width={220}
+            height={220}
+          />
         </div>
       </div>
     </div>
