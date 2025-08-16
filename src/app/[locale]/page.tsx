@@ -181,12 +181,15 @@ export default function HomePage() {
                     className="w-full h-72 object-cover"
                   />
                   <div className="p-4">
-                    <h3 className="text-xl text-sky-700 font-bold mb-2">
+                    <Link
+                      href={`/NewCSR/${item.new_csr_id}?lang=${lang}`}
+                      className="text-xl text-sky-700 font-bold hover:text-sky-400 mb-4"
+                    >
                       {getValueNewCRS(
                         item,
                         `new_csr_title_${lang}` as keyof NewCrsData
                       )}
-                    </h3>
+                    </Link>
 
                     <Link href={`/NewCSR/${item.new_csr_id}?lang=${lang}`}>
                       <button className="mt-auto w-full bg-gradient-to-r from-sky-500 to-green-300 hover:from-green-300 hover:to-sky-500 text-white font-medium rounded py-2 px-10 transition duration-300 ease-in-out cursor-pointer">
