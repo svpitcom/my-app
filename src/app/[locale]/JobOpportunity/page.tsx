@@ -91,7 +91,7 @@ export default function JobOpportunity() {
       <div className="bg-[url('/assets/imgs/svp-office-tree.jpg')] bg-cover bg-center text-white w-full relative">
         <div className="flex flex-col text-center items-center justify-center bg-white/50 w-full h-full py-28">
           <Image
-            src="/assets/imgs/LogoSVP.png"
+            src="/assets/imgs/AW_LOGO_SVP [Final] + Stroke-01.png"
             alt="LogoSVP"
             width={180}
             height={180}
