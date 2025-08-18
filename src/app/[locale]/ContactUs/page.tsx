@@ -1,8 +1,11 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function ContactUs() {
+  const { lang } = useLanguage();
+
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -10,6 +13,49 @@ export default function ContactUs() {
     subject: "",
     message: "",
   });
+
+  const t = {
+    en: {
+      contactUs: "Contact Us",
+      contactInfo: "Contact Info",
+      contactForm: "Contact Form",
+      companyName: "SV Polymer Co., Ltd.",
+      address:
+        "888 Moo 6, Tambon Nam Phi, Amphur Thong Saen Khan, Uttaradit 53230 Thailand.",
+      tel: "Tel.",
+      fax: "Fax.",
+      website: "Website:",
+      email: "E-mail:",
+      formIntro:
+        "We appreciate your comments for our product and services, we will reply you as soon as possible.",
+      name: "Name",
+      emailPlaceholder: "Email Address",
+      phone: "Phone",
+      subject: "Subject",
+      message: "Your message...",
+      send: "Send Message",
+    },
+    th: {
+      contactUs: "ติดต่อเรา",
+      contactInfo: "ข้อมูลการติดต่อ",
+      contactForm: "แบบฟอร์มติดต่อ",
+      companyName: "บริษัท เอสวี โพลิเมอร์ จำกัด",
+      address:
+        "888 หมู่ 6 ตำบลน้ำพี้ อำเภอทองแสนขัน จังหวัดอุตรดิตถ์ 53230 ประเทศไทย",
+      tel: "โทร.",
+      fax: "แฟกซ์",
+      website: "เว็บไซต์:",
+      email: "อีเมล:",
+      formIntro:
+        "เรายินดีรับฟังความคิดเห็นเกี่ยวกับสินค้าและบริการของเรา และจะรีบตอบกลับโดยเร็วที่สุด",
+      name: "ชื่อ-นามสกุล",
+      emailPlaceholder: "อีเมล",
+      phone: "เบอร์โทรศัพท์",
+      subject: "หัวข้อ",
+      message: "ข้อความของคุณ...",
+      send: "ส่งข้อความ",
+    },
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -46,47 +92,46 @@ export default function ContactUs() {
       {/* Contact Section */}
       <div className="bg-gradient-to-r from-sky-500 to-green-300 rounded-sm">
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold p-4 sm:p-8 text-white text-center">
-          Contact Us
+          {t[lang].contactUs}
         </h1>
 
         <div className="flex flex-col md:flex-row gap-6 sm:gap-8 p-4 sm:p-6 md:p-20 bg-white">
           {/* Left: Contact Info */}
           <div className="w-full md:w-1/2 text-black space-y-3 sm:space-y-4 text-sm md:text-base p-2">
-            <h2 className="font-bold text-lg uppercase">Contact Info</h2>
-            <h3 className="font-bold text-xl">SV Polymer Co., Ltd.</h3>
+            <h2 className="font-bold text-lg uppercase">
+              {t[lang].contactInfo}
+            </h2>
+            <h3 className="font-bold text-xl">{t[lang].companyName}</h3>
+            <p>{t[lang].address}</p>
             <p>
-              888 Moo 6,Tambon Nam Phi, Amphur Thong Saen Khan,
-              <br />
-              Uttaradit 53230 Thailand.
+              <span className="font-bold">{t[lang].tel}</span> +66(0)55 409 686
             </p>
             <p>
-              <span className="font-bold">Tel.</span> +66(0)55 409 686
+              <span className="font-bold">{t[lang].fax}</span>
             </p>
             <p>
-              <span className="font-bold">Fax.</span>
+              <span className="font-bold">{t[lang].website}</span>{" "}
+              www.sv-polymer.com
             </p>
             <p>
-              <span className="font-bold">Website:</span> www.sv-polymer.com
-            </p>
-            <p>
-              <span className="font-bold">E-mail:</span> info@sv-polymer.com
+              <span className="font-bold">{t[lang].email}</span>{" "}
+              info@sv-polymer.com
             </p>
           </div>
 
           {/* Right: Contact Form */}
           <div className="w-full md:w-1/2 bg-white rounded-md shadow space-y-3 sm:space-y-4 p-4 sm:p-6">
-            <h2 className="font-bold text-lg uppercase">Contact Form</h2>
-            <p className="text-gray-600 text-sm">
-              We appreciate your comments for our product and services, we will
-              reply you as soon as possible.
-            </p>
+            <h2 className="font-bold text-lg uppercase">
+              {t[lang].contactForm}
+            </h2>
+            <p className="text-gray-600 text-sm">{t[lang].formIntro}</p>
 
             <input
               type="text"
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="Name"
+              placeholder={t[lang].name}
               className="border border-gray-300 rounded p-2 w-full text-sm sm:text-base"
             />
 
@@ -95,7 +140,7 @@ export default function ContactUs() {
               name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="Email Address"
+              placeholder={t[lang].emailPlaceholder}
               className="border border-gray-300 rounded p-2 w-full text-sm sm:text-base"
             />
 
@@ -104,7 +149,7 @@ export default function ContactUs() {
               name="phone"
               value={form.phone}
               onChange={handleChange}
-              placeholder="Phone"
+              placeholder={t[lang].phone}
               className="border border-gray-300 rounded p-2 w-full text-sm sm:text-base"
             />
 
@@ -113,7 +158,7 @@ export default function ContactUs() {
               name="subject"
               value={form.subject}
               onChange={handleChange}
-              placeholder="Subject"
+              placeholder={t[lang].subject}
               className="border border-gray-300 rounded p-2 w-full text-sm sm:text-base"
             />
 
@@ -121,7 +166,7 @@ export default function ContactUs() {
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder="Your message..."
+              placeholder={t[lang].message}
               className="border border-gray-300 rounded p-2 w-full h-32 text-sm sm:text-base"
             />
 
@@ -130,7 +175,7 @@ export default function ContactUs() {
               onClick={handleSubmit}
               className="bg-gradient-to-r from-sky-500 to-green-300 hover:from-green-300 hover:to-sky-500 text-white font-semibold rounded p-2 w-full text-sm sm:text-base"
             >
-              Send Message
+              {t[lang].send}
             </button>
           </div>
         </div>

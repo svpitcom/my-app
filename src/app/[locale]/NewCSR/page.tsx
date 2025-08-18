@@ -45,7 +45,7 @@ export default function NewCSR() {
       <div className="container mx-auto  px-4">
         {/* Header */}
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white drop-shadow mb-8 text-center">
-          NEW & CSR
+          {lang === "th" ? "สื่อใหม่และกิจกรรม" : "NEW & CSR"}
         </h1>
 
         {/* Card Container */}

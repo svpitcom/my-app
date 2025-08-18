@@ -43,6 +43,30 @@ export default function OurProduct() {
     fetchOurProduction();
   }, [lang]);
 
+  const productTitle = lang === "th" ? "ผลิตภัณฑ์" : "Product";
+  const products =
+    lang === "th"
+      ? [
+          "ยางมาตรฐานไทย 10",
+          "ยางมาตรฐานไทย 20",
+          "ยางมาตรฐานไทย 20M",
+          "Mooney Viscosity Controlleds 9710",
+          "Mooney Viscosity Controlled 9720",
+          "Constant Viscosity 60",
+          "Constant Viscosity 65",
+          "Mixture Rubber (รอดำเนินการ 2017–2018)",
+        ]
+      : [
+          "Standard Thai Rubber 10",
+          "Standard Thai Rubber 20",
+          "Standard Thai Rubber 20M",
+          "Mooney Viscosity Controlleds 9710",
+          "Mooney Viscosity Controlled 9720",
+          "Constant Viscosity 60",
+          "Constant Viscosity 65",
+          "Mixture Rubber (Pending 2017–2018)",
+        ];
+
   const productInfo = data?.find((item) => item.our_production_id === 1);
   const packagingInfo = data?.find((item) => item.our_production_id === 2);
 
@@ -76,7 +100,7 @@ export default function OurProduct() {
         <div className="bg-cover bg-center">
           <div className="flex justify-center py-10 md:py-12">
             <h1 className="text-white text-shadow-lg/20 text-4xl md:text-6xl font-bold p-4 md:p-6 rounded text-center">
-              OurProducts
+              {lang === "th" ? "ผลิตภัณฑ์" : "OurProduct"}
             </h1>
           </div>
 
@@ -126,23 +150,14 @@ export default function OurProduct() {
               <div className="w-full md:w-1/2 bg-gradient-to-br from-sky-600 to-green-500 text-white rounded-lg flex items-center">
                 <div className="p-6 md:p-10 space-y-3 text-left md:text-left">
                   <h2 className="text-xl md:text-2xl font-semibold mb-2">
-                    Product
+                    {productTitle}
                   </h2>
                   <div className="space-y-2 text-sm md:text-base">
-                    <p className="font-semibold">Standard Thai Rubber 10</p>
-                    <p className="font-semibold">Standard Thai Rubber 20</p>
-                    <p className="font-semibold">Standard Thai Rubber 20M</p>
-                    <p className="font-semibold">
-                      Mooney Viscosity Controlleds 9710
-                    </p>
-                    <p className="font-semibold">
-                      Mooney Viscosity Controlled 9720
-                    </p>
-                    <p className="font-semibold">Constant Viscosity 60</p>
-                    <p className="font-semibold">Constant Viscosity 65</p>
-                    <p className="font-semibold">
-                      Mixture Rubber (Pending 2017–2018)
-                    </p>
+                    {products.map((p, idx) => (
+                      <p key={idx} className="font-semibold">
+                        {p}
+                      </p>
+                    ))}
                   </div>
                 </div>
               </div>
