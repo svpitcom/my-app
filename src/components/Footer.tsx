@@ -24,7 +24,7 @@ export default function Footer() {
       customer: "ลูกค้าสัมพันธ์",
       intranet: "อินทราเน็ต\nSV POLYMER",
       login: "เข้าสู่ระบบสมาชิก",
-      copyright: `SV Polymer. สงวนลิขสิทธิ์ทั้งหมด`,
+      copyright: `บริษัท เอสวีโพลิเมอร์ จำกัด. สงวนลิขสิทธิ์ทั้งหมด`,
     },
   };
 
