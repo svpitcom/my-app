@@ -120,7 +120,7 @@ export default function HomePage() {
               {getValue(item, `home_title_${lang}` as keyof HomeData)}
             </h1>
             <div className="max-w-4xl mx-auto">
-              <p className="text-base sm:text-lg md:text-xl text-sky-700 font-bold mb-4">
+              <p className="text-base sm:text-base md:text-lg text-sky-700 font-bold mb-4">
                 <Balancer>
                   {getValue(item, `home_detail_01_${lang}` as keyof HomeData)}
                 </Balancer>
@@ -130,7 +130,7 @@ export default function HomePage() {
                   {getValue(item, `home_detail_02_${lang}` as keyof HomeData)}
                 </Balancer>
               </p>
-              <p className="text-base sm:text-base md:text-lg mb-4 leading-relaxed whitespace-nowrap">
+              <p className="text-sm sm:text-base md:text-lg mb-4 leading-relaxed whitespace-nowrap">
                 <Balancer>
                   {getValue(item, `home_detail_03_${lang}` as keyof HomeData)}
                 </Balancer>
