@@ -149,9 +149,6 @@ export default function HomePage() {
                 defaultSrc={img.default}
                 hoverSrc={img.hover}
                 alt={`Company image ${index + 1}`}
-                // width={200}
-                // height={200}
-                // className="w-full h-full object-cover shadow-md"
               />
             </div>
           ))}

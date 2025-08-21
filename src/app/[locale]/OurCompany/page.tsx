@@ -101,7 +101,7 @@ export default function OurCompany() {
       </div>
 
       {/* ---------- Company Detail Section ---------- */}
-      <div className="bg-gradient-to-r from-sky-500 to-green-300 p-4">
+      <div className="bg-gradient-to-r from-sky-500 to-green-300 opacity-60 p-4">
         <div className="bg-gradient-to-br from-sky-600 to-green-500 text-balance">
           <div className="max-w-5xl mx-auto">
             {companyData?.map((item) => (
@@ -139,24 +139,48 @@ export default function OurCompany() {
       <div className="bg-[url('/assets/imgs/our_sv.png')] bg-cover bg-center">
         <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-10 p-4 md:p-16 rounded-lg backdrop-blur-sm">
           {banner1 && (
-            <div className="bg-gradient-to-r from-sky-500 to-green-300 p-6 md:py-16 md:px-16 rounded-md shadow-md w-full h-auto md:h-96 text-center">
-              <h2 className="text-xl md:text-5xl font-bold text-blue-700 mb-4">
-                {getValue(banner1, `banner_title_${lang}` as keyof BannerData)}
-              </h2>
-              <p className="text-white text-sm md:text-lg leading-relaxed">
-                {getValue(banner1, `banner_detail_${lang}` as keyof BannerData)}
-              </p>
+            <div className="relative w-full h-auto md:h-96 text-center rounded-md shadow-md overflow-hidden">
+              {/* background layer */}
+              <div className="absolute inset-0 bg-gradient-to-r from-sky-500 to-green-300 opacity-60"></div>
+
+              {/* content */}
+              <div className="relative z-10 p-6 md:py-16 md:px-16">
+                <h2 className="text-xl md:text-5xl font-bold text-blue-700 mb-4">
+                  {getValue(
+                    banner1,
+                    `banner_title_${lang}` as keyof BannerData
+                  )}
+                </h2>
+                <p className="text-white text-sm md:text-lg leading-relaxed">
+                  {getValue(
+                    banner1,
+                    `banner_detail_${lang}` as keyof BannerData
+                  )}
+                </p>
+              </div>
             </div>
           )}
 
           {banner2 && (
-            <div className="bg-gradient-to-r from-sky-500 to-green-300 p-6 md:py-16 md:px-16 rounded-md shadow-md w-full h-auto md:h-96 text-center">
-              <h2 className="text-xl md:text-5xl font-bold text-blue-700 mb-4">
-                {getValue(banner2, `banner_title_${lang}` as keyof BannerData)}
-              </h2>
-              <p className="text-white text-sm md:text-lg leading-relaxed">
-                {getValue(banner2, `banner_detail_${lang}` as keyof BannerData)}
-              </p>
+            <div className="relative w-full h-auto md:h-96 text-center rounded-md shadow-md overflow-hidden">
+              {/* background layer */}
+              <div className="absolute inset-0 bg-gradient-to-r from-sky-500 to-green-300 opacity-60"></div>
+
+              {/* content */}
+              <div className="relative z-10 p-6 md:py-16 md:px-16">
+                <h2 className="text-xl md:text-5xl font-bold text-blue-700 mb-4">
+                  {getValue(
+                    banner2,
+                    `banner_title_${lang}` as keyof BannerData
+                  )}
+                </h2>
+                <p className="text-white text-sm md:text-lg leading-relaxed">
+                  {getValue(
+                    banner2,
+                    `banner_detail_${lang}` as keyof BannerData
+                  )}
+                </p>
+              </div>
             </div>
           )}
         </div>
