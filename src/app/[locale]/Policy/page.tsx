@@ -86,7 +86,7 @@ export default function Policy() {
           </div>
         </AnimateOnScroll>
 
-        <AnimateOnScroll>
+        {/* <AnimateOnScroll> */}
           <div className="flex flex-row justify-center items-center gap-6 p-4 w-full">
             <ImagePopup
               src="/assets/imgs/Certificate14001_SV_Polymer_page-0001.jpg"
@@ -107,7 +107,7 @@ export default function Policy() {
               height={220}
             />
           </div>
-        </AnimateOnScroll>
+        {/* </AnimateOnScroll> */}
       </div>
     </div>
   );
