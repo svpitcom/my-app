@@ -26,7 +26,7 @@ export default function Policy() {
           <h1
             className="text-base sm:text-lg md:text-4xl font-black uppercase text-sky-700 mt-2"
             style={{
-              WebkitTextStroke: "1px white",
+              WebkitTextStroke: "0.5px white",
               WebkitFontSmoothing: "antialiased",
             }}
           >
