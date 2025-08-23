@@ -24,7 +24,7 @@ export default function Policy() {
           />
           <h1 className="text-4xl md:text-6xl font-bold py-2">{t.policy}</h1>
           <h1
-            className="text-base sm:text-lg md:text-4xl font-black uppercase text-sky-700 mt-2"
+            className="text-2xl sm:text-lg md:text-4xl font-black uppercase text-sky-700 mt-2"
             style={{
               WebkitTextStroke: "0.5px white",
               WebkitFontSmoothing: "antialiased",
