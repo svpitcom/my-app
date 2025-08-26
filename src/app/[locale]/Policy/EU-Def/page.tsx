@@ -18,7 +18,7 @@ export default function EUDef() {
         <div className="text-center grid grid-cols-1 sm:grid-cols-6 text-sm gap-4">
           <h1 className="sm:col-span-4 sm:col-start-2 font-semibold text-base sm:text-lg">
             ประกาศกฎระเบียบที่ปราศจากการตัดไม้ทำลายป่าของสหภาพยุโรป (EUDR)
-            กลุ่มบริษัทในเครือ เอสวี โพลีเมอร์ กรุ๊ป
+            กลุ่มบริษัทในเครือ เอสวี โพลีเมอร์ กรุ๊ปs
           </h1>
 
           <p className="text-left text-pretty sm:col-start-2 sm:col-end-6 p-2">
