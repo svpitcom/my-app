@@ -1,8 +1,10 @@
-// next.config.ts
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  output: "export", // ให้ Next.js build เป็น static files
   images: {
-    domains: ["your-image-domain.com"],
+    unoptimized: true, // ปิด optimizer ของ next/image
+    domains: ["your-image-domain.com"], // ถ้ามีรูปจาก domain นอก
   },
 };
 
