@@ -1,6 +1,17 @@
+---
 deployment:
   tasks:
+    # กำหนด path ของเว็บจริง
     - export DEPLOYPATH=/home/zyakpszw/public_html/my-app/
-    - npm install
-    - npm run build
+
+    # ติดตั้ง dependency (ใช้ npm ของเซิร์ฟเวอร์)
+    - /usr/bin/npm install
+
+    # build Next.js
+    - /usr/bin/npm run build
+
+    # export ออกมาเป็น static
+    - /usr/bin/npm run export
+
+    # copy ผลลัพธ์ไปยังโฟลเดอร์เว็บจริง
     - /bin/cp -R out/* $DEPLOYPATH
