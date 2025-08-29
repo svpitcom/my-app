@@ -103,7 +103,7 @@ export default function JobOpportunity() {
       {/* Title */}
       <div className="text-center py-8 bg-gradient-to-br from-sky-600 to-green-500">
         <h1 className="text-4xl md:text-5xl font-bold text-white">
-          ตำแหน่งว่าง
+          ตำแหน่งว่างงาน
         </h1>
       </div>
 

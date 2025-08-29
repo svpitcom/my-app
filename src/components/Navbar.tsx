@@ -31,7 +31,7 @@ const dict: Record<Locale, Record<MenuKey, string>> = {
     OurCompany: "เกี่ยวกับบริษัท",
     OurProduct: "ผลิตภัณฑ์ของเรา",
     Policy: "นโยบาย",
-    NewCSR: "สื่อใหม่และกิจกรรม",
+    NewCSR: "ข่าวและกิจกรรม",
     JobOpportunity: "ร่วมงานกับเรา",
     ContactUs: "ติดต่อเรา",
   },
