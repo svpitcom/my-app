@@ -1,39 +1,35 @@
 import { NextResponse, NextRequest } from "next/server";
-import { supabase } from "@/lib/supabase";
+import { db } from "@/lib/db";
 
 export async function GET(req: NextRequest) {
-  const { searchParams } = new URL(req.url);
-  const lang = searchParams.get("lang") === "th" ? "th" : "en";
-
-  const fields = [
-    "home_id",
-    `home_title_${lang}`,
-    `home_detail_01_${lang}`,
-    `home_detail_02_${lang}`,
-    `home_detail_03_${lang}`,
-  ];
-  const selectFields = fields.join(", ");
-
-  const { data, error } = await supabase.from("home").select(selectFields);
-
-  if (error) {
-    console.error("Supabase select error:", error);
-    return NextResponse.json({ error: error.message }, { status: 500 });
+  try {
+    const { searchParams } = new URL(req.url);
+    const lang = searchParams.get("lang") === "th" ? "th" : "en";
+    // field ที่เลือกตามภาษา
+    const fields = [
+      "home_id",
+      `home_title_${lang}`,
+      `home_detail_01_${lang}`,
+      `home_detail_02_${lang}`,
+      `home_detail_03_${lang}`,
+    ].join(", ");
+    // เพิ่ม FROM
+    const [rows] = await db.query(`SELECT ${fields} FROM home_svp`);
+    return NextResponse.json({ data: rows });
+  } catch (err: any) {
+    console.error("MySQL select error:", err);
+    return NextResponse.json({ error: err.message }, { status: 500 });
   }
-  return NextResponse.json({ data });
 }
 
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json()
-    const { data, error } = await supabase.from("home").insert([body]);
-    if (error) {
-      console.error("Supabase insert error:", error);
-      return NextResponse.json({ error: error.message }, { status: 500 });
-    }
-    return NextResponse.json({ data }, { status: 201 });
-  } catch (err) {
-    console.error("Request parse error:", err);
-    return NextResponse.json({ error: "Invalid JSON body" }, { status: 400 });
+    const body = await req.json();
+    const [result] = await db.query("INSERT INTO home_svp SET ?", [body]);
+
+    return NextResponse.json({ data: result }, { status: 201 });
+  } catch (err: any) {
+    console.error("MySQL insert error:", err);
+    return NextResponse.json({ error: err.message }, { status: 500 });
   }
 }
