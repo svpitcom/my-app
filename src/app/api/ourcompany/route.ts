@@ -25,8 +25,8 @@ export async function GET(req: NextRequest) {
     const [rows] = await db.query(`SELECT ${selectFields} FROM our_company_svp`);
 
     return NextResponse.json({ data: rows });
-  } catch (error: any) {
+  } catch (error) {
     console.error("MySQL error:", error);
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    return NextResponse.json({ error: error }, { status: 500 });
   }
 }

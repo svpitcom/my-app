@@ -36,14 +36,14 @@ export async function GET(
       [id]
     );
 
-    if ((rows as any).length === 0) {
+    if (!Array.isArray(rows) || rows.length === 0) {
       return NextResponse.json({ error: "Not found" }, { status: 404 });
     }
 
     // rows[0] เป็น object record
-    return NextResponse.json({ data: (rows as any)[0] });
-  } catch (err: any) {
+    return NextResponse.json({ data: rows[0] });
+  } catch (err) {
     console.error("MySQL select error:", err);
-    return NextResponse.json({ error: err.message }, { status: 500 });
+    return NextResponse.json({ error: err }, { status: 500 });
   }
 }

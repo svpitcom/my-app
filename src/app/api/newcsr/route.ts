@@ -20,8 +20,8 @@ export async function GET(req: NextRequest) {
     // เพิ่ม FROM
     const [rows] = await db.query(`SELECT ${fields} FROM new_csr_svp`);
     return NextResponse.json({ data: rows });
-  } catch (err: any) {
+  } catch (err) {
     console.error("Supabase select error:", err);
-    return NextResponse.json({ error: err.message }, { status: 500 });
+    return NextResponse.json({ error: err }, { status: 500 });
   }
 }

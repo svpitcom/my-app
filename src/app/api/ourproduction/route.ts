@@ -30,8 +30,8 @@ export async function GET(req: NextRequest) {
     const data = Array.isArray(rows) ? rows : [];
 
     return NextResponse.json({ data });
-  } catch (error: any) {
+  } catch (error) {
     console.error("MySQL query error:", error);
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    return NextResponse.json({ error: error }, { status: 500 });
   }
 }

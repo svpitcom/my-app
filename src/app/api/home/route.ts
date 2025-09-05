@@ -16,9 +16,9 @@ export async function GET(req: NextRequest) {
     // เพิ่ม FROM
     const [rows] = await db.query(`SELECT ${fields} FROM home_svp`);
     return NextResponse.json({ data: rows });
-  } catch (err: any) {
+  } catch (err) {
     console.error("MySQL select error:", err);
-    return NextResponse.json({ error: err.message }, { status: 500 });
+    return NextResponse.json({ error: err }, { status: 500 });
   }
 }
 
@@ -28,8 +28,8 @@ export async function POST(req: NextRequest) {
     const [result] = await db.query("INSERT INTO home_svp SET ?", [body]);
 
     return NextResponse.json({ data: result }, { status: 201 });
-  } catch (err: any) {
+  } catch (err) {
     console.error("MySQL insert error:", err);
-    return NextResponse.json({ error: err.message }, { status: 500 });
+    return NextResponse.json({ error: err }, { status: 500 });
   }
 }
