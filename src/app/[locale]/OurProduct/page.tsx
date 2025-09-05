@@ -6,19 +6,19 @@ import { useEffect, useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 
 type OurProductionData = {
-  our_production_id: number;
-  our_production_title_en: string;
-  our_production_title_th: string;
-  our_production_detail_01_en: string;
-  our_production_detail_01_th: string;
-  our_production_detail_02_en: string;
-  our_production_detail_02_th: string;
-  our_production_detail_03_en: string;
-  our_production_detail_03_th: string;
-  our_production_detail_04_en: string;
-  our_production_detail_04_th: string;
-  our_production_detail_05_en: string;
-  our_production_detail_05_th: string;
+  our_product_id: number;
+  our_product_title_en: string;
+  our_product_title_th: string;
+  our_product_detail_01_en: string;
+  our_product_detail_01_th: string;
+  our_product_detail_02_en: string;
+  our_product_detail_02_th: string;
+  our_product_detail_03_en: string;
+  our_product_detail_03_th: string;
+  our_product_detail_04_en: string;
+  our_product_detail_04_th: string;
+  our_product_detail_05_en: string;
+  our_product_detail_05_th: string;
   created_at: string;
 };
 
@@ -67,8 +67,8 @@ export default function OurProduct() {
           "Mixture Rubber (Pending 2017–2018)",
         ];
 
-  const productInfo = data?.find((item) => item.our_production_id === 1);
-  const packagingInfo = data?.find((item) => item.our_production_id === 2);
+  const productInfo = data?.find((item) => item.our_product_id === 1);
+  const packagingInfo = data?.find((item) => item.our_product_id === 2);
 
   return (
     <div>
@@ -113,14 +113,14 @@ export default function OurProduct() {
                 <h1 className="text-3xl md:text-4xl font-bold mb-4">
                   {getValue(
                     productInfo,
-                    `our_production_title_${lang}` as keyof OurProductionData
+                    `our_product_title_${lang}` as keyof OurProductionData
                   )}
                 </h1>
 
                 <br />
                 {[1, 2, 3, 4, 5].map((i) => {
                   const key =
-                    `our_production_detail_0${i}_${lang}` as keyof OurProductionData;
+                    `our_product_detail_0${i}_${lang}` as keyof OurProductionData;
                   const value = getValue(productInfo, key);
                   return value ? (
                     <p
@@ -172,13 +172,13 @@ export default function OurProduct() {
                 <h2 className="text-4xl md:text-7xl font-bold text-center text-sky-700 mb-4 uppercase">
                   {getValue(
                     packagingInfo,
-                    `our_production_title_${lang}` as keyof OurProductionData
+                    `our_product_title_${lang}` as keyof OurProductionData
                   )}
                 </h2>
                 <p className="text-sm md:text-lg max-w-4xl mx-auto text-center text-black">
                   {getValue(
                     packagingInfo,
-                    `our_production_detail_01_${lang}` as keyof OurProductionData
+                    `our_product_detail_01_${lang}` as keyof OurProductionData
                   )}
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">

@@ -53,13 +53,6 @@ const imageList = [
   },
 ];
 
-// const imageList = [
-//   "/assets/imgs/home_Imgae_v1.png",
-//   "/assets/imgs/home_Imgae_v2.png",
-//   "/assets/imgs/Laboratory.jpg",
-//   "/assets/imgs/home_Imgae_v4.png",
-// ];
-
 function getValue(obj: HomeData, key: keyof HomeData): string {
   return (obj[key] as string) ?? "";
 }
