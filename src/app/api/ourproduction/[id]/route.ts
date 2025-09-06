@@ -1,32 +1,37 @@
-import { NextRequest, NextResponse } from "next/server";
-import { db } from "@/lib/db";
+export const dynamic = "force-dynamic";
 
+import { NextResponse, NextRequest } from "next/server";
+import { supabase } from "@/lib/supabase";
+
+// GET by ID
 export async function GET(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
-  const { id } = params;
+  const { id } = await context.params;
   const { searchParams } = new URL(req.url);
   const lang = searchParams.get("lang") === "th" ? "th" : "en";
 
   const fields = [
-    "our_product_id",
-    `our_product_title_${lang}`,
-    `our_product_detail_01_${lang}`,
-    `our_product_detail_02_${lang}`,
-    `our_product_detail_03_${lang}`,
-    `our_product_detail_04_${lang}`,
-    `our_product_detail_05_${lang}`,
-  ].join(", ");
+    "our_production_id",
+    `our_production_title_${lang}`,
+    `our_production_detail_01_${lang}`,
+    `our_production_detail_02_${lang}`,
+    `our_production_detail_03_${lang}`,
+    `our_production_detail_04_${lang}`,
+    `our_production_detail_05_${lang}`,
+  ];
+  const selectFields = fields.join(", ");
 
-  const [rows] = await db.query(
-    `SELECT ${fields} FROM our_production_svp WHERE our_product_id = ? LIMIT 1`,
-    [id]
-  );
+  const { data, error } = await supabase
+    .from("our_production")
+    .select(selectFields)
+    .eq("our_production_id", id)
+    .single();
 
-  if (!rows || rows.length === 0) {
-    return NextResponse.json({ error: "Not found" }, { status: 404 });
+  if (error) {
+    return NextResponse.json({ error: error.message }, { status: 500 });
   }
 
-  return NextResponse.json({ data: rows[0] });
+  return NextResponse.json({ data });
 }

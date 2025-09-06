@@ -1,56 +1,36 @@
+// src/app/[locale]/layout.tsx
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "../[locale]/globals.css";
 import { setRequestLocale } from "next-intl/server";
 import { LanguageProvider } from "@/context/LanguageContext";
-import { ReactNode } from "react";
 
-type Props = {
-  children: ReactNode;
-  params: Promise<{ locale: Locale }>;
-};
+export type Locale = "th" | "en";
+
+interface Props {
+  children: React.ReactNode;
+  params: { locale: string }; // ต้องเป็น object ไม่ใช่ Promise
+}
 
 export const metadata = {
   title: {
     default: "SV Polymer Co., Ltd.",
     template: "%s | SV Polymer Co., Ltd.",
   },
-  description: "ผู้ผลิตและผู้จำหน่ายผลิตภัณฑ์แปรรูปยางพาราที่มีคุณภาพในประเทศไทย",
-  keywords: [
-    "SV Polymer",
-    "พลาสติก",
-    "โพลิเมอร์",
-    "โรงงาน",
-    "บริษัท",
-    "ผลิตภัณฑ์",
-  ],
-  openGraph: {
-    title: "SV Polymer Co., Ltd.",
-    description: "ผู้ผลิตและผู้จำหน่ายผลิตภัณฑ์แปรรูปยางพาราที่มีคุณภาพในประเทศไทย",
-    url: "https://sv-polymer.com",
-    siteName: "SV Polymer Co., Ltd.",
-    locale: "en_EN",
-    type: "website",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
 };
 
-export type Locale = "th" | "en";
+// ✅ เปลี่ยนเป็น synchronous
+export default function RootLayout({ children, params }: Props) {
+  const { locale } = params;
 
-export default async function RootLayout({ children, params }: Props) {
-  const { locale } = await params;
-
-  setRequestLocale(locale);
+  setRequestLocale(locale); // ถ้าไม่ใช่ async ก็ต้อง sync version
 
   return (
     <html lang={locale}>
       <body>
-        <LanguageProvider>
+        <LanguageProvider initialLang={locale as Locale}>
           <Navbar />
-          <main>{children}</main>
+          {children}
           <Footer />
         </LanguageProvider>
       </body>
