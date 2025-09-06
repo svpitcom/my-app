@@ -1,15 +1,17 @@
 // src/app/[locale]/layout.tsx
+import { ReactNode } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "../[locale]/globals.css";
 import { setRequestLocale } from "next-intl/server";
-import { LanguageProvider } from "@/context/LanguageContext";
+import { LanguageProvider, Locale } from "@/context/LanguageContext";
 
-export type Locale = "th" | "en";
-
+// ใช้ type LayoutProps ของ Next.js
 interface Props {
-  children: React.ReactNode;
-  params: { locale: string }; // ต้องเป็น object ไม่ใช่ Promise
+  children: ReactNode;
+  params: {
+    locale: Locale; // union type "th" | "en"
+  };
 }
 
 export const metadata = {
@@ -19,16 +21,17 @@ export const metadata = {
   },
 };
 
-// ✅ เปลี่ยนเป็น synchronous
+// ❌ ห้าม async → return ReactNode ทันที
 export default function RootLayout({ children, params }: Props) {
   const { locale } = params;
 
-  setRequestLocale(locale); // ถ้าไม่ใช่ async ก็ต้อง sync version
+  // ตั้ง locale สำหรับ next-intl
+  setRequestLocale(locale);
 
   return (
     <html lang={locale}>
       <body>
-        <LanguageProvider initialLang={locale as Locale}>
+        <LanguageProvider initialLang={locale}>
           <Navbar />
           {children}
           <Footer />

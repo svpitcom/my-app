@@ -4,9 +4,8 @@ import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
-import { useLanguage } from "@/context/LanguageContext";
+import { useLanguage, Locale } from "@/context/LanguageContext";
 
-type Locale = "en" | "th";
 type MenuKey =
   | "Home"
   | "OurCompany"
@@ -56,30 +55,27 @@ export default function Navbar() {
   const { lang, setLang } = useLanguage();
 
   // ตรวจหา locale ปัจจุบันจาก pathname
-  const currentLocale = useMemo<Locale>(() => {
+  const currentLocale: Locale = useMemo(() => {
     const segments = pathname.split("/");
-    // console.log(segments)
-    if (segments[1] === "th" || segments[1] === "en") {
-      return segments[1];
-    }
+    if (segments[1] === "th" || segments[1] === "en")
+      return segments[1] as Locale;
     return "en";
   }, [pathname]);
-  // sync lang context กับ currentLocale
+
+  // sync context กับ currentLocale
   useEffect(() => {
     if (lang !== currentLocale) {
-      setLang(currentLocale as "th" | "en");
+      setLang(currentLocale);
     }
   }, [currentLocale, lang, setLang]);
-  // เปลี่ยน URL ตาม locale และ update context
-  const changeLocale = (newLocale: string) => {
+
+  // เปลี่ยน locale
+  const changeLocale = (newLocale: Locale) => {
     const segments = pathname.split("/");
-    if (["en", "th"].includes(segments[1])) {
-      segments[1] = newLocale;
-    } else {
-      segments.splice(1, 0, newLocale);
-    }
+    if (["th", "en"].includes(segments[1])) segments[1] = newLocale;
+    else segments.splice(1, 0, newLocale);
     const newPath = segments.join("/") || "/";
-    setLang(newLocale as "th" | "en");
+    setLang(newLocale);
     router.push(newPath);
   };
 
@@ -128,7 +124,7 @@ export default function Navbar() {
           ))}
           <select
             value={currentLocale}
-            onChange={(e) => changeLocale(e.target.value)}
+            onChange={(e) => changeLocale(e.target.value as Locale)}
             className={selectClass}
             aria-label="Select language"
           >
@@ -169,7 +165,7 @@ export default function Navbar() {
           <select
             value={currentLocale}
             onChange={(e) => {
-              changeLocale(e.target.value);
+              changeLocale(e.target.value as Locale);
               setIsOpen(false);
             }}
             className={`mt-2 ${selectClass}`}
