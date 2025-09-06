@@ -1,54 +1,30 @@
-// src/context/LanguageContext.tsx
+// context/LanguageContext.tsx
 "use client";
 
-import { createContext, useContext, useState, useEffect, ReactNode } from "react";
-import Cookies from "js-cookie";
+import { createContext, useContext, useState } from "react";
 
-// กำหนด type ภาษา
-export type Locale = "th" | "en";
+type Language = "th" | "en";
 
-// Context type
-interface LangContextType {
-  lang: Locale;
-  setLang: (lang: Locale) => void;
-}
+const LanguageContext = createContext<{
+  lang: Language;
+  setLang: (lang: Language) => void;
+}>({
+  lang: "th",
+  setLang: () => {},
+});
 
-// สร้าง Context
-const LanguageContext = createContext<LangContextType | undefined>(undefined);
-
-interface Props {
-  children: ReactNode;
-  initialLang: Locale; // รับค่าภาษาเริ่มต้นจาก layout
-}
-
-export function LanguageProvider({ children, initialLang }: Props) {
-  const [lang, setLangState] = useState<Locale>(initialLang);
-
-  // โหลดจาก cookie ถ้ามี
-  useEffect(() => {
-    const savedLang = Cookies.get("lang") as Locale | undefined;
-    if (savedLang) {
-      setLangState(savedLang);
-    }
-  }, []);
-
-  const setLang = (newLang: Locale) => {
-    setLangState(newLang);
-    Cookies.set("lang", newLang, { expires: 7 });
-  };
+export const LanguageProvider = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => {
+  const [lang, setLang] = useState<Language>("th");
 
   return (
     <LanguageContext.Provider value={{ lang, setLang }}>
       {children}
     </LanguageContext.Provider>
   );
-}
+};
 
-// Hook สำหรับใช้งานใน component
-export function useLanguage(): LangContextType {
-  const context = useContext(LanguageContext);
-  if (!context) {
-    throw new Error("useLanguage must be used within LanguageProvider");
-  }
-  return context;
-}
+export const useLanguage = () => useContext(LanguageContext);

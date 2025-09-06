@@ -1,39 +1,56 @@
-// src/app/[locale]/layout.tsx
-import { ReactNode } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "../[locale]/globals.css";
 import { setRequestLocale } from "next-intl/server";
-import { LanguageProvider, Locale } from "@/context/LanguageContext";
+import { LanguageProvider } from "@/context/LanguageContext";
+import { ReactNode } from "react";
 
-// ใช้ type LayoutProps ของ Next.js
-interface Props {
+type Props = {
   children: ReactNode;
-  params: {
-    locale: Locale; // union type "th" | "en"
-  };
-}
+  params: Promise<{ locale: Locale }>;
+};
 
 export const metadata = {
   title: {
     default: "SV Polymer Co., Ltd.",
     template: "%s | SV Polymer Co., Ltd.",
   },
+  description: "ผู้ผลิตและผู้จำหน่ายผลิตภัณฑ์แปรรูปยางพาราที่มีคุณภาพในประเทศไทย",
+  keywords: [
+    "SV Polymer",
+    "พลาสติก",
+    "โพลิเมอร์",
+    "โรงงาน",
+    "บริษัท",
+    "ผลิตภัณฑ์",
+  ],
+  openGraph: {
+    title: "SV Polymer Co., Ltd.",
+    description: "ผู้ผลิตและผู้จำหน่ายผลิตภัณฑ์แปรรูปยางพาราที่มีคุณภาพในประเทศไทย",
+    url: "https://sv-polymer.com",
+    siteName: "SV Polymer Co., Ltd.",
+    locale: "en_EN",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
-// ❌ ห้าม async → return ReactNode ทันที
-export default function RootLayout({ children, params }: Props) {
-  const { locale } = params;
+export type Locale = "th" | "en";
 
-  // ตั้ง locale สำหรับ next-intl
+export default async function RootLayout({ children, params }: Props) {
+  const { locale } = await params;
+
   setRequestLocale(locale);
 
   return (
     <html lang={locale}>
       <body>
-        <LanguageProvider initialLang={locale}>
+        <LanguageProvider>
           <Navbar />
-          {children}
+          <main>{children}</main>
           <Footer />
         </LanguageProvider>
       </body>

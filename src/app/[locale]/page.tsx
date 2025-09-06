@@ -8,6 +8,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import Balancer from "react-wrap-balancer";
 import HoverImage from "@/components/HoverImage";
 
+// Type Data Home
 type HomeData = {
   home_id: number;
   home_title_th?: string;
@@ -19,7 +20,7 @@ type HomeData = {
   home_detail_03_th?: string;
   home_detail_03_en?: string;
 };
-
+// Type Data NewCrs
 type NewCrsData = {
   new_csr_id: number;
   new_csr_header_en: string;
@@ -34,6 +35,7 @@ type NewCrsData = {
   created_at: string;
 };
 
+// Data Image Funtion
 const imageList = [
   {
     default: "/assets/imgs/home_Imgae_v1.png",
@@ -53,10 +55,11 @@ const imageList = [
   },
 ];
 
+// Get Data type Home
 function getValue(obj: HomeData, key: keyof HomeData): string {
   return (obj[key] as string) ?? "";
 }
-
+// Get Data type NEWCRS
 function getValueNewCRS(obj: NewCrsData, key: keyof NewCrsData): string {
   return (obj[key] as string) ?? "";
 }
